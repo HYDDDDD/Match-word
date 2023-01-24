@@ -6,3 +6,5 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'email', 'password',) #id django auto create แต่เราต้องใช้ id เพื่อเอามาอ้างอิงถึง user แต่ละคนจึงต้อง return มันออกมาด้วย
+
+

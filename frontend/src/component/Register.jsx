@@ -4,25 +4,11 @@ import { useState } from "react";
 
 function Register() {
   const [users, setUsers] = useState([]);
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
   const [newUser, setNewUser] = useState({
     username: "",
     email: "",
     password: "",
   });
-
-  // const createUser = (event) => {
-  //   event.preventDefault(); //when submitting and refreshing your page so when it save data.
-
-  //   setUsername("");
-  //   setPassword("");
-  //   setNewUser({
-  //     username: "",
-  //     email: "",
-  //     password: "",
-  //   });
-  // };
 
   const createUser = (event) => {
     event.preventDefault(); //when submitting and refreshing your page so when it save data.
