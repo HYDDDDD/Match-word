@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -10,16 +11,33 @@ function Register() {
     password: "",
   });
 
+  // const createUser = (event) => {
+  //   event.preventDefault(); //when submitting and refreshing your page so when it save data.
+
+  //   let url = "http://127.0.0.1:8000/users/";
+
+  //   fetch(url, {
+  //     method: "POST",
+  //     headers: { "Content-type": "application/json" },
+  //     body: JSON.stringify(newUser),
+  //   })
+  //     .then(() => {
+  //       setNewUser({
+  //         username: "",
+  //         email: "",
+  //         password: "",
+  //       });
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+
   const createUser = (event) => {
     event.preventDefault(); //when submitting and refreshing your page so when it save data.
 
     let url = "http://127.0.0.1:8000/users/";
 
-    fetch(url, {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(newUser),
-    })
+    axios
+      .post(url, newUser)
       .then(() => {
         setNewUser({
           username: "",
@@ -30,14 +48,11 @@ function Register() {
       .catch((err) => console.log(err));
   };
 
-  const getAllUsers = async () => {
-    try {
-      const response = await fetch("http://127.0.0.1:8000/users/");
-      const users_data = await response.json();
-      setUsers(users_data);
-    } catch (error) {
-      console.log(error);
-    }
+  const getAllUsers = () => {
+    axios
+      .get("http://127.0.0.1:8000/users/")
+      .then((data) => console.log(data.data))
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
@@ -45,6 +60,7 @@ function Register() {
   }, []);
 
   // console.log(users);
+  console.log(newUser);
   // users.map((user) => console.log(user.username));
 
   return (
