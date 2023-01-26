@@ -1,35 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
-  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
   const [newUser, setNewUser] = useState({
     username: "",
     email: "",
     password: "",
   });
-
-  // const createUser = (event) => {
-  //   event.preventDefault(); //when submitting and refreshing your page so when it save data.
-
-  //   let url = "http://127.0.0.1:8000/users/";
-
-  //   fetch(url, {
-  //     method: "POST",
-  //     headers: { "Content-type": "application/json" },
-  //     body: JSON.stringify(newUser),
-  //   })
-  //     .then(() => {
-  //       setNewUser({
-  //         username: "",
-  //         email: "",
-  //         password: "",
-  //       });
-  //     })
-  //     .catch((err) => console.log(err));
-  // };
 
   const createUser = (event) => {
     event.preventDefault(); //when submitting and refreshing your page so when it save data.
@@ -44,29 +23,15 @@ function Register() {
           email: "",
           password: "",
         });
+        navigate("/");
       })
       .catch((err) => console.log(err));
   };
 
-  const getAllUsers = () => {
-    axios
-      .get("http://127.0.0.1:8000/users/")
-      .then((data) => console.log(data.data))
-      .catch((error) => console.log(error));
-  };
-
-  useEffect(() => {
-    getAllUsers();
-  }, []);
-
-  // console.log(users);
-  console.log(newUser);
-  // users.map((user) => console.log(user.username));
-
   return (
     <form>
       <h1>Register</h1>
-      <div className="inputLogin">
+      <div className="formRegister">
         <label>Username</label>
         <input
           type="text"
