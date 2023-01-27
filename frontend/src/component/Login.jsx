@@ -34,10 +34,21 @@ function Login({ setCurrentUser }) {
     return true;
   };
 
+  const checkUser = () => {
+    const userCheck = users.find(
+      (user) => user.username === username && user.password === password
+    );
+    if (userCheck) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   const login = (event) => {
     event.preventDefault(); //when submitting and refreshing your page so when it save data.
 
-    if (handleValidation() === true) {
+    if (handleValidation() === true && checkUser() === true) {
       users.find((user) => {
         //loop
         if (
@@ -48,9 +59,11 @@ function Login({ setCurrentUser }) {
             email: user.email,
             password: user.password,
           });
-          navigate("/editProfile");
         }
       });
+      navigate("/editProfile");
+    } else {
+      alert("Invalid username or password.");
     }
   };
 
