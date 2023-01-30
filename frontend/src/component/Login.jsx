@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login({ setCurrentUser }) {
-  const [users, setUsers] = useState([]);
+function Login({ users, setCurrentUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  const getAllUsers = () => {
-    axios
-      .get("http://127.0.0.1:8000/users/")
-      .then((data) => {
-        setUsers(data.data);
-      })
-      .catch((error) => console.log(error));
-  };
-
-  useEffect(() => {
-    getAllUsers();
-  }, []);
 
   const handleValidation = () => {
     if (username === "" && username === null) {
@@ -55,9 +40,9 @@ function Login({ setCurrentUser }) {
           (user.username === username && user.password === password) === true
         ) {
           setCurrentUser({
+            user_id: user.user_id,
             username: user.username,
             email: user.email,
-            password: user.password,
           });
         }
       });

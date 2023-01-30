@@ -1,6 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function EditProfile({ currentUser }) {
+  const [updateData, setUpdateData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  // console.log(updateData);
+
   return (
     <div>
       <div>
@@ -12,11 +22,26 @@ function EditProfile({ currentUser }) {
         <form>
           <div className="formEditProfile">
             <label>Name :</label>
-            <input type="text" />
+            <input
+              type="text"
+              onChange={(event) => {
+                setUpdateData({ ...updateData, username: event.target.value });
+              }}
+            />
             <label>E-mail :</label>
-            <input type="email" />
+            <input
+              type="email"
+              onChange={(event) => {
+                setUpdateData({ ...updateData, email: event.target.value });
+              }}
+            />
             <label>Password</label>
-            <input type="password" />
+            <input
+              type="password"
+              onChange={(event) => {
+                setUpdateData({ ...updateData, password: event.target.value });
+              }}
+            />
             <label>Password***</label>
             <input type="password" />
           </div>
