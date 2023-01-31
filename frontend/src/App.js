@@ -3,16 +3,10 @@ import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import { useLocalStorage } from "./component/useLocalStorage";
 import "./App.css";
-<<<<<<< HEAD
 //import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasury";
 import Category from "./component/Category/Category";
 //import Register from "./component/Register";
 //import { Routes, Route } from "react-router-dom";
-=======
-import Register from "./component/Register";
-import Login from "./component/Login";
-import EditProfile from "./component/EditProfile";
->>>>>>> 0e74e705fb39bb710bf69484e0d1b1be5b0e2af7
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -54,36 +48,16 @@ function App() {
   console.log(users);
 
   return (
-<<<<<<< HEAD
     <div className="App">
-      <Category/>
+      <Category />
       {/* <VocabularyTreasury /> */}
     </div>
-    
+
     // <Routes>
     //   {/* path="/" หน้าแรกที่ขึ้นมาแสดง */}
     //   <Route path="/" element={<Login />} />
     //   <Route path="/register" element={<Register />} />
     // </Routes>
-=======
-    // <div className="App">
-    //   {/* <Register /> */}
-    //   <Login setCurrentUser={setCurrentUser} />
-    // </div>
-
-    <Routes>
-      {/* path="/" หน้าแรกที่ขึ้นมาแสดง */}
-      <Route
-        path="/"
-        element={<Login users={users} setCurrentUser={setCurrentUser} />}
-      />
-      <Route path="/register" element={<Register />} />
-      <Route
-        path="/editProfile"
-        element={<EditProfile currentUser={currentUser} />}
-      />
-    </Routes>
->>>>>>> 0e74e705fb39bb710bf69484e0d1b1be5b0e2af7
   );
 }
 
