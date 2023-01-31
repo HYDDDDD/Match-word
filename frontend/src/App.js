@@ -1,11 +1,14 @@
 import "./App.css";
-import Register from "./component/Register";
-import { Routes, Route } from "react-router-dom";
+//import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasury";
+import Category from "./component/Category/Category";
+//import Register from "./component/Register";
+//import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Register />
+      <Category/>
+      {/* <VocabularyTreasury /> */}
     </div>
     
     // <Routes>
