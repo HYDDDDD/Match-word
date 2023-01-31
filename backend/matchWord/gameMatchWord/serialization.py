@@ -7,7 +7,7 @@ from .models import User, Treasury, Score, Vocabulary
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        # id django auto create แต่เราต้องใช้ id เพื่อเอามาอ้างอิงถึง user แต่ละคนจึงต้อง return มันออกมาด้วย or สร้างเองก่อได้
+        # id django auto create แต่เราต้องใช้ id เพื่อเอามาอ้างอิงถึง user แต่ละคนจึงต้อง return มันออกมาด้วย หรือ สร้างเองก่อได้
         fields = ('user_id', 'username', 'email', 'password',)
 
 

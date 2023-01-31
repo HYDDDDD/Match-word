@@ -10,6 +10,7 @@ function Register() {
     password: "",
   });
 
+  //Add user.
   const createUser = (event) => {
     event.preventDefault(); //when submitting and refreshing your page so when it save data.
 
@@ -23,9 +24,15 @@ function Register() {
           email: "",
           password: "",
         });
+
         navigate("/");
+        refreshPage();
       })
       .catch((err) => console.log(err));
+  };
+
+  const refreshPage = () => {
+    window.location.reload(false);
   };
 
   return (

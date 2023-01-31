@@ -44,6 +44,8 @@ function App() {
     setSaveData(currentUser);
   }, [setSaveData]);
 
+  console.log(users);
+
   return (
     // <div className="App">
     //   {/* <Register /> */}
