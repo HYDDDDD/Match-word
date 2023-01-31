@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 body{
   margin: 0px;
   padding: 0px;
   
+=======
+body {
+  margin: 10px 10px 10px 10px;
+  padding: 50px;
+>>>>>>> 0e74e705fb39bb710bf69484e0d1b1be5b0e2af7
 }
 
-.inputLogin{
+.formRegister,
+.formLogin,
+.formEditProfile {
   width: 250px;
   display: flex;
   flex-direction: column;
-  
+}
+
+.formLogin input {
+  margin-top: 10px;
 }
