@@ -20,7 +20,7 @@ function EditProfile({ currentUser }) {
       axios.put(url, updateData).then(() => {
         setUpdateData({ username: "", email: "", password: "" });
         setPasswordAgain("");
-        // navigate("");
+        navigate("/category");
       });
     }
   };
@@ -32,8 +32,6 @@ function EditProfile({ currentUser }) {
     }
     return true;
   };
-
-  console.log(currentUser);
 
   return (
     <div>

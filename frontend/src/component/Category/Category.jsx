@@ -1,15 +1,15 @@
 import React from "react";
 import Username from "./Username";
 import "./Category.css";
-import Po from "../../Picture/no2.png";
+import Po from "../../picture/no2.png";
 import Option from "./Option";
 
-function Category() {
+function Category({ currentUser }) {
   return (
     <div>
       <div id="picNo2"></div>
-      <Username />
-      <Option/>
+      <Username currentUser={currentUser} />
+      <Option />
       {/* <div className='section-username'>
           <p>Category</p>
         </div> */}

@@ -1,148 +1,143 @@
 .frame-Option-one {
-    width: 665px;
-    height: 518px;
-    position: fixed;
-    top: 25%;
-    left: 350px;
-    z-index: 1;
+  width: 665px;
+  height: 518px;
+  position: fixed;
+  top: 25%;
+  left: 350px;
+  z-index: 1;
 }
 
 .Option-one {
-    background-color: #004B6B;
-    width: 530px;
-    height: 130px;
-    position: absolute;
-    top: 0%;
-    left: 0px;
-    z-index: -1;
-    border-radius: 50px 50px 50px 50px;
+  background-color: #004b6b;
+  width: 530px;
+  height: 130px;
+  position: absolute;
+  top: 0%;
+  left: 0px;
+  z-index: -1;
+  border-radius: 50px 50px 50px 50px;
 }
 
 .photo-Option-one {
-    background-image: url(../../Picture/no3.png);
-    background-size: cover;
-    width: 170px;
-    height: 170px;
-    margin: -42px -38px;
+  background-image: url(../../picture/no3.png);
+  background-size: cover;
+  width: 170px;
+  height: 170px;
+  margin: -42px -38px;
 }
 
 /* Caveat Brush */
 .name-Option-one {
-    color: #fff;
-    margin: -120px 188px;
-    font-size: 30px;
-    font-weight: bold;
+  color: #fff;
+  margin: -120px 188px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .iconplay-Option-one {
-    background-image: url(../../Picture/no8.png);
-    /* background-size: 36px; */
-    width: 36px;
-    height: 36px;
-    content: "";
-    margin: 83px 503px;
+  background-image: url(../../picture/no8.png);
+  /* background-size: 36px; */
+  width: 36px;
+  height: 36px;
+  content: "";
+  margin: 83px 503px;
 }
 
 .numberword-Option-one {
-    background-color: aquamarine;
-    width: 67.62px;
-    height: 66.52px;
-    border-radius: 11px 11px 11px 11px;
-    margin: -134px 553px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+  background-color: aquamarine;
+  width: 67.62px;
+  height: 66.52px;
+  border-radius: 11px 11px 11px 11px;
+  margin: -134px 553px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-
 .Option-two {
-    background-color: #004B6B;
-    width: 665px;
-    height: 139.5px;
-    position: absolute;
-    top: 35%;
-    left: 0px;
-    z-index: -1;
-    border-radius: 50px 50px 50px 50px;
+  background-color: #004b6b;
+  width: 665px;
+  height: 139.5px;
+  position: absolute;
+  top: 35%;
+  left: 0px;
+  z-index: -1;
+  border-radius: 50px 50px 50px 50px;
 }
 
 .photo-Option-two {
-    background-image: url(../../Picture/no4.png);
-    background-size: cover;
-    width: 170px;
-    height: 170px;
-    margin: 173px -26px;
+  background-image: url(../../picture/no4.png);
+  background-size: cover;
+  width: 170px;
+  height: 170px;
+  margin: 173px -26px;
 }
 
 .name-Option-two {
-    margin: -258px 188px;
-    font-size: 35px;
-    font-weight: bold;
+  margin: -258px 188px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .iconplay-Option-two {
-    background-image: url(../../Picture/no8.png);
-    width: 36px;
-    height: 36px;
-    content: "";
-    margin: 214px 503px;
+  background-image: url(../../picture/no8.png);
+  width: 36px;
+  height: 36px;
+  content: "";
+  margin: 214px 503px;
 }
 
 .numberword-Option-two {
-    background-color: aquamarine;
-    width: 67.62px;
-    height: 66.52px;
-    border-radius: 11px 11px 11px 11px;
-    margin: -266px 553px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+  background-color: aquamarine;
+  width: 67.62px;
+  height: 66.52px;
+  border-radius: 11px 11px 11px 11px;
+  margin: -266px 553px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-
 .Option-three {
-    background-color: #004B6B;
-    width: 665px;
-    height: 139.5px;
-    position: absolute;
-    top: 70%;
-    left: 0px;
-    z-index: -1;
-    border-radius: 50px 50px 50px 50px;
+  background-color: #004b6b;
+  width: 665px;
+  height: 139.5px;
+  position: absolute;
+  top: 70%;
+  left: 0px;
+  z-index: -1;
+  border-radius: 50px 50px 50px 50px;
 }
 
 .photo-Option-three {
-    background-image: url(../../Picture/no5.png);
-    background-size: cover;
-    width: 170px;
-    height: 170px;
-    margin: 306px -26px;
-
-
+  background-image: url(../../picture/no5.png);
+  background-size: cover;
+  width: 170px;
+  height: 170px;
+  margin: 306px -26px;
 }
 
 .name-Option-three {
-    margin: -387px 188px;
-    font-size: 35px;
-    font-weight: bold;
+  margin: -387px 188px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .iconplay-Option-three {
-    background-image: url(../../Picture/no8.png);
-    width: 36px;
-    height: 36px;
-    content: "";
-    margin: 347px 503px;
-
+  background-image: url(../../picture/no8.png);
+  width: 36px;
+  height: 36px;
+  content: "";
+  margin: 347px 503px;
 }
 
 .numberword-Option-three {
-    background-color: aquamarine;
-    width: 67.62px;
-    height: 66.52px;
-    border-radius: 11px 11px 11px 11px;
-    margin: -400px 553px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+  background-color: aquamarine;
+  width: 67.62px;
+  height: 66.52px;
+  border-radius: 11px 11px 11px 11px;
+  margin: -400px 553px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
