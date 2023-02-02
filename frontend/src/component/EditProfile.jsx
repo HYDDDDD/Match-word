@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function EditProfile({ currentUser }) {
+function EditProfile({ currentUser, setCurrentUser }) {
   const navigate = useNavigate();
   const [updateData, setUpdateData] = useState({
     username: "",
@@ -18,9 +18,14 @@ function EditProfile({ currentUser }) {
       let url = `http://127.0.0.1:8000/users/${currentUser.user_id}`;
 
       axios.put(url, updateData).then(() => {
+        setCurrentUser({
+          user_id: currentUser.user_id,
+          username: updateData.username,
+          email: updateData.email,
+        });
         setUpdateData({ username: "", email: "", password: "" });
         setPasswordAgain("");
-        navigate("/category");
+        refreshPage();
       });
     }
   };
@@ -31,6 +36,10 @@ function EditProfile({ currentUser }) {
       return false;
     }
     return true;
+  };
+
+  const refreshPage = () => {
+    window.location.reload(false);
   };
 
   return (
@@ -83,6 +92,9 @@ function EditProfile({ currentUser }) {
             DONE
           </button>
         </form>
+        <button type="button" onClick={() => navigate("/category")}>
+          คลัง
+        </button>
       </div>
     </div>
   );

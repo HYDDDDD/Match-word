@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import { useLocalStorage } from "./component/useLocalStorage";
+import "./App.css";
 import Login from "./component/Login";
 import Register from "./component/Register";
-import "./App.css";
 import EditProfile from "./component/EditProfile";
 import Category from "./component/Category/Category";
+import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasury";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -45,8 +46,7 @@ function App() {
     setSaveData(currentUser);
   }, [setSaveData]);
 
-  // console.log(users);
-  // console.log(currentUser);
+  console.log(users);
 
   return (
     <Routes>
@@ -58,12 +58,18 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route
         path="/editProfile"
-        element={<EditProfile currentUser={currentUser} />}
+        element={
+          <EditProfile
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
+          />
+        }
       />
       <Route
         path="/category"
         element={<Category currentUser={currentUser} />}
       />
+      <Route path="/vocabularyTreasury" element={<VocabularyTreasury currentUser={currentUser}/>} />
     </Routes>
   );
 }
