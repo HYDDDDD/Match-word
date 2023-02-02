@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Option.css";
 import { useNavigate } from "react-router-dom";
 
-function Option() {
+function Option({ setSeletedTreasury }) {
   const navigate = useNavigate();
   const [treasurys, setTreasurys] = useState([]);
 
@@ -13,14 +13,19 @@ function Option() {
     });
   }, []);
 
-  // console.log(treasurys);
+  const findCategory = (idCategory) => {
+    treasurys
+      .filter((id) => id.treasury_id === idCategory)
+      .map((data) => setSeletedTreasury(data));
+    navigate("/prepare");
+  };
 
   return (
     <>
       <div className="frame-Option-one">
         <div className="Option-one"></div>
         <div className="photo-Option-one"></div>
-        <div className="name-Option-one">
+        <div className="name-Option-one" onClick={() => findCategory(1)}>
           <p>
             {treasurys
               .filter((id) => id.treasury_id === 1)
@@ -39,7 +44,7 @@ function Option() {
 
         <div className="Option-two"></div>
         <div className="photo-Option-two"></div>
-        <div className="name-Option-two">
+        <div className="name-Option-two" onClick={() => findCategory(2)}>
           <p>
             {treasurys
               .filter((id) => id.treasury_id === 2)

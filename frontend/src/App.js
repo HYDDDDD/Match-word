@@ -8,11 +8,13 @@ import Register from "./component/Register";
 import EditProfile from "./component/EditProfile";
 import Category from "./component/Category/Category";
 import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasury";
+import Prepare from "./component/Prepare/Prepare";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [setSaveData, clearLocalStorage] = useLocalStorage("Current User");
   const [currentUser, setCurrentUser] = useState([]);
+  const [seletedTreasury, setSeletedTreasury] = useState([]);
 
   const getLocalStorage = async () => {
     try {
@@ -67,9 +69,26 @@ function App() {
       />
       <Route
         path="/category"
-        element={<Category currentUser={currentUser} />}
+        element={
+          <Category
+            currentUser={currentUser}
+            setSeletedTreasury={setSeletedTreasury}
+          />
+        }
       />
-      <Route path="/vocabularyTreasury" element={<VocabularyTreasury currentUser={currentUser}/>} />
+      <Route
+        path="/vocabularyTreasury"
+        element={<VocabularyTreasury currentUser={currentUser} />}
+      />
+      <Route
+        path="/prepare"
+        element={
+          <Prepare
+            currentUser={currentUser}
+            seletedTreasury={seletedTreasury}
+          />
+        }
+      />
     </Routes>
   );
 }

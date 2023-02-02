@@ -5,14 +5,14 @@ import Po from "../../picture/no2.png";
 import Option from "./Option";
 import { useNavigate } from "react-router-dom";
 
-function Category({ currentUser }) {
+function Category({ currentUser, setSeletedTreasury }) {
   const navigate = useNavigate();
 
   return (
     <div>
       <div id="picNo2"></div>
       <Username currentUser={currentUser} />
-      <Option />
+      <Option setSeletedTreasury={setSeletedTreasury} />
       <button onClick={() => navigate("/vocabularyTreasury")}>คลัง</button>
     </div>
   );

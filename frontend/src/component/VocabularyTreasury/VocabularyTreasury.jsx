@@ -13,6 +13,7 @@ function VocabularyTreasury({ currentUser }) {
       setTreasurys(data.data);
     });
   }, []);
+
   return (
     <>
       <div>
