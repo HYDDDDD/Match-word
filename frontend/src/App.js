@@ -14,7 +14,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [setSaveData, clearLocalStorage] = useLocalStorage("Current User");
   const [currentUser, setCurrentUser] = useState([]);
-  const [seletedTreasury, setSeletedTreasury] = useState([]);
+  const [selectedTreasury, setSelectedTreasury] = useState([]);
 
   const getLocalStorage = async () => {
     try {
@@ -72,7 +72,7 @@ function App() {
         element={
           <Category
             currentUser={currentUser}
-            setSeletedTreasury={setSeletedTreasury}
+            setSelectedTreasury={setSelectedTreasury}
           />
         }
       />
@@ -85,7 +85,7 @@ function App() {
         element={
           <Prepare
             currentUser={currentUser}
-            seletedTreasury={seletedTreasury}
+            selectedTreasury={selectedTreasury}
           />
         }
       />
