@@ -3,7 +3,11 @@ import React, { useState, useEffect } from "react";
 import "./Option.css";
 import { useNavigate } from "react-router-dom";
 
+<<<<<<< HEAD
 function Option({ setSeletedTreasury }) {
+=======
+function Option({ setSelectedTreasury }) {
+>>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   const navigate = useNavigate();
   const [treasurys, setTreasurys] = useState([]);
 
@@ -16,7 +20,11 @@ function Option({ setSeletedTreasury }) {
   const findCategory = (idCategory) => {
     treasurys
       .filter((id) => id.treasury_id === idCategory)
+<<<<<<< HEAD
       .map((data) => setSeletedTreasury(data));
+=======
+      .map((data) => setSelectedTreasury(data));
+>>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
     navigate("/prepare");
   };
 

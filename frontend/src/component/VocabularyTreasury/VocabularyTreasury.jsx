@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+<<<<<<< HEAD
 import Po from "../../Picture/no2.png";
+=======
+import Po from "../../picture/no2.png";
+>>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
 import Username from "../Category/Username";
 
 function VocabularyTreasury({ currentUser }) {

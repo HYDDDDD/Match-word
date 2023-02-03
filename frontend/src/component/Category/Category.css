@@ -1,5 +1,9 @@
 #picNo2 {
+<<<<<<< HEAD
   background-image: url(../../Picture/no2.png);
+=======
+  background-image: url(../../picture/no2.png);
+>>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   /* background-size: cover; */
   height: 100vh;
   background-size: 100% 100%;

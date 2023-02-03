@@ -7,10 +7,14 @@ class Treasury(models.Model):
     treasury_title = models.CharField(max_length=10, blank=True)
     treasury_date = models.DateField(blank=True)
 <<<<<<< HEAD
+<<<<<<< HEAD
     total_vocab = models.IntegerField(blank=True)
 =======
 
 >>>>>>> 4d215fb844d1ee2cd13a053cb7573d7b2183af07
+=======
+    total_vocab = models.IntegerField(blank=True)
+>>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
     # return
     def __str__(self) -> str:
         return self.treasury_title
