@@ -10,7 +10,6 @@ function Category({ currentUser, setSeletedTreasury }) {
   return (
     <div>
       <div id="picNo2"></div>
-      <div>How are you</div>
       <Username currentUser={currentUser} />
       <Option setSeletedTreasury={setSeletedTreasury} />
       <button onClick={() => navigate("/vocabularyTreasury")}>คลัง</button>
