@@ -12,7 +12,7 @@ function Category({ currentUser, setSeletedTreasury }) {
       <div id="picNo2"></div>
       <Username currentUser={currentUser} />
       <Option setSeletedTreasury={setSeletedTreasury} />
-      <button onClick={() => navigate("/vocabularyTreasury")}>คลัง</button>
+      <button onClick={() => navigate("/vocabularyTreasury")}>Treasury</button>
     </div>
   );
 }
