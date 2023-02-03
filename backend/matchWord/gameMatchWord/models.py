@@ -6,7 +6,11 @@ class Treasury(models.Model):
     treasury_id = models.AutoField(primary_key=True, blank=True)
     treasury_title = models.CharField(max_length=10, blank=True)
     treasury_date = models.DateField(blank=True)
+<<<<<<< HEAD
     total_vocab = models.IntegerField(blank=True)
+=======
+
+>>>>>>> 4d215fb844d1ee2cd13a053cb7573d7b2183af07
     # return
     def __str__(self) -> str:
         return self.treasury_title

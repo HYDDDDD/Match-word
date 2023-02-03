@@ -14,7 +14,11 @@ class UserSerializer(serializers.ModelSerializer):
 class TreasurySerializer(serializers.ModelSerializer):
     class Meta:
         model = Treasury
+<<<<<<< HEAD
         fields = ('treasury_id', 'treasury_title', 'treasury_date', 'total_vocab')
+=======
+        fields = ('treasury_id', 'treasury_title', 'treasury_date')
+>>>>>>> 4d215fb844d1ee2cd13a053cb7573d7b2183af07
 
 
 class ScoreSerializer(serializers.ModelSerializer):
