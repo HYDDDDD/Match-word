@@ -1,0 +1,16 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.formRegister,
+.formLogin,
+.formEditProfile {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formLogin input {
+  margin-top: 10px;
+}

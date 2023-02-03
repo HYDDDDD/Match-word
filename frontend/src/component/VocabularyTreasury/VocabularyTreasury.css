@@ -1,0 +1,16 @@
+#picNo2 {
+    background-image:
+        url(../../Picture/no2.png);
+    /* background-size: cover; */
+    height: 100vh;
+    background-size: 100% 100%;
+    /* margin-top: -70px; */
+    /* font-size: 50px; */
+    /* background-repeat: no-repeat; */
+}
+
+.section-username {
+    margin: -732px 561px;
+    font-size: 48px;
+    font-weight: bold;
+}
