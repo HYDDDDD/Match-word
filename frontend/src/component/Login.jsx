@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "./useLocalStorage";
 
 function Login({ users, setCurrentUser }) {
+  const [getLocalStorage, setSaveData, clearLocalStorage] =
+    useLocalStorage("Current User");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -40,6 +43,11 @@ function Login({ users, setCurrentUser }) {
           (user.username === username && user.password === password) === true
         ) {
           setCurrentUser({
+            user_id: user.user_id,
+            username: user.username,
+            email: user.email,
+          });
+          setSaveData({
             user_id: user.user_id,
             username: user.username,
             email: user.email,

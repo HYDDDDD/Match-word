@@ -1,8 +1,11 @@
 import React from "react";
 import "./Username.css";
 import Photo from "../../Picture/no1.png";
+<<<<<<< HEAD
 import Sound from "../../Picture/no6.png";
 import Thai from "../../Picture/no7.png";
+=======
+>>>>>>> f6a134eccf02194e8422f1f996b72eadcbfc3b51
 
 function Username({ currentUser }) {
   return (

@@ -12,16 +12,30 @@ import Prepare from "./component/Prepare/Prepare";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [setSaveData, clearLocalStorage] = useLocalStorage("Current User");
+  const [getLocalStorage, setSaveData, clearLocalStorage] =
+    useLocalStorage("Current User");
   const [currentUser, setCurrentUser] = useState([]);
-  const [seletedTreasury, setSeletedTreasury] = useState([]);
+  const [seletedTreasury, setSelectedTreasury] = useState([]);
 
-  const getLocalStorage = async () => {
+  const getLocalStorageUser = async () => {
     try {
       const local = await localStorage.getItem("Current User");
 
       if (local) {
         await setCurrentUser(JSON.parse(local));
+        return JSON.parse(local);
+      }
+    } catch (error) {
+      return undefined;
+    }
+  };
+
+  const getLocalStorageTreasury = async () => {
+    try {
+      const local = await localStorage.getItem("Treasury");
+
+      if (local) {
+        await setSelectedTreasury(JSON.parse(local));
         return JSON.parse(local);
       }
     } catch (error) {
@@ -41,14 +55,15 @@ function App() {
   useEffect(() => {
     // clearLocalStorage();
     getAllUsers();
-    getLocalStorage();
+    getLocalStorageUser();
+    getLocalStorageTreasury();
   }, []);
 
-  useEffect(() => {
-    setSaveData(currentUser);
-  }, [setSaveData]);
+  // useEffect(() => {
+  //   setSaveData(currentUser);
+  // }, [setSaveData, currentUser]);
 
-  console.log(users);
+  // console.log(users);
 
   return (
     // <>
@@ -76,7 +91,7 @@ function App() {
         element={
           <Category
             currentUser={currentUser}
-            setSeletedTreasury={setSeletedTreasury}
+            setSelectedTreasury={setSelectedTreasury}
           />
         }
       />

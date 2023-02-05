@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const useLocalStorage = (name) => {
+  // console.log(name);
   //provides 2 services.
+  const getLocalStorage = async () => {
+    try {
+      const local = await localStorage.getItem(name);
+      console.log(local);
+      if (local) {
+        // await setData(JSON.parse(local));
+        return JSON.parse(local);
+      }
+    } catch (error) {
+      return undefined;
+    }
+  };
 
   //save data.
   const setLocalStorage = async (item) => {
@@ -16,5 +29,5 @@ export const useLocalStorage = (name) => {
     return await localStorage.removeItem(name);
   };
 
-  return [setLocalStorage, removeLocalStorage];
+  return [getLocalStorage, setLocalStorage, removeLocalStorage];
 };
