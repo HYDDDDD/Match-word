@@ -1,46 +1,19 @@
-.frame-Username {
-  position: fixed;
-  width: 1150px;
-  height: 63px;
-  top: 31px;
-  left: 36px;
-}
-.img {
-  position: fixed;
-  top: 100%;
-  border: radius 25px;
-}
-.namepoint-username {
-  position: fixed;
-  top: 27px;
-  left: 110px;
-  font-size: 85%;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
+.username {
+  display: flex;
+  justify-content: space-between;
 }
 
-.icon1-username {
-<<<<<<< HEAD
-  background-image: url(../../Picture/no6.png);
-=======
-  background-image: url(../../picture/no6.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  content: "";
-  margin: -60px 999px;
+.frame-username {
+  display: flex;
+  margin: 28px 0px 28px 51px;
 }
 
-.icon2-username {
-<<<<<<< HEAD
-  background-image: url(../../Picture/no7.png);
-=======
-  background-image: url(../../picture/no7.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  content: "";
-  margin: 10px 1068px;
+.description-username {
+  color: #fff;
+  margin: -14px 0px 0px 18px;
+}
+
+.group-icon {
+  display: flex;
+  margin: 28px 51px 0px 0px;
 }

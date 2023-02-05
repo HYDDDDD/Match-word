@@ -1,19 +1,34 @@
 #picNo2 {
-<<<<<<< HEAD
   background-image: url(../../Picture/no2.png);
-=======
-  background-image: url(../../picture/no2.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   /* background-size: cover; */
-  height: 100vh;
-  background-size: 100% 100%;
+  /* height: 100vh;
+  background-size: 100% 100%; */
   /* margin-top: -70px; */
   /* font-size: 50px; */
   /* background-repeat: no-repeat; */
+  /* position: fixed; */
+  background-position: center;
+  background-size: cover;
+  height: 721px;
+  margin: 0px 0px;
+  background-repeat: no-repeat;
 }
 
 .section-username {
   margin: -744px 561px;
   font-size: 48px;
+  font-weight: bold;
+}
+
+/* .Option{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+#category-details {
+  text-align: center;
+  margin-top: -116px;
+  font-size: 32px;
   font-weight: bold;
 }

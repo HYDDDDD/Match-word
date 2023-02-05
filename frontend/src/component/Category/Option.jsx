@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Option.css";
 import { useNavigate } from "react-router-dom";
 
-<<<<<<< HEAD
 function Option({ setSeletedTreasury }) {
-=======
-function Option({ setSelectedTreasury }) {
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   const navigate = useNavigate();
   const [treasurys, setTreasurys] = useState([]);
 
@@ -20,11 +16,7 @@ function Option({ setSelectedTreasury }) {
   const findCategory = (idCategory) => {
     treasurys
       .filter((id) => id.treasury_id === idCategory)
-<<<<<<< HEAD
       .map((data) => setSeletedTreasury(data));
-=======
-      .map((data) => setSelectedTreasury(data));
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
     navigate("/prepare");
   };
 
@@ -42,12 +34,12 @@ function Option({ setSelectedTreasury }) {
         </div>
         <div className="iconplay-Option-one"></div>
         <div className="numberword-Option-one">
-          <p>
+          <p id="numberword-one">
             {treasurys
               .filter((id) => id.treasury_id === 1)
               .map((data) => data.total_vocab)}
           </p>
-          <p>word</p>
+          <p id="word-one">word</p>
         </div>
 
         <div className="Option-two"></div>
@@ -61,12 +53,12 @@ function Option({ setSelectedTreasury }) {
         </div>
         <div className="iconplay-Option-two"></div>
         <div className="numberword-Option-two">
-          <p>
+          <p id="numberword-two">
             {treasurys
               .filter((id) => id.treasury_id === 2)
               .map((data) => data.total_vocab)}
           </p>
-          <p>word</p>
+          <p id="word-two">word</p>
         </div>
 
         <div className="Option-three"></div>
@@ -76,8 +68,8 @@ function Option({ setSelectedTreasury }) {
         </div>
         <div className="iconplay-Option-three"></div>
         <div className="numberword-Option-three">
-          <p>10</p>
-          <p>word</p>
+          <p id="numberword-three">10</p>
+          <p id="word-three">word</p>
         </div>
       </div>
     </>

@@ -8,10 +8,15 @@ function Category({ currentUser, setSeletedTreasury }) {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div id="picNo2"></div>
+    <div id="picNo2">
       <Username currentUser={currentUser} />
-      <Option setSeletedTreasury={setSeletedTreasury} />
+      <div id="category-details">
+        <p>Category</p>
+      </div>
+
+      <div className="Option">
+        <Option setSeletedTreasury={setSeletedTreasury} />
+      </div>
       <button onClick={() => navigate("/vocabularyTreasury")}>Treasury</button>
     </div>
   );

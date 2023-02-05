@@ -1,167 +1,189 @@
 .frame-Option-one {
   width: 665px;
-  height: 518px;
-  position: fixed;
-  top: 25%;
-  left: 350px;
+  height: 439px;
+  /* อันนี้ทำให้ไม่สามารถขยับไปไหนได้*/
+  /* position: fixed;  */
+  /* top: 25%;
+  left: 380px; */
   z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 113px;
 }
+
 
 .Option-one {
   background-color: #004b6b;
-  width: 530px;
+  width: 563px;
   height: 130px;
-  position: absolute;
-  top: 0%;
-  left: 0px;
-  z-index: -1;
   border-radius: 50px 50px 50px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:inset -24px 24px 48px rgba(79, 214, 255, 0.587);
 }
 
 .photo-Option-one {
-<<<<<<< HEAD
   background-image: url(../../Picture/no3.png);
-=======
-  background-image: url(../../picture/no3.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   background-size: cover;
   width: 170px;
   height: 170px;
-  margin: -42px -38px;
+  margin: -159px 25px;
 }
 
 /* Caveat Brush */
 .name-Option-one {
   color: #fff;
-  margin: -120px 188px;
+  margin: 58px 214px;
   font-size: 30px;
   font-weight: bold;
 }
 
 .iconplay-Option-one {
-<<<<<<< HEAD
   background-image: url(../../Picture/no8.png);
-=======
-  background-image: url(../../picture/no8.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   /* background-size: 36px; */
   width: 36px;
   height: 36px;
   content: "";
-  margin: 83px 503px;
+  margin: -91px 437px;
 }
 
 .numberword-Option-one {
-  background-color: aquamarine;
+  background-color: #FFCF66;
   width: 67.62px;
   height: 66.52px;
   border-radius: 11px 11px 11px 11px;
-  margin: -134px 553px;
-  text-align: center;
+  margin: 32px 495px;
+  box-shadow:inset -12px 12px 48px rgb(255 134 0);
+
+}
+
+#numberword-one {
+  padding-top: 17px;
   font-size: 24px;
   font-weight: bold;
+  margin: 3px 0px 0px 26px;
+}
+
+#word-one {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 21px 13px;
 }
 
 .Option-two {
   background-color: #004b6b;
-  width: 665px;
-  height: 139.5px;
-  position: absolute;
+  width: 563px;
+  height: 130px;
+  /* position: absolute;
   top: 35%;
   left: 0px;
-  z-index: -1;
+  z-index: -1; */
   border-radius: 50px 50px 50px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 62px;
+  box-shadow:inset -24px 24px 48px rgba(79, 214, 255, 0.587);
 }
 
 .photo-Option-two {
-<<<<<<< HEAD
   background-image: url(../../Picture/no4.png);
-=======
-  background-image: url(../../picture/no4.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   background-size: cover;
   width: 170px;
   height: 170px;
-  margin: 173px -26px;
+  margin: -147px 9px;
 }
 
 .name-Option-two {
-  margin: -258px 188px;
-  font-size: 35px;
+  margin: -157px 215px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .iconplay-Option-two {
-<<<<<<< HEAD
   background-image: url(../../Picture/no8.png);
-=======
-  background-image: url(../../picture/no8.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   width: 36px;
   height: 36px;
   content: "";
-  margin: 214px 503px;
+  margin: 123px 435px;
 }
 
 .numberword-Option-two {
-  background-color: aquamarine;
+  background-color: #FFCF66;
   width: 67.62px;
   height: 66.52px;
   border-radius: 11px 11px 11px 11px;
-  margin: -266px 553px;
-  text-align: center;
+  margin: -171px 495px;
+  box-shadow:inset -12px 12px 48px rgb(255 134 0);
+}
+
+#numberword-two {
+  padding-top: 17px;
   font-size: 24px;
   font-weight: bold;
+  margin: 3px 0px 0px 26px;
+}
+
+#word-two {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 21px 13px;
 }
 
 .Option-three {
   background-color: #004b6b;
-  width: 665px;
-  height: 139.5px;
-  position: absolute;
+  width: 563px;
+  height: 130px;
+  /* position: absolute;
   top: 70%;
   left: 0px;
-  z-index: -1;
+  z-index: -1; */
   border-radius: 50px 50px 50px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 234px;
+  box-shadow:inset -24px 24px 48px rgba(79, 214, 255, 0.587);
 }
 
 .photo-Option-three {
-<<<<<<< HEAD
   background-image: url(../../Picture/no5.png);
-=======
-  background-image: url(../../picture/no5.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   background-size: cover;
   width: 170px;
   height: 170px;
-  margin: 306px -26px;
+  margin: -153px 22px;
 }
 
 .name-Option-three {
-  margin: -387px 188px;
-  font-size: 35px;
+  margin: -118px 208px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .iconplay-Option-three {
-<<<<<<< HEAD
   background-image: url(../../Picture/no8.png);
-=======
-  background-image: url(../../picture/no8.png);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
   width: 36px;
   height: 36px;
   content: "";
-  margin: 347px 503px;
+  margin: 83px 438px;
 }
 
 .numberword-Option-three {
-  background-color: aquamarine;
+  background-color: #FFCF66;
   width: 67.62px;
   height: 66.52px;
   border-radius: 11px 11px 11px 11px;
-  margin: -400px 553px;
-  text-align: center;
+  margin: -133px 496px;
+  box-shadow:inset -12px 12px 48px rgb(255 134 0);
+}
+
+#numberword-three {
+  padding-top: 17px;
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
+}
+
+#word-three {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 21px 13px;
 }

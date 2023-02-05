@@ -14,11 +14,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [setSaveData, clearLocalStorage] = useLocalStorage("Current User");
   const [currentUser, setCurrentUser] = useState([]);
-<<<<<<< HEAD
   const [seletedTreasury, setSeletedTreasury] = useState([]);
-=======
-  const [selectedTreasury, setSelectedTreasury] = useState([]);
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
 
   const getLocalStorage = async () => {
     try {
@@ -55,21 +51,15 @@ function App() {
   console.log(users);
 
   return (
+    // <>
+    //   <Category />
+    //   {/* <VocabularyTreasury /> */}
+    // </>
     <Routes>
       {/* path="/" หน้าแรกที่ขึ้นมาแสดง */}
       <Route
         path="/"
-<<<<<<< HEAD
-        // element={<Login users={users} setCurrentUser={setCurrentUser} />}
-        element={
-          <Category
-            currentUser={currentUser}
-            setSeletedTreasury={setSeletedTreasury}
-          />
-        }
-=======
         element={<Login users={users} setCurrentUser={setCurrentUser} />}
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
       />
       <Route path="/register" element={<Register />} />
       <Route
@@ -81,26 +71,15 @@ function App() {
           />
         }
       />
-<<<<<<< HEAD
-      {/* <Route
-=======
       <Route
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
         path="/category"
         element={
           <Category
             currentUser={currentUser}
-<<<<<<< HEAD
             setSeletedTreasury={setSeletedTreasury}
           />
         }
-      /> */}
-=======
-            setSelectedTreasury={setSelectedTreasury}
-          />
-        }
       />
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
       <Route
         path="/vocabularyTreasury"
         element={<VocabularyTreasury currentUser={currentUser} />}
@@ -110,11 +89,7 @@ function App() {
         element={
           <Prepare
             currentUser={currentUser}
-<<<<<<< HEAD
             seletedTreasury={seletedTreasury}
-=======
-            selectedTreasury={selectedTreasury}
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
           />
         }
       />

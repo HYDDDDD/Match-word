@@ -1,26 +1,30 @@
 import React from "react";
 import "./Username.css";
-<<<<<<< HEAD
 import Photo from "../../Picture/no1.png";
-=======
-import Photo from "../../picture/no1.png";
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
+import Sound from "../../Picture/no6.png";
+import Thai from "../../Picture/no7.png";
 
 function Username({ currentUser }) {
   return (
-    <>
-      <div className="frame-Username">
-        <div>
+    <div className="username">
+      <div className="frame-username">
+        <div className="photo-username">
           <img width="63px" height="63px" src={Photo} alt="" />
         </div>
-        <div className="namepoint-username">
+        <div className="description-username">
           <p>{currentUser.username}</p>
           <p>Point : 100</p>
         </div>
-        <div className="icon1-username"></div>
-        <div className="icon2-username"></div>
       </div>
-    </>
+      <div className="group-icon">
+        <div className="icon1-username">
+          <img width="63px" height="63px" src={Sound} alt="" />
+        </div>
+        <div className="icon2-username">
+          <img width="63px" height="63px" src={Thai} alt="" />
+        </div>
+      </div>
+    </div>
   );
 }
 

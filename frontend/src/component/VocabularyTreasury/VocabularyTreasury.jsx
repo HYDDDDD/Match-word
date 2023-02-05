@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-<<<<<<< HEAD
-import Po from "../../Picture/no2.png";
-=======
-import Po from "../../picture/no2.png";
->>>>>>> 7cf0c02fd8f3abe7184f7bc35fd9f48104515c81
 import Username from "../Category/Username";
+import "./VocabularyTreasury.css"
+import "../Category/Option.css"
 
 function VocabularyTreasury({ currentUser }) {
   const navigate = useNavigate();
@@ -19,11 +16,11 @@ function VocabularyTreasury({ currentUser }) {
   }, []);
 
   return (
-    <>
-      <div>
-        <img width="1490px" height="735px" src={Po} alt="" />
-      </div>
+    <div id="picNo2">
       <Username currentUser={currentUser} />
+      <div id="VocabularyTreasury-details">
+        <p>Vocabulary Treasury</p>
+      </div>
       <div className="frame-Option-one">
         <div className="Option-one"></div>
         <div className="photo-Option-one"></div>
@@ -33,7 +30,7 @@ function VocabularyTreasury({ currentUser }) {
               .filter((id) => id.treasury_id === 1)
               .map((data) => data.treasury_title)}
           </p>
-          <p>
+          <p id="dateplay-details">
             Last played date :{" "}
             {treasurys
               .filter((id) => id.treasury_id === 1)
@@ -42,12 +39,12 @@ function VocabularyTreasury({ currentUser }) {
         </div>
         <div className="iconplay-Option-one"></div>
         <div className="numberword-Option-one">
-          <p>
+          <p id="numberword-one">
             {treasurys
               .filter((id) => id.treasury_id === 1)
               .map((data) => data.total_vocab)}
           </p>
-          <p>word</p>
+          <p id="word-one">word</p>
         </div>
 
         <div className="Option-two"></div>
@@ -58,7 +55,7 @@ function VocabularyTreasury({ currentUser }) {
               .filter((id) => id.treasury_id === 2)
               .map((data) => data.treasury_title)}
           </p>
-          <p>
+          <p id="dateplay-details">
             Last played date :{" "}
             {treasurys
               .filter((id) => id.treasury_id === 1)
@@ -67,26 +64,27 @@ function VocabularyTreasury({ currentUser }) {
         </div>
         <div className="iconplay-Option-two"></div>
         <div className="numberword-Option-two">
-          <p>
+          <p id="numberword-two">
             {treasurys
               .filter((id) => id.treasury_id === 2)
               .map((data) => data.total_vocab)}
           </p>
-          <p>word</p>
+          <p id="word-two">word</p>
         </div>
 
         <div className="Option-three"></div>
         <div className="photo-Option-three"></div>
         <div className="name-Option-three">
           <p>GameWord</p>
+          <p id="dateplay-details">date</p>
         </div>
         <div className="iconplay-Option-three"></div>
         <div className="numberword-Option-three">
-          <p>10</p>
-          <p>word</p>
+          <p id="numberword-three">10</p>
+          <p id="word-three">word</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
