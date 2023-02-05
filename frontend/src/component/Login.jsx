@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "./useLocalStorage";
 
 function Login({ users, setCurrentUser }) {
+  const [getLocalStorage, setSaveData, clearLocalStorage] =
+    useLocalStorage("Current User");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -44,13 +47,16 @@ function Login({ users, setCurrentUser }) {
             username: user.username,
             email: user.email,
           });
+          setSaveData({
+            user_id: user.user_id,
+          });
         }
       });
       navigate("/editProfile");
     } else {
       alert("Invalid username or password.");
     }
-  };
+  }; 
 
   return (
     <>

@@ -2,9 +2,12 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./Option.css";
 import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../useLocalStorage";
 
 function Option({ setSelectedTreasury }) {
   const navigate = useNavigate();
+  const [getLocalStorage, setSaveData, clearLocalStorage] =
+    useLocalStorage("Treasury");
   const [treasurys, setTreasurys] = useState([]);
 
   useEffect(() => {
@@ -16,8 +19,11 @@ function Option({ setSelectedTreasury }) {
   const findCategory = (idCategory) => {
     treasurys
       .filter((id) => id.treasury_id === idCategory)
-      .map((data) => setSelectedTreasury(data));
-    navigate("/prepare");
+      .map((data) => {
+        setSelectedTreasury(data);
+        setSaveData(data);
+      });
+    // navigate("/prepare");
   };
 
   return (

@@ -12,11 +12,12 @@ import Prepare from "./component/Prepare/Prepare";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [setSaveData, clearLocalStorage] = useLocalStorage("Current User");
+  const [getLocalStorage, setSaveData, clearLocalStorage] =
+    useLocalStorage("Current User");
   const [currentUser, setCurrentUser] = useState([]);
   const [selectedTreasury, setSelectedTreasury] = useState([]);
 
-  const getLocalStorage = async () => {
+  const getLocalStorageUser = async () => {
     try {
       const local = await localStorage.getItem("Current User");
 
@@ -41,14 +42,17 @@ function App() {
   useEffect(() => {
     // clearLocalStorage();
     getAllUsers();
-    getLocalStorage();
+  }, []);
+
+  useEffect(() => {
+    getLocalStorageUser();
   }, []);
 
   useEffect(() => {
     setSaveData(currentUser);
-  }, [setSaveData]);
+  }, [setSaveData, currentUser]);
 
-  console.log(users);
+  // console.log(users);
 
   return (
     <Routes>

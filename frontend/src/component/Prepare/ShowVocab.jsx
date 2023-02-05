@@ -25,6 +25,7 @@ function ShowVocab({ selectedTreasury }) {
   }, []);
 
   // totalVocab.filter((id) => console.log(id.treasury_id[0] === ));
+  // console.log(totalVocab);
 
   return (
     <div>
