@@ -23,7 +23,7 @@ function Option({ setSelectedTreasury }) {
         setSelectedTreasury(data);
         setSaveData(data);
       });
-    // navigate("/prepare");
+    navigate("/prepare");
   };
 
   return (

@@ -30,6 +30,19 @@ function App() {
     }
   };
 
+  const getLocalStorageTreasury = async () => {
+    try {
+      const local = await localStorage.getItem("Treasury");
+
+      if (local) {
+        await setSelectedTreasury(JSON.parse(local));
+        return JSON.parse(local);
+      }
+    } catch (error) {
+      return undefined;
+    }
+  };
+
   const getAllUsers = () => {
     axios
       .get("http://127.0.0.1:8000/users/")
@@ -42,15 +55,13 @@ function App() {
   useEffect(() => {
     // clearLocalStorage();
     getAllUsers();
-  }, []);
-
-  useEffect(() => {
     getLocalStorageUser();
+    getLocalStorageTreasury();
   }, []);
 
-  useEffect(() => {
-    setSaveData(currentUser);
-  }, [setSaveData, currentUser]);
+  // useEffect(() => {
+  //   setSaveData(currentUser);
+  // }, [setSaveData, currentUser]);
 
   // console.log(users);
 

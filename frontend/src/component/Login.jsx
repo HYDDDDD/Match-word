@@ -49,6 +49,8 @@ function Login({ users, setCurrentUser }) {
           });
           setSaveData({
             user_id: user.user_id,
+            username: user.username,
+            email: user.email,
           });
         }
       });
@@ -56,7 +58,7 @@ function Login({ users, setCurrentUser }) {
     } else {
       alert("Invalid username or password.");
     }
-  }; 
+  };
 
   return (
     <>
