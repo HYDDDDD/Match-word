@@ -2,30 +2,26 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 function ShowVocab({ selectedTreasury }) {
-  console.log(selectedTreasury);
-  const [totalVocab, setTotalVocab] = useState([]);
-
-  // useEffect(() => {
-  //   axios.get("http://127.0.0.1:8000/treasurys/").then((data) => {
-  //     setTreasurys(data.data);
-  //   });
-  // }, []);
-
-  // const findCategory = (idCategory) => {
-  //   treasurys
-  //     .filter((id) => id.treasury_id === idCategory)
-  //     .map((data) => setSeletedTreasury(data));
-  //   navigate("/prepare");
-  // };
+  const [getVocabs, setGetVocabs] = useState([]);
+  const [vocabs, setVocabs] = useState([]);
 
   useEffect(() => {
     axios.get("http://127.0.0.1:8000/vocabularys/").then((data) => {
-      setTotalVocab(data.data);
+      setGetVocabs(data.data);
     });
   }, []);
 
-  // totalVocab.filter((id) => console.log(id.treasury_id[0] === ));
-  // console.log(totalVocab);
+  useEffect(() => {
+    let data = getVocabs
+      .filter((data) => data.treasury_id[0] === selectedTreasury.treasury_id)
+      .map((data) => {
+        return data;
+      });
+
+    setVocabs(data);
+  }, [getVocabs]);
+
+  // console.log(vocabs);
 
   return (
     <div>
@@ -35,7 +31,16 @@ function ShowVocab({ selectedTreasury }) {
         <div>{selectedTreasury.total_vocab} Word</div>
         <div>Edit</div>
       </div>
-      <div></div>
+      <div>
+        {vocabs.map((vocab, index) => {
+          return (
+            <div key={index}>
+              {index + 1}. {vocab.vocabulary} - {vocab.thai_vocab}
+            </div>
+          );
+        })}
+        <button>GO to Play</button>
+      </div>
     </div>
   );
 }
