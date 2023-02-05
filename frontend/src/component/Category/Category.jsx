@@ -1,7 +1,7 @@
 import React from "react";
 import Username from "./Username";
 import "./Category.css";
-import Po from "../../picture/no2.png";
+import Po from "../../Picture/no2.png";
 import Option from "./Option";
 import { useNavigate } from "react-router-dom";
 

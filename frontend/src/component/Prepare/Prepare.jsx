@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocalStorage } from "../useLocalStorage";
 import Username from "../Category/Username";
-import Po from "../../picture/no2.png";
+import Po from "../../Picture/no2.png";
 import ShowVocab from "./ShowVocab";
 
 function Prepare({ currentUser, selectedTreasury }) {

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Username.css";
-import Photo from "../../picture/no1.png";
+import Photo from "../../Picture/no1.png";
 
 function Username({ currentUser }) {
   return (
