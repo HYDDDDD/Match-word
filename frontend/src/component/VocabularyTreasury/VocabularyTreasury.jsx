@@ -17,6 +17,7 @@ function VocabularyTreasury({ currentUser }) {
 
   return (
     <div id="picNo2">
+      <div>Goolge</div>
       <Username currentUser={currentUser} />
       <div id="VocabularyTreasury-details">
         <p>Vocabulary Treasury</p>
