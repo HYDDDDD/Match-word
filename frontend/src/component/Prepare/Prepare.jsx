@@ -7,6 +7,7 @@ function Prepare({ currentUser, selectedTreasury }) {
 
   return (
     <div id="picNo2">
+      hohohohohohohoho
       <Username currentUser={currentUser} />
       <ShowVocab selectedTreasury={selectedTreasury} />
     </div>
