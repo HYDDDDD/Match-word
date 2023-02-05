@@ -1,0 +1,75 @@
+#prepare-details {
+    text-align: center;
+    margin-top: -116px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.details-boxframe {
+    background-color: #91a5ae;
+    width: 640px;
+    height: 497px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 39px;
+}
+
+.photo-showVo {
+    background-image: url(../../Picture/no3.png);
+    background-size: cover;
+    width: 170px;
+    height: 170px;
+    margin: -528px -1px;
+  }
+
+.details-boxbig {
+    background-color: #ffffff;
+    width: 639px;
+    height: 498px;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:inset -12px 12px 48px rgb(9, 124, 159);
+}
+
+#name-showVo {
+    color: black;
+    margin: 427px 185px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#date-showVo {
+    color: rgb(0, 0, 0);
+    margin: -427px 187px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#boxword-showVo {
+    background-color: #FFCF66;
+    width: 67.62px;
+    height: 66.52px;
+    border-radius: 11px 11px 11px 11px;
+    margin: 363px 426px;
+    box-shadow:inset -12px 12px 48px rgb(255 134 0);
+}
+
+#boxedit-showVo {
+    background-color: #507214;
+    width: 67.62px;
+    height: 66.52px;
+    border-radius: 11px 11px 11px 11px;
+    margin: -430px 520px;
+    box-shadow:inset -12px 12px 48px rgb(116, 214, 11);
+}
+
+#photoedit-showVo {
+    background-image: url(../../Picture/Edit.png);
+    background-size: cover;
+    padding-top: 17px;
+    width: 25px;
+    height: 11px;
+    margin: 3px 0px 0px 26px;
+}

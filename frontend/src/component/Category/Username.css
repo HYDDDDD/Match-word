@@ -1,0 +1,19 @@
+.username {
+  display: flex;
+  justify-content: space-between;
+}
+
+.frame-username {
+  display: flex;
+  margin: 28px 0px 28px 51px;
+}
+
+.description-username {
+  color: #fff;
+  margin: -14px 0px 0px 18px;
+}
+
+.group-icon {
+  display: flex;
+  margin: 28px 51px 0px 0px;
+}
