@@ -9,6 +9,7 @@ import EditProfile from "./component/EditProfile";
 import Category from "./component/Category/Category";
 import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasury";
 import Prepare from "./component/Prepare/Prepare";
+import EditVocabulary from "./component/EditVocabulary/EditVocabulary";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -66,10 +67,6 @@ function App() {
   // console.log(users);
 
   return (
-    // <>
-    //   <Category />
-    //   {/* <VocabularyTreasury /> */}
-    // </>
     <Routes>
       {/* path="/" หน้าแรกที่ขึ้นมาแสดง */}
       <Route
@@ -103,6 +100,15 @@ function App() {
         path="/prepare"
         element={
           <Prepare
+            currentUser={currentUser}
+            selectedTreasury={selectedTreasury}
+          />
+        }
+      />
+      <Route
+        path="/editVocabulary"
+        element={
+          <EditVocabulary
             currentUser={currentUser}
             selectedTreasury={selectedTreasury}
           />

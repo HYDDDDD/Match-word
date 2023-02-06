@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Username from "../Category/Username";
-import "./VocabularyTreasury.css"
-import "../Category/Option.css"
+import "./VocabularyTreasury.css";
+import "../Category/Option.css";
 
 function VocabularyTreasury({ currentUser }) {
   const navigate = useNavigate();

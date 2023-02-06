@@ -9,10 +9,15 @@ function Option({ setSelectedTreasury }) {
   const [getLocalStorage, setSaveData, clearLocalStorage] =
     useLocalStorage("Treasury");
   const [treasurys, setTreasurys] = useState([]);
+  const [vocabs, setVocabs] = useState([]);
 
   useEffect(() => {
     axios.get("http://127.0.0.1:8000/treasurys/").then((data) => {
       setTreasurys(data.data);
+    });
+
+    axios.get("http://127.0.0.1:8000/vocabularys/").then((data) => {
+      setVocabs(data.data);
     });
   }, []);
 
@@ -41,9 +46,7 @@ function Option({ setSelectedTreasury }) {
         <div className="iconplay-Option-one"></div>
         <div className="numberword-Option-one">
           <p id="numberword-one">
-            {treasurys
-              .filter((id) => id.treasury_id === 1)
-              .map((data) => data.total_vocab)}
+            {vocabs.filter((id) => id.treasury_id[0] === 1).length}
           </p>
           <p id="word-one">word</p>
         </div>
@@ -60,9 +63,7 @@ function Option({ setSelectedTreasury }) {
         <div className="iconplay-Option-two"></div>
         <div className="numberword-Option-two">
           <p id="numberword-two">
-            {treasurys
-              .filter((id) => id.treasury_id === 2)
-              .map((data) => data.total_vocab)}
+            {vocabs.filter((id) => id.treasury_id[0] === 2).length}
           </p>
           <p id="word-two">word</p>
         </div>
