@@ -9,6 +9,6 @@ urlpatterns = [
     path('scores/', views.ScoreList.as_view(), name='score-list'),
     path('scores/<int:pk>', views.DetailScore.as_view()),
     path('vocabularys/', views.VocabularyList.as_view(), name='vocabulary-list'),
-    path('vocabulary/<int:pk>', views.DetailVocabulary.as_view()),
+    path('vocabularys/<int:pk>', views.DetailVocabulary.as_view()),
     path('', views.api_root)
 ]

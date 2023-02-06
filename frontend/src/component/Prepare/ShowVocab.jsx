@@ -24,6 +24,8 @@ function ShowVocab({ selectedTreasury }) {
     setVocabs(data);
   }, [getVocabs]);
 
+  // console.log(vocabs);
+
   return (
     <>
       <div className="details-boxframe">

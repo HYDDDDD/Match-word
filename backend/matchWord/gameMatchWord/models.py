@@ -15,6 +15,7 @@ class Treasury(models.Model):
 
 class Vocabulary(models.Model):
     # Create table Vocabulary
+    vocabulary_id = models.AutoField(primary_key=True)
     vocabulary = models.CharField(max_length=30, blank=True)
     thai_vocab = models.CharField(max_length=30, blank=True)
     treasury_id = models.ManyToManyField(Treasury)

@@ -4,7 +4,7 @@ import ShowVocab from "./ShowVocab";
 import "./Prepare.css";
 
 function Prepare({ currentUser, selectedTreasury }) {
-  
+  // console.log(selectedTreasury);
   return (
     <div id="picNo2">
       <Username currentUser={currentUser} />

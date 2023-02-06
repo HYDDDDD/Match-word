@@ -1,14 +1,18 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Vocab({ selectedTreasury }) {
+  // console.log(selectedTreasury.treasury_id);
+  const navigate = useNavigate();
   const [getVocabs, setGetVocabs] = useState([]);
   const [vocabs, setVocabs] = useState([]);
-  const id = selectedTreasury.treasury_id;
+  // const [id, setId] = useState();
+  // const id = selectedTreasury.treasury_id;
   const [vocab, setVocab] = useState({
     vocabulary: "",
     translation: "",
-    treasury_id: [id],
+    treasury_id: [selectedTreasury.treasury_id],
   });
 
   useEffect(() => {
@@ -21,6 +25,7 @@ function Vocab({ selectedTreasury }) {
     let data = getVocabs
       .filter((data) => data.treasury_id[0] === selectedTreasury.treasury_id)
       .map((data) => {
+        // setId(selectedTreasury.treasury_id);
         return data;
       });
 
@@ -33,17 +38,25 @@ function Vocab({ selectedTreasury }) {
     let url = "http://127.0.0.1:8000/vocabularys/";
 
     axios
-      .post(url, vocab)
+      .post(url, vocab, {
+        headers: { "content-type": "multipart/form-data" },
+      })
       .then(() => {
         setVocab({
           vocabulary: "",
           translation: "",
-          treasury_id: [id],
+          treasury_id: [],
         });
 
-        refreshPage();
+        navigate("/prepare");
       })
       .catch((err) => console.log(err));
+  };
+
+  const deleteVocab = (id) => {
+    axios
+      .delete(`http://127.0.0.1:8000/vocabularys/${id}`)
+      .then(() => refreshPage());
   };
 
   const refreshPage = () => {
@@ -52,6 +65,8 @@ function Vocab({ selectedTreasury }) {
 
   //   vocabs.map((vocab) => console.log(vocab));
   console.log(vocab);
+  console.log(vocab.treasury_id);
+  // console.log(id);
 
   return (
     <div>
@@ -64,7 +79,7 @@ function Vocab({ selectedTreasury }) {
       <div>
         {vocabs.map((vocab, index) => {
           return (
-            <div key={index} onClick={() => console.log(vocab.vocabulary)}>
+            <div key={index} onClick={() => deleteVocab(vocab.vocabulary_id)}>
               {index + 1}. {vocab.vocabulary} - {vocab.thai_vocab}
             </div>
           );
