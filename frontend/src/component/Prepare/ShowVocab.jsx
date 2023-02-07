@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Prepare.css";
-import Ho from "../../Picture/Edit.png";
 
 function ShowVocab({ selectedTreasury }) {
+  const navigate = useNavigate();
   const [getVocabs, setGetVocabs] = useState([]);
   const [vocabs, setVocabs] = useState([]);
 
@@ -23,7 +24,7 @@ function ShowVocab({ selectedTreasury }) {
     setVocabs(data);
   }, [getVocabs]);
 
-  // console.log(selectedTreasury);
+  // console.log(vocabs);
 
   return (
     <>
@@ -35,12 +36,20 @@ function ShowVocab({ selectedTreasury }) {
           Last played date : {selectedTreasury.treasury_date}
         </div>
         <div id="boxword-showVo">
-          <div id="numberword-one">{selectedTreasury.total_vocab}</div>
+          <div id="numberword-one">
+            {
+              vocabs.filter(
+                (id) => id.treasury_id[0] === selectedTreasury.treasury_id
+              ).length
+            }
+          </div>
           <p id="word-one">Word</p>
         </div>
         <div id="boxedit-showVo">
-          <img id="photoedit-showVo" src={Ho} alt=""></img>
-          <div id="word-one">Edit</div>
+          <div id="photoedit-showVo"></div>
+          <div id="word-one" onClick={() => navigate("/editVocabulary")}>
+            Edit
+          </div>
         </div>
       </div>
       <div className="details-boxsmall">

@@ -14,7 +14,8 @@ class UserSerializer(serializers.ModelSerializer):
 class TreasurySerializer(serializers.ModelSerializer):
     class Meta:
         model = Treasury
-        fields = ('treasury_id', 'treasury_title', 'treasury_date', 'total_vocab')
+        fields = ('treasury_id', 'treasury_title',
+                  'treasury_date', 'total_vocab')
 
 
 class ScoreSerializer(serializers.ModelSerializer):
@@ -26,4 +27,4 @@ class ScoreSerializer(serializers.ModelSerializer):
 class VocabularySerializer(serializers.ModelSerializer):
     class Meta:
         model = Vocabulary
-        fields = ('vocabulary', 'thai_vocab', 'vocab_type','treasury_id')
+        fields = ('vocabulary_id','vocabulary', 'thai_vocab', 'treasury_id')

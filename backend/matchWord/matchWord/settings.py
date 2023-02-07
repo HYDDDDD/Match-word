@@ -88,7 +88,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'CHARSET': 'utf8',
+        'COLLATION': 'utf8_general_ci',
+    },
+    # 'TEST': {
+    #     'CHARSET': 'utf8',
+    #     'COLLATION': 'utf8_general_ci',
+    # }
 }
 
 
