@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function Category({ currentUser, setSelectedTreasury }) {
   const navigate = useNavigate();
-
+  
   return (
     <div id="picNo2">
       <Username currentUser={currentUser} />

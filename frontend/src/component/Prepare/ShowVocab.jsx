@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import "./Prepare.css"
+import "./Prepare.css";
+import Ho from "../../Picture/Edit.png";
 
 function ShowVocab({ selectedTreasury }) {
   const [getVocabs, setGetVocabs] = useState([]);
@@ -30,25 +31,29 @@ function ShowVocab({ selectedTreasury }) {
         <div className="details-boxbig"></div>
         <div className="photo-showVo"></div>
         <div id="name-showVo">{selectedTreasury.treasury_title}</div>
-        <div id="date-showVo">Last played date : {selectedTreasury.treasury_date}</div>
+        <div id="date-showVo">
+          Last played date : {selectedTreasury.treasury_date}
+        </div>
         <div id="boxword-showVo">
-           <div id="numberword-one">{selectedTreasury.total_vocab}</div>
-           <p id="word-one">Word</p>
+          <div id="numberword-one">{selectedTreasury.total_vocab}</div>
+          <p id="word-one">Word</p>
         </div>
         <div id="boxedit-showVo">
-           <div id="photoedit-showVo"></div>
-           <div id="word-one">Edit</div>
+          <img id="photoedit-showVo" src={Ho} alt=""></img>
+          <div id="word-one">Edit</div>
         </div>
       </div>
-      <div>
+      <div className="details-boxsmall">
         {vocabs.map((vocab, index) => {
           return (
-            <div key={index}>
+            <div id="showvocad" key={index}>
               {index + 1}. {vocab.vocabulary} - {vocab.thai_vocab}
             </div>
           );
         })}
-        <button>GO to Play</button>
+      </div>
+      <div>
+        <button id="goplay-showVocab">GO to Play</button>
       </div>
     </>
   );
