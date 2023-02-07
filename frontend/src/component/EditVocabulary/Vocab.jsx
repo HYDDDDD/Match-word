@@ -7,8 +7,7 @@ function Vocab({ selectedTreasury }) {
   const navigate = useNavigate();
   const [getVocabs, setGetVocabs] = useState([]);
   const [vocabs, setVocabs] = useState([]);
-  // const [id, setId] = useState();
-  // const id = selectedTreasury.treasury_id;
+  const [id, setId] = useState();
   const [vocab, setVocab] = useState({
     vocabulary: "",
     translation: "",
@@ -32,14 +31,14 @@ function Vocab({ selectedTreasury }) {
     setVocabs(data);
   }, [getVocabs]);
 
-  const addVocab = (event) => {
-    event.preventDefault();
-
+  const addVocab = async () => {
     let url = "http://127.0.0.1:8000/vocabularys/";
 
-    axios
+    await axios
       .post(url, vocab, {
-        headers: { "content-type": "multipart/form-data" },
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
       })
       .then(() => {
         setVocab({
@@ -79,7 +78,7 @@ function Vocab({ selectedTreasury }) {
       <div>
         {vocabs.map((vocab, index) => {
           return (
-            <div key={index} onClick={() => deleteVocab(vocab.vocabulary_id)}>
+            <div key={index} onClick={() => setId(vocab.vocabulary_id)}>
               {index + 1}. {vocab.vocabulary} - {vocab.thai_vocab}
             </div>
           );
@@ -100,8 +99,15 @@ function Vocab({ selectedTreasury }) {
             value={vocab.translation}
           />
         </form>
-        <button onClick={addVocab}>Add</button>
-        <button>Delete</button>
+        <button
+          onClick={() => {
+            setVocab({ ...vocab, treasury_id: selectedTreasury.treasury_id });
+            addVocab();
+          }}
+        >
+          Add
+        </button>
+        <button onClick={() => deleteVocab(id)}>Delete</button>
       </div>
     </div>
   );
