@@ -38,9 +38,8 @@ function Vocab({ selectedTreasury }) {
         setVocab({
           vocabulary: "",
           thai_vocab: "",
-          treasury_id: [],
+          treasury_id: [selectedTreasury.treasury_id],
         });
-
         navigate("/prepare");
       })
       .catch((err) => console.log(err));
@@ -55,6 +54,8 @@ function Vocab({ selectedTreasury }) {
   const refreshPage = () => {
     window.location.reload(false);
   };
+
+  console.log(vocab);
 
   return (
     <div>
