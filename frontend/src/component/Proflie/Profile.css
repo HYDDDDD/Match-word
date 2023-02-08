@@ -1,0 +1,35 @@
+.frame-profile {
+    background-color: aliceblue;
+    width: 663px;
+    height: 160px;
+    margin: 39px 430px;
+    position: absolute;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.photo-profile {
+    background-image: url(../../Picture/no1.png);
+    width: 130px;
+    height: 130px;
+    border-radius: 118px 118px 118px 118px;
+    background-size: cover;
+    margin: 15px 26px;
+}
+
+.name-profile {
+    color: #000;
+    margin: -125px 184px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.email-profile {
+    color: #000;
+    margin: 140px 184px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.edit-profile {
+    margin: 353px 0px 0px 0px;
+}

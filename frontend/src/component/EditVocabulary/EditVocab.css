@@ -1,0 +1,169 @@
+#boxword-EditVo {
+    background-color: #507214;
+    width: 134.62px;
+    height: 66.52px;
+    border-radius: 11px 11px 11px 11px;
+    margin: 263px 426px;
+    box-shadow: inset -12px 12px 48px rgb(116, 214, 11);
+}
+
+#correct-EditVo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 19px 38px;
+}
+
+.editVo-boxbig {
+    background-color: #ffffff;
+    width: 639px;
+    height: 414px;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset -12px 12px 48px rgb(9, 124, 159);
+}
+
+.photo-editVo {
+    background-image: url(../../Picture/no3.png);
+    background-size: cover;
+    width: 170px;
+    height: 170px;
+    margin: -438px -1px;
+}
+
+#name-editVo {
+    color: black;
+    margin: 329px 185px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#date-editVo {
+    color: rgb(0, 0, 0);
+    margin: -325px 187px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.editVo-boxsmall {
+    background-color: #507214;
+    color: #ffffff;
+    width: 404px;
+    height: 292px;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: -3px;
+    margin-top: -208px;
+    box-shadow: inset -12px 12px 48px rgb(116, 214, 11);
+    overflow-y: scroll;
+}
+
+.editVo-boxsmall::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+}
+
+.edit-vocadtran {
+    height: 29px;
+    line-height: inherit;
+    text-align: center;
+    display: block;
+    transition: initial;
+}
+
+.edit-vocadtran:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+
+/* .edit-Vocab {
+    background-color: #507214;
+    width: 172.62px;
+    height: 58px;
+    border-radius: 11px 11px 11px 11px;
+    box-shadow:inset -12px 12px 48px rgb(116, 214, 11);
+    margin-left: 818px;
+    margin-right: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+} */
+
+/* input[type=text] {
+    background-color: #ffffff;
+    width: 172px;
+    height: 58px;
+    border-radius: 11px 11px 11px 11px;
+    margin: 23px -1px;
+    box-shadow:inset -2px 2px 25px rgb(255 134 0);
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    border: 3px solid #ffcf66;
+} */
+
+#puttext {
+    background-color: #ffffff;
+    width: 172px;
+    height: 58px;
+    border-radius: 11px 11px 11px 11px;
+    margin: 23px -1px;
+    box-shadow: inset -2px 2px 25px rgb(255 134 0);
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    border: 3px solid #ffcf66;
+}
+
+#farme-VocadTranlation {
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    border-radius: 11px 11px 11px 11px;
+    margin: -273px 426px;
+    box-shadow: inset -12px 12px 48px rgb(255, 255, 255);
+}
+
+
+.detil-AddDelete {
+    display: flex;
+}
+
+
+.btnAdd {
+    width: 184px;
+    height: 57px;
+    text-align: center;
+    border-radius: 11px 11px 11px 11px;
+    background-color: #FFCF66;
+    box-shadow:inset -12px 12px 48px rgb(255 134 0);
+    font-size: 20px;
+    font-weight: bold;
+    margin: -20px 561px;
+    border: 3px solid #ffcf66;
+    transition-duration: 0.4s;
+}
+
+.btndelete {
+    background-color: #004b6b;
+    box-shadow: inset -12px 12px 48px rgb(9 124 159);
+    border: 3px solid rgb(79 214 255 / 59%);
+    width: 184px;
+    height: 57px;
+    text-align: center;
+    border-radius: 11px 11px 11px 11px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: -20px -496px;
+    transition-duration: 0.4s;
+}
+
+.btnAdd:hover {
+    background-color: #f0d588; 
+    color: white;
+}
+
+.btndelete:hover {
+    background-color: #19aee8; 
+    color: white;
+}

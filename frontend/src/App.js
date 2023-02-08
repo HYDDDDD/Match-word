@@ -10,6 +10,7 @@ import Category from "./component/Category/Category";
 import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasury";
 import Prepare from "./component/Prepare/Prepare";
 import EditVocabulary from "./component/EditVocabulary/EditVocabulary";
+import Profile from "./component/Proflie/Profile";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -111,6 +112,15 @@ function App() {
           <EditVocabulary
             currentUser={currentUser}
             selectedTreasury={selectedTreasury}
+          />
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <Profile
+            currentUser={currentUser}
+            setCurrentUser={setCurrentUser}
           />
         }
       />

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./EditVocab.css";
 
 function Vocab({ selectedTreasury }) {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ function Vocab({ selectedTreasury }) {
       });
 
     setVocabs(data);
-  }, [getVocabs]);
+  }, [getVocabs, selectedTreasury.treasury_id]);
 
   const addVocab = async () => {
     let url = "http://127.0.0.1:8000/vocabularys/";
@@ -44,7 +45,7 @@ function Vocab({ selectedTreasury }) {
       })
       .catch((err) => console.log(err));
   };
-
+  console.log(selectedTreasury.treasury_id);
   const deleteVocab = (id) => {
     axios
       .delete(`http://127.0.0.1:8000/vocabularys/${id}`)
@@ -58,46 +59,79 @@ function Vocab({ selectedTreasury }) {
   console.log(vocab);
 
   return (
-    <div>
-      <div>
-        <div>{selectedTreasury.treasury_title}</div>
-        <div>Last played date : {selectedTreasury.treasury_date}</div>
-        <div>_/10</div>
-        <div>Correct</div>
+    <>
+      <div className="details-boxframe">
+        <div className="editVo-boxbig"></div>
+        <div className="photo-editVo"></div>
+        <div id="name-editVo">{selectedTreasury.treasury_title}</div>
+        <div id="date-editVo">
+          Last played date : {selectedTreasury.treasury_date}
+        </div>
+        <div id="boxword-EditVo">
+          <div id="numberword-one">_/10</div>
+          <div id="correct-EditVo">Correct</div>
+        </div>
+
+        <div>
+          <div className="editVo-boxsmall">
+            {vocabs.map((vocab, index) => {
+              return (
+                <div
+                  className="edit-vocadtran"
+                  key={index}
+                  onClick={() => setId(vocab.vocabulary_id)}
+                >
+                  {index + 1}. {vocab.vocabulary} - {vocab.thai_vocab}
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            <form id="farme-VocadTranlation">
+              <input
+                id="puttext"
+                type="text"
+                placeholder="Vocabulary"
+                onChange={(e) =>
+                  setVocab({ ...vocab, vocabulary: e.target.value })
+                }
+                value={vocab.vocabulary}
+              />
+              <input
+                id="puttext"
+                type="text"
+                placeholder="Translation"
+                onChange={(e) =>
+                  setVocab({ ...vocab, thai_vocab: e.target.value })
+                }
+                value={vocab.thai_vocab}
+              />
+            </form>
+          </div>
+        </div>
       </div>
-      <div>
-        {vocabs.map((vocab, index) => {
-          return (
-            <div key={index} onClick={() => setId(vocab.vocabulary_id)}>
-              {index + 1}. {vocab.vocabulary} - {vocab.thai_vocab}
-            </div>
-          );
-        })}
-        <form>
-          <input
-            type="text"
-            placeholder="Vocabulary"
-            onChange={(e) => setVocab({ ...vocab, vocabulary: e.target.value })}
-            value={vocab.vocabulary}
-          />
-          <input
-            type="text"
-            placeholder="Translation"
-            onChange={(e) => setVocab({ ...vocab, thai_vocab: e.target.value })}
-            value={vocab.thai_vocab}
-          />
-        </form>
-        <button
-          onClick={() => {
-            setVocab({ ...vocab, treasury_id: selectedTreasury.treasury_id });
-            addVocab();
-          }}
-        >
-          Add
-        </button>
-        <button onClick={() => deleteVocab(id)}>Delete</button>
+      <div className="detil-AddDelete">
+        <div>
+          <button
+            className="btnAdd"
+            onClick={() => {
+              setVocab({
+                ...vocab,
+                treasury_id: selectedTreasury.treasury_id,
+              });
+              addVocab();
+            }}
+          >
+            Add
+          </button>
+        </div>
+        <div>
+          <button className="btndelete" onClick={() => deleteVocab(id)}>
+            Delete
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
