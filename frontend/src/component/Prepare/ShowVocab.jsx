@@ -43,12 +43,12 @@ function ShowVocab({ selectedTreasury }) {
               ).length
             }
           </div>
-          <p id="word-one">Word</p>
+          <p id="word-showVo">Word</p>
         </div>
-        <div id="boxedit-showVo">
+        <div id="boxedit-showVo" onClick={() => navigate("/editVocabulary")}>
           <div id="photoedit-showVo"></div>
-          <div id="word-one" onClick={() => navigate("/editVocabulary")}>
-            Edit
+          <div id="word-shoeVo" onClick={() => navigate("/editVocabulary")}>
+            <p>Edit</p>
           </div>
         </div>
       </div>

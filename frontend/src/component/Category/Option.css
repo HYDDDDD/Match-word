@@ -61,13 +61,14 @@
   padding-top: 17px;
   font-size: 24px;
   font-weight: bold;
-  margin: 3px 0px 0px 26px;
+  text-align: center;
+  /* margin: 3px 0px 0px 26px; */
 }
 
 #word-one {
   font-size: 18px;
   font-weight: bold;
-  margin: 21px 13px;
+  margin: -6px 13px;
 }
 
 .Option-two {
@@ -120,13 +121,14 @@
   padding-top: 17px;
   font-size: 24px;
   font-weight: bold;
-  margin: 3px 0px 0px 26px;
+  text-align: center;
+  /* margin: 3px 0px 0px 26px; */
 }
 
 #word-two {
   font-size: 18px;
   font-weight: bold;
-  margin: 21px 13px;
+  margin: -6px 13px;
 }
 
 .Option-three {
@@ -185,5 +187,5 @@
 #word-three {
   font-size: 18px;
   font-weight: bold;
-  margin: 21px 13px;
+  margin: -6px 13px;
 }

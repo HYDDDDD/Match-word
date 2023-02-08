@@ -56,6 +56,12 @@
     box-shadow:inset -12px 12px 48px rgb(255 134 0);
 }
 
+#word-showVo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 19px 13px;
+}
+
 #boxedit-showVo {
     background-color: #507214;
     width: 67.62px;
@@ -66,10 +72,20 @@
 }
 
 #photoedit-showVo {
+    background-image: url(../../Picture/Edit.png);
     padding-top: 11px;
     width: 34px;
     height: 34px;
-    margin: 1px 0px -1px 19px;
+    margin: 11px 0px -1px 19px;
+    position: absolute;
+}
+
+#word-shoeVo {
+    font-size: 18px;
+    font-weight: bold;
+    /* margin: 21px 13px; */
+    text-align: center;
+    line-height: 9;
 }
 
 .details-boxsmall {
@@ -112,4 +128,7 @@
     box-shadow:inset -12px 12px 48px rgb(255 134 0);
     font-size: 20px;
     font-weight: bold;
+    margin-left: 664px;
+    margin-right: 0px;
+    margin-top: 24px;
 }
