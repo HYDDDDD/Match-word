@@ -58,7 +58,7 @@ function Login({ users, setCurrentUser }) {
           });
         }
       });
-      navigate("/editProfile");
+      navigate("/setting");
     } else {
       alert("Invalid username or password.");
     }

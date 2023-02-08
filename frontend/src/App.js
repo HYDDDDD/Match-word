@@ -5,16 +5,17 @@ import { useLocalStorage } from "./component/useLocalStorage";
 import "./App.css";
 import Login from "./component/Login/Login";
 import Register from "./component/Register/Register";
-import EditProfile from "./component/EditProfile";
+import EditProfile from "./component/Setting/EditProfile";
 import Category from "./component/Category/Category";
 import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasury";
 import Prepare from "./component/Prepare/Prepare";
 import EditVocabulary from "./component/EditVocabulary/EditVocabulary";
+import Setting from "./component/Setting/Setting";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [getLocalStorage, setSaveData, clearLocalStorage] =
-    useLocalStorage("Current User");
+  // const [getLocalStorage, setSaveData, clearLocalStorage] =
+  //   useLocalStorage("Current User");
   const [currentUser, setCurrentUser] = useState([]);
   const [selectedTreasury, setSelectedTreasury] = useState([]);
 
@@ -54,17 +55,12 @@ function App() {
   };
 
   useEffect(() => {
-    // clearLocalStorage();
     getAllUsers();
     getLocalStorageUser();
     getLocalStorageTreasury();
   }, []);
 
-  // useEffect(() => {
-  //   setSaveData(currentUser);
-  // }, [setSaveData, currentUser]);
-
-  // console.log(users);
+  console.log(users);
 
   return (
     <Routes>
@@ -114,6 +110,7 @@ function App() {
           />
         }
       />
+      <Route path="/setting" element={<Setting />} />
     </Routes>
   );
 }
