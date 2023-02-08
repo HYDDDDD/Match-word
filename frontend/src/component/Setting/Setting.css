@@ -1,0 +1,160 @@
+.backgroungSetting {
+  background-image: url(../../Picture/no2.png);
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleSetting {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closeSetting {
+  margin-top: 2rem;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* movable area */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* circle move */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* change background color when click */
+input:checked + .slider {
+  background-color: #000;
+}
+
+/* circle move position */
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* title setting */
+.rec-setting {
+  margin-right: auto;
+  margin-left: 0;
+  margin-top: 1rem;
+  width: 295px;
+  height: 62px;
+  background-color: #fff;
+  text-align: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.rec-container {
+  width: 263px;
+  height: 62px;
+  position: absolute;
+  background-color: #dfc6e3;
+  text-align: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  margin: -52px 0;
+}
+
+/* box background */
+.boxSetting {
+  position: relative;
+  background-color: rgb(216, 235, 240, 0.8);
+  width: 760px;
+  height: 670px;
+  border-radius: 50px 50px 50px 50px;
+  margin: 40px auto 0 auto;
+}
+
+.containerSetting {
+  position: absolute;
+}
+
+.selectMenu {
+  width: 600px;
+  display: flex;
+  border-radius: 50px;
+  margin: 40px 80px;
+  border: 2px solid;
+}
+
+.btnGeneral {
+  width: 300px;
+  text-align: center;
+  background-color: #f7e6f0;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.btnGeneral-selected {
+  width: 300px;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.btnOther {
+  width: 300px;
+  text-align: center;
+  background-color: #f7e6f0;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.btnOther-selected {
+  width: 300px;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.listDataEdit {
+  width: 600px;
+  margin: 70px auto 0 auto;
+}
+
+.list-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 20px;
+}

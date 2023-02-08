@@ -47,13 +47,10 @@ function Vocab({ selectedTreasury }) {
   };
   console.log(selectedTreasury.treasury_id);
   const deleteVocab = (id) => {
-    axios
-      .delete(`http://127.0.0.1:8000/vocabularys/${id}`)
-      .then(() => refreshPage());
-  };
-
-  const refreshPage = () => {
-    window.location.reload(false);
+    console.log(id);
+    axios.delete(`http://127.0.0.1:8000/vocabularys/${id}`).then(() => {
+      navigate("/prepare");
+    });
   };
 
   console.log(vocab);
