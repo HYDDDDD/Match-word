@@ -3,14 +3,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Vocab({ selectedTreasury }) {
-  // console.log(selectedTreasury.treasury_id);
   const navigate = useNavigate();
   const [getVocabs, setGetVocabs] = useState([]);
   const [vocabs, setVocabs] = useState([]);
   const [id, setId] = useState();
   const [vocab, setVocab] = useState({
     vocabulary: "",
-    translation: "",
+    thai_vocab: "",
     treasury_id: [selectedTreasury.treasury_id],
   });
 
@@ -24,7 +23,6 @@ function Vocab({ selectedTreasury }) {
     let data = getVocabs
       .filter((data) => data.treasury_id[0] === selectedTreasury.treasury_id)
       .map((data) => {
-        // setId(selectedTreasury.treasury_id);
         return data;
       });
 
@@ -35,18 +33,13 @@ function Vocab({ selectedTreasury }) {
     let url = "http://127.0.0.1:8000/vocabularys/";
 
     await axios
-      .post(url, vocab, {
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
+      .post(url, vocab)
       .then(() => {
         setVocab({
           vocabulary: "",
-          translation: "",
-          treasury_id: [],
+          thai_vocab: "",
+          treasury_id: [selectedTreasury.treasury_id],
         });
-
         navigate("/prepare");
       })
       .catch((err) => console.log(err));
@@ -62,10 +55,7 @@ function Vocab({ selectedTreasury }) {
     window.location.reload(false);
   };
 
-  //   vocabs.map((vocab) => console.log(vocab));
   console.log(vocab);
-  console.log(vocab.treasury_id);
-  // console.log(id);
 
   return (
     <div>
@@ -93,10 +83,8 @@ function Vocab({ selectedTreasury }) {
           <input
             type="text"
             placeholder="Translation"
-            onChange={(e) =>
-              setVocab({ ...vocab, translation: e.target.value })
-            }
-            value={vocab.translation}
+            onChange={(e) => setVocab({ ...vocab, thai_vocab: e.target.value })}
+            value={vocab.thai_vocab}
           />
         </form>
         <button

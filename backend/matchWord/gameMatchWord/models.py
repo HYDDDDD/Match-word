@@ -7,7 +7,7 @@ class Treasury(models.Model):
     treasury_title = models.CharField(max_length=10, blank=True)
     treasury_date = models.DateField(blank=True)
     total_vocab = models.IntegerField(blank=True)
-    
+
     # return
     def __str__(self) -> str:
         return self.treasury_title
@@ -51,22 +51,3 @@ class User(models.Model):
     # return object -> str
     def __str__(self) -> str:
         return self.username
-
-
-# Create table Basic vocab
-# class Basic_vocab(models.Model):
-#     vocab_Bid = models.ForeignKey(Vocabulary,)
-#     vocabulary = models.CharField(max_length=30, blank=True)
-#     thai_vocab = models.CharField(max_length=30, blank=True)
-
-
-# Create table Hard vocab
-# class Hard_basic(models.Model):
-#     vocabulary = models.CharField(max_length=30, blank=True)
-#     thai_vocab = models.CharField(max_length=30, blank=True)
-
-
-# Create table User add vocab
-# class UserAdd_vocab(models.Model):
-#     vocabulary = models.CharField(max_length=30, blank=True)
-#     thai_vocab = models.CharField(max_length=30, blank=True)
