@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../Login/Login.css";
+import "../Register/Register.css";
 import Logo from "../../Picture/Logo.png";
 
 function Register() {
@@ -38,52 +38,64 @@ function Register() {
   };
 
   return (
-    <div>
-      <div className="logo">
-        <img src={Logo} alt="" />
-      </div>
-      <div>Sign Up!</div>
-      <form>
-        <div className="formRegister">
-          <input
-            type="text"
-            placeholder="Username"
-            onChange={(event) => {
-              setNewUser({ ...newUser, username: event.target.value });
-            }}
-            value={newUser.username}
-          />
-
-          <input
-            type="text"
-            placeholder="Email"
-            onChange={(event) => {
-              setNewUser({ ...newUser, email: event.target.value });
-            }}
-            value={newUser.email}
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            onChange={(event) => {
-              setNewUser({ ...newUser, password: event.target.value });
-            }}
-            value={newUser.password}
-          />
+    <div className="backgroundRegister">
+      <div className="boxRegister">
+        <div className="logo">
+          <img src={Logo} alt="" />
         </div>
-
-        <button
-          className="btn"
-          type="submit"
-          onClick={createUser}
-          onKeyPress={(event) => {
-            event.key === "Enter" && createUser();
+        <div
+          style={{
+            fontWeight: "bold",
+            fontSize: "xx-large",
+            textAlign: "center",
+            margin: "30px 0 30px 0",
           }}
         >
-          Create!
-        </button>
-      </form>
+          Sign Up!
+        </div>
+        <form>
+          <div className="formRegister">
+            <input
+              type="text"
+              placeholder="Username"
+              onChange={(event) => {
+                setNewUser({ ...newUser, username: event.target.value });
+              }}
+              value={newUser.username}
+            />
+
+            <input
+              type="text"
+              placeholder="Email"
+              onChange={(event) => {
+                setNewUser({ ...newUser, email: event.target.value });
+              }}
+              value={newUser.email}
+            />
+
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(event) => {
+                setNewUser({ ...newUser, password: event.target.value });
+              }}
+              value={newUser.password}
+            />
+          </div>
+
+          <button
+            className="btn"
+            type="submit"
+            onClick={createUser}
+            onKeyPress={(event) => {
+              event.key === "Enter" && createUser();
+            }}
+            style={{ margin: "30px 0 0 0" }}
+          >
+            Create!
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
