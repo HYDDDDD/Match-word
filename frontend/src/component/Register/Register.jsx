@@ -42,6 +42,7 @@ function Register() {
       <div className="logo">
         <img src={Logo} alt="" />
       </div>
+      <div>Sign Up!</div>
       <form>
         <div className="formRegister">
           <input
