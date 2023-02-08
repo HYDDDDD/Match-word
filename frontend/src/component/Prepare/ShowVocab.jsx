@@ -52,15 +52,17 @@ function ShowVocab({ selectedTreasury }) {
           </div>
         </div>
       </div>
-      <div>
+      <div className="details-boxsmall">
         {vocabs.map((vocab, index) => {
           return (
-            <div key={index}>
+            <div id="showvocad" key={index}>
               {index + 1}. {vocab.vocabulary} - {vocab.thai_vocab}
             </div>
           );
         })}
-        <button>GO to Play</button>
+      </div>
+      <div>
+        <button id="goplay-showVocab">GO to Play</button>
       </div>
     </>
   );
