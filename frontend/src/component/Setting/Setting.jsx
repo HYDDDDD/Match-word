@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "../Setting/Setting.css";
+import { useNavigate } from "react-router-dom";
 import Edit from "../../Picture/Edit-setting.png";
 import Close from "../../Picture/close.png";
 
-function Setting() {
+function Setting({ setSelectEdit }) {
+  const navigate = useNavigate();
   const [selectGeneral, setSelectGeneral] = useState(false);
+  // const [selectEdit, setSelectEdit] = useState("");
 
   return (
     <div className="backgroungSetting">
@@ -76,19 +79,34 @@ function Setting() {
             <div className="listDataEdit">
               <div className="list-data">
                 <div>ชื่อผู้ใช้งาน</div>
-                <div>
+                <div
+                  onClick={() => {
+                    navigate("/editProfile");
+                    setSelectEdit("name");
+                  }}
+                >
                   <img src={Edit} alt="" width={"35px"} />
                 </div>
               </div>
               <div className="list-data">
                 <div>อีเมล</div>
-                <div>
+                <div
+                  onClick={() => {
+                    navigate("/editProfile");
+                    setSelectEdit("email");
+                  }}
+                >
                   <img src={Edit} alt="" width={"35px"} />
                 </div>
               </div>
               <div className="list-data">
                 <div>รหัสผ่าน</div>
-                <div>
+                <div
+                  onClick={() => {
+                    navigate("/editProfile");
+                    setSelectEdit("name");
+                  }}
+                >
                   <img src={Edit} alt="" width={"35px"} />
                 </div>
               </div>

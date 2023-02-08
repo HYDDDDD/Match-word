@@ -11,6 +11,7 @@ import VocabularyTreasury from "./component/VocabularyTreasury/VocabularyTreasur
 import Prepare from "./component/Prepare/Prepare";
 import EditVocabulary from "./component/EditVocabulary/EditVocabulary";
 import Setting from "./component/Setting/Setting";
+import Edit from "./component/Setting/Edit";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -18,6 +19,7 @@ function App() {
   //   useLocalStorage("Current User");
   const [currentUser, setCurrentUser] = useState([]);
   const [selectedTreasury, setSelectedTreasury] = useState([]);
+  const [selectEdit, setSelectEdit] = useState("");
 
   const getLocalStorageUser = async () => {
     try {
@@ -111,6 +113,7 @@ function App() {
         }
       />
       <Route path="/setting" element={<Setting />} />
+      <Route path="/edit" element={<Edit setSelectEdit={setSelectEdit} />} />
     </Routes>
   );
 }

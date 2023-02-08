@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./EditProfile.css";
+import PictureUser from "../../Picture/pictureUser.png";
 
 function EditProfile({ currentUser, setCurrentUser }) {
   const navigate = useNavigate();
@@ -43,58 +45,104 @@ function EditProfile({ currentUser, setCurrentUser }) {
   };
 
   return (
-    <div>
-      <div>
-        <div>{currentUser.username}</div>
-        <div>Point:</div>
-      </div>
-      <div>
-        <h1>ชื่อผู้ใช้งาน</h1>
-        <form>
-          <div className="formEditProfile">
-            <label>Name :</label>
-            <input
-              type="text"
-              onChange={(event) => {
-                setUpdateData({ ...updateData, username: event.target.value });
-              }}
-              value={updateData.username}
-            />
-            <label>E-mail :</label>
-            <input
-              type="email"
-              onChange={(event) => {
-                setUpdateData({ ...updateData, email: event.target.value });
-              }}
-              value={updateData.email}
-            />
-            <label>Password</label>
-            <input
-              type="password"
-              onChange={(event) => {
-                setUpdateData({ ...updateData, password: event.target.value });
-              }}
-              value={updateData.password}
-            />
-            <label>Password***</label>
-            <input
-              type="password"
-              onChange={(event) => setPasswordAgain(event.target.value)}
-            />
+    <div className="backgroundEditProfile">
+      <div className="boxEdit">
+        <div className="containerEdit">
+          <div style={{ textAlign: "center", marginTop: "50px" }}>
+            <h1>ชื่อผู้ใช้งาน</h1>
           </div>
-          <button
-            type="submit"
-            onClick={update}
-            onKeyPress={(event) => {
-              event.key === "Enter" && update();
-            }}
-          >
-            DONE
-          </button>
-        </form>
-        <button type="button" onClick={() => navigate("/category")}>
+          <div className="edit-data">
+            <div className="picture-user">
+              <div>
+                <img src={PictureUser} alt="" />
+              </div>
+              <div>
+                <p>Edit</p>
+              </div>
+            </div>
+            <div className="formEdit">
+              <form>
+                <div className="formEditProfile">
+                  <div className="list-edit-data">
+                    <label>Name :</label>
+                    <input
+                      className="inputName"
+                      type="text"
+                      onChange={(event) => {
+                        setUpdateData({
+                          ...updateData,
+                          username: event.target.value,
+                        });
+                      }}
+                      value={updateData.username}
+                    />
+                  </div>
+                  <div className="list-edit-data">
+                    <label>E-mail :</label>
+                    <input
+                      type="email"
+                      onChange={(event) => {
+                        setUpdateData({
+                          ...updateData,
+                          email: event.target.value,
+                        });
+                      }}
+                      value={updateData.email}
+                    />
+                  </div>
+
+                  <div className="list-edit-data">
+                    <label>Password :</label>
+                    <input
+                      type="password"
+                      onChange={(event) => {
+                        setUpdateData({
+                          ...updateData,
+                          password: event.target.value,
+                        });
+                      }}
+                      value={updateData.password}
+                    />
+                  </div>
+                  <div className="list-edit-data">
+                    <label>Password*** : </label>
+                    <input
+                      type="password"
+                      onChange={(event) => setPasswordAgain(event.target.value)}
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="btnEditForm">
+            <div>
+              <button
+                className="btnEdit"
+                type="submit"
+                onClick={() => navigate("/setting")}
+              >
+                Cancle
+              </button>
+            </div>
+            <div>
+              <button
+                className="btnEdit"
+                type="submit"
+                onClick={update}
+                onKeyPress={(event) => {
+                  event.key === "Enter" && update();
+                }}
+              >
+                DONE
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* <button type="button" onClick={() => navigate("/category")}>
           คลัง
-        </button>
+        </button> */}
       </div>
     </div>
   );

@@ -1,0 +1,73 @@
+.backgroundEditProfile {
+  background-image: url(../../Picture/no2.png);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.boxEdit {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 780px;
+  height: 679px;
+  border-radius: 50px 50px 50px 50px;
+  margin: 40px auto 0 auto;
+}
+
+.containerEdit {
+  position: absolute;
+}
+
+.edit-data {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.formEdit {
+  width: 600px;
+}
+
+.picture-user {
+  text-align: center;
+  font-weight: 500;
+  margin-left: 45px;
+}
+
+input {
+  width: 80%;
+  height: 35px;
+  background-color: rgb(255, 186, 90, 0.3);
+  border: none;
+  box-shadow: 2px 3px #ffbb53;
+  font-size: 18px;
+}
+
+.list-edit-data {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 180px 430px;
+}
+
+.btnEditForm {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.btnEdit {
+  width: 184px;
+  height: 57px;
+  text-align: center;
+  border-radius: 11px 11px 11px 11px;
+  background-color: #ffcf66;
+  border: none;
+  box-shadow: inset -12px -12px 24px #ffa82e, inset 6px 6px 24px #ffa82e;
+  font-size: 20px;
+  font-weight: 600;
+}

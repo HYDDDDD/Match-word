@@ -4,9 +4,15 @@ body {
 }
 
 .formRegister,
-.formLogin,
-.formEditProfile {
+.formLogin {
   width: 642px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 10px auto;
+}
+
+.formEditProfile {
+  width: 620px;
   display: flex;
   flex-direction: column;
   margin: 10px auto 10px auto;
