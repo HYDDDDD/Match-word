@@ -40,18 +40,18 @@ function Setting() {
               <div className="list-data">
                 <div>พื้นหลัง</div>
                 <div>
-                  <label class="switch">
+                  <label className="switch">
                     <input type="checkbox" />
-                    <span class="slider round"></span>
+                    <span className="slider round"></span>
                   </label>
                 </div>
               </div>
               <div className="list-data">
                 <div>ภาษา</div>
                 <div>
-                  <label class="switch">
+                  <label className="switch">
                     <input type="checkbox" />
-                    <span class="slider round"></span>
+                    <span className="slider round"></span>
                   </label>
                 </div>
               </div>
