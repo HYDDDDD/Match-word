@@ -24,9 +24,9 @@ form {
   position: relative;
   background-color: rgb(216, 235, 240, 0.8);
   width: 780px;
-  height: 835px;
+  height: 805px;
   border-radius: 50px 50px 50px 50px;
-  margin: 40px auto 0 auto;
+  margin: 20px auto 0 auto;
 }
 
 .login {

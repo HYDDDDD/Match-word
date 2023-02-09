@@ -1,0 +1,144 @@
+
+/* แท็บข้าง */
+.tab {
+    display: grid;
+    margin: 200px 20px;
+    
+}
+#bg-tab {
+    position: fixed;
+}
+#treasury {
+    margin: 65px 25px;
+    position: fixed;
+}
+#history {
+    margin: 165px 25px;
+    position: fixed;
+}
+#setting {
+    margin: 265px 25px;
+    position: fixed;
+}
+#log-out {
+    margin: 365px 25px;
+    position: fixed;
+}
+
+.tab-text {
+    margin: 140px 25px;
+    position: fixed;
+}
+#treasury-text {
+    margin: 125px 35px;
+}
+#history-text {
+    margin: 225px 30px;
+}
+#setting-text {
+    margin: 325px 35px;
+}
+#log-out-text {
+    margin: 425px 10px;
+}
+
+.main {
+    /* position:absolute ; */
+    position: fixed;
+}
+/* พื้นหลัง */
+#bg-his {
+    background-image: url("../../src/img-his/his.jpeg");
+    position: fixed;
+    background-size: contain;
+    height: 1000px;
+    margin: -200px 0px;
+    background-repeat: no-repeat ; 
+}
+/* ข้อความ */
+.text-title {
+    font-size: 23px;
+    position: fixed;
+    margin: -60px 350px;
+}
+#tt1 {
+    position: fixed;
+    margin: 30px 10px;
+}
+#tt2 {
+    position: fixed;
+    margin: 30px 400px;
+}
+#tt3 {
+    position: fixed;
+    margin: 30px 700px;
+}
+#tt3-1 {
+    position: fixed;
+    margin: 30px 764px;
+}
+.text {
+    font-size: 20px;
+    position: fixed;
+    margin: 60px 340px;
+}
+#t1{
+    position: fixed;
+    margin: 00px 40px;
+}
+#t2{
+    position: fixed;
+    margin: 00px 440px;
+}
+#t3{
+    position: fixed;
+    margin: 00px 740px;
+}
+#line{
+    position: fixed;
+    margin: 30px 320px;
+}
+
+/* ตรงกลางหน้า */
+#hisarrow{
+    position: fixed;
+    margin: 60px 1180px;
+}
+#bghisword {
+    position: fixed;
+    margin: -170px 0px;
+}
+#cross{
+    position: fixed;
+    margin: -160px 1380px;
+}
+#hiswordbg {
+    position: fixed;
+    margin: -70px 240px;
+    height: 80vh;
+}
+
+
+/* ที่ซ่อน */
+.text-click{
+    position: absolute;
+}
+#hidetext1{
+    position: fixed;
+    margin: 150px 380px;
+}
+#hidetext2{
+    position: fixed;
+    margin: 180px 380px;
+}
+#hidearrow{
+    position: fixed;
+    margin: 360px 180px;
+}
+#hideline{
+    position: fixed;
+    margin: 120px 330px;
+}
+/* #hisarrow{
+    visibility:hidden;
+} */

@@ -58,7 +58,7 @@ function Login({ users, setCurrentUser }) {
           });
         }
       });
-      navigate("/setting");
+      navigate("/");
     } else {
       alert("Invalid username or password.");
     }
@@ -113,7 +113,7 @@ function Login({ users, setCurrentUser }) {
                 <img src={Facebook} alt="" />
               </button>
             </div>
-            <div style={{ fontWeight: "bold", margin: "30px 0 10px 0" }}>
+            <div style={{ fontWeight: "bold", margin: "20px 0 10px 0" }}>
               Not register?
             </div>
             <div
@@ -124,6 +124,7 @@ function Login({ users, setCurrentUser }) {
                 textDecoration: "underline",
                 color: "white",
                 cursor: "pointer",
+                margin: "-5px",
               }}
             >
               Sign Up!

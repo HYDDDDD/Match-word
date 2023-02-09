@@ -1,0 +1,120 @@
+.main-game {
+    display: grid;
+}
+.bg-game {
+    background-image: url("../../src/img-game/bg-game.png");
+    position: fixed;
+    background-size: contain;
+    height: 1100px;
+    margin: 0px 0px;
+    background-repeat:no-repeat;
+}
+#menu {
+    margin: 30px 20px;
+}
+#stop {
+    margin: -75px 1400px;
+}
+#bg-word {
+    margin: -630px 230px ;
+}
+#bg-word1 {
+    margin: -510px 230px ;
+}
+#bg-word2 {
+    margin: -390px 230px ;
+}
+#bg-word3 {
+    margin: -270px 230px ;
+}
+#bg-word4 {
+    margin: -150px 230px ;
+}
+#bg-word5 {
+    margin: -630px 480px ;
+}
+#bg-word6 {
+    margin: -510px 480px ;
+}
+#bg-word7 {
+    margin: -390px 480px ;
+}
+#bg-word8 {
+    margin: -270px 480px ;
+}
+#bg-word9 {
+    margin: -150px 480px ;
+}
+#bg-word10 {
+    margin: -630px 800px ;
+}
+#bg-word11 {
+    margin: -510px 800px ;
+}
+#bg-word12 {
+    margin: -390px 800px ;
+}
+#bg-word13 {
+    margin: -270px 800px ;
+}
+#bg-word14 {
+    margin: -150px 800px ;
+}
+#bg-word15 {
+    margin: -630px 1050px ;
+}
+#bg-word16 {
+    margin: -510px 1050px ;
+}
+#bg-word17 {
+    margin: -390px 1050px ;
+}
+#bg-word18 {
+    margin: -270px 1050px ;
+}
+#bg-word19 {
+    margin: -150px 1050px ;
+}
+#word-bg {
+    margin: 10px 160px;
+}
+
+.bg-stop{
+    /* display: block; */
+    position: absolute;
+    background-image: url("../../src/img-game/bg-stop.png");
+    /* position: fixed; */
+    background-size: contain;
+    height: 350px;
+    margin: 250px 580px;
+    background-repeat:no-repeat; 
+}
+#btn-add{
+    margin: 55px 120px;
+}
+#btn-edit{
+    margin: -20px 40px;
+}
+#btn-exit{
+    margin: -65px -120px;
+}
+
+.menu-bg{
+    /* display: block; */
+    position: absolute;
+    background-image: url("../../src/img-game/bg-stop.png");
+    /* position: fixed; */
+    background-size: contain;
+    height: 350px;
+    margin: 250px 580px;
+    background-repeat:no-repeat; 
+}
+#btn-main{
+    margin: 55px 120px;
+}
+#btn-setting{
+    margin: -20px 40px;
+}
+#btn-treasury{
+    margin: -20px 20px;
+}

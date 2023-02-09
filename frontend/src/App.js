@@ -12,6 +12,9 @@ import Prepare from "./component/Prepare/Prepare";
 import EditVocabulary from "./component/EditVocabulary/EditVocabulary";
 import Setting from "./component/Setting/Setting";
 import Edit from "./component/Setting/Edit";
+import Main from "./component/Main";
+import History from "./component/History";
+import Game from "./component/Game";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -114,6 +117,9 @@ function App() {
       />
       <Route path="/setting" element={<Setting />} />
       <Route path="/edit" element={<Edit setSelectEdit={setSelectEdit} />} />
+      <Route path="/Main" element={<Main />} />
+      <Route path="/Game" element={<Game />} /> 
+      <Route path="/history" element={<History/>} />
     </Routes>
   );
 }
