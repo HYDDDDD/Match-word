@@ -1,0 +1,135 @@
+
+#prepare-details {
+    text-align: center;
+    margin-top: -116px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.details-boxframe {
+    width: 640px;
+    height: 497px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 39px;
+}
+
+.photo-showVo {
+    background-image: url(../../Picture/no3.png);
+    background-size: cover;
+    width: 170px;
+    height: 170px;
+    margin: -528px -1px;
+  }
+
+.details-boxbig {
+    background-color: #ffffff;
+    width: 639px;
+    height: 498px;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:inset -12px 12px 48px rgb(9, 124, 159);
+}
+
+#name-showVo {
+    color: black;
+    margin: 427px 185px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#date-showVo {
+    color: rgb(0, 0, 0);
+    margin: -427px 187px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#boxword-showVo {
+    background-color: #FFCF66;
+    width: 67.62px;
+    height: 66.52px;
+    border-radius: 11px 11px 11px 11px;
+    margin: 363px 426px;
+    box-shadow:inset -12px 12px 48px rgb(255 134 0);
+}
+
+#word-showVo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 19px 13px;
+}
+
+#boxedit-showVo {
+    background-color: #507214;
+    width: 67.62px;
+    height: 66.52px;
+    border-radius: 11px 11px 11px 11px;
+    margin: -430px 520px;
+    box-shadow:inset -12px 12px 48px rgb(116, 214, 11);
+}
+
+#photoedit-showVo {
+    background-image: url(../../Picture/Edit.png);
+    padding-top: 11px;
+    width: 34px;
+    height: 34px;
+    margin: 11px 0px -1px 19px;
+    position: absolute;
+}
+
+#word-shoeVo {
+    font-size: 18px;
+    font-weight: bold;
+    /* margin: 21px 13px; */
+    text-align: center;
+    line-height: 9;
+}
+
+.details-boxsmall {
+    background-color: #004b6b;
+    color: #ffffff;
+    width: 639px;
+    height: 355px;
+    border-radius: 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -364px;
+    box-shadow:inset -12px 12px 48px rgb(9, 124, 159);
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+}
+.details-boxsmall::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+#showvocad {
+    /* margin-left: 653px;
+    margin-right: 0px; */
+    /* margin-top: -488px; */
+    /* width: 355px; */
+    height: 29px;
+    line-height: inherit;
+    text-align : center;
+    display: block;
+
+}
+
+#goplay-showVocab {
+    width: 184px;
+    height: 57px;
+    margin: 27px 1px 6px 670px;
+    text-align: center;
+    border-radius: 11px 11px 11px 11px;
+    background-color: #FFCF66;
+    box-shadow:inset -12px 12px 48px rgb(255 134 0);
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 664px;
+    margin-right: 0px;
+    margin-top: 24px;
+    border: 3px solid #ffcf66;
+}

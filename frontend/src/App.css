@@ -1,0 +1,57 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.formRegister,
+.formLogin {
+  width: 642px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 10px auto;
+}
+
+.formEditProfile {
+  width: 620px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 10px auto;
+}
+
+.formLogin input,
+.formRegister input {
+  background-color: #fff;
+  -webkit-box-shadow: inset 7px 7px 10px rgba(0, 0, 0, 0.25),
+    4px 8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 7px 7px 10px rgba(0, 0, 0, 0.25),
+    4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 7px 7px 10px rgba(0, 0, 0, 0.25),
+    4px 8px rgba(0, 0, 0, 0.25);
+  border-style: none;
+  border-radius: 25px;
+  margin: 10px 0 13px 0;
+  padding-left: 25px;
+  width: 100%;
+  height: 45px;
+  font-size: 25px;
+}
+
+.btn {
+  background-color: #fff;
+  -webkit-box-shadow: inset 7px 7px 10px rgba(0, 0, 0, 0.25),
+    4px 8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 7px 7px 10px rgba(0, 0, 0, 0.25),
+    4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 7px 7px 10px rgba(0, 0, 0, 0.25),
+    4px 8px rgba(0, 0, 0, 0.25);
+  border-style: none;
+  border-radius: 18px;
+  margin: 10px 0 13px 0;
+  padding-left: 25px;
+  width: 200px;
+  height: 65px;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+}
