@@ -12,6 +12,12 @@ import Prepare from "./component/Prepare/Prepare";
 import EditVocabulary from "./component/EditVocabulary/EditVocabulary";
 import Setting from "./component/Setting/Setting";
 import Edit from "./component/Setting/Edit";
+<<<<<<< HEAD
+=======
+import Main from "./component/Main";
+import History from "./component/History";
+import Game from "./component/Game";
+>>>>>>> bf899e5a0610e8b8957c9352583c515921366d3a
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -114,6 +120,12 @@ function App() {
       />
       <Route path="/setting" element={<Setting />} />
       <Route path="/edit" element={<Edit setSelectEdit={setSelectEdit} />} />
+<<<<<<< HEAD
+=======
+      <Route path="/Main" element={<Main />} />
+      <Route path="/Game" element={<Game />} /> 
+      <Route path="/history" element={<History/>} />
+>>>>>>> bf899e5a0610e8b8957c9352583c515921366d3a
     </Routes>
   );
 }

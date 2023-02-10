@@ -24,9 +24,15 @@ form {
   position: relative;
   background-color: rgb(216, 235, 240, 0.8);
   width: 780px;
+<<<<<<< HEAD
   height: 835px;
   border-radius: 50px 50px 50px 50px;
   margin: 40px auto 0 auto;
+=======
+  height: 805px;
+  border-radius: 50px 50px 50px 50px;
+  margin: 20px auto 0 auto;
+>>>>>>> bf899e5a0610e8b8957c9352583c515921366d3a
 }
 
 .login {
