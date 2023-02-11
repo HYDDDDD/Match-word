@@ -3,12 +3,14 @@ import "./Username.css";
 import Photo from "../../Picture/no1.png";
 import Sound from "../../Picture/no6.png";
 import Thai from "../../Picture/no7.png";
+import { useNavigate } from "react-router-dom";
 
 function Username({ currentUser }) {
+  const navigate = useNavigate();
   return (
     <div className="username">
       <div className="frame-username">
-        <div className="photo-username">
+        <div className="photo-username" onClick={() => navigate("/Main")}>
           <img width="63px" height="63px" src={Photo} alt="" />
         </div>
         <div className="description-username">

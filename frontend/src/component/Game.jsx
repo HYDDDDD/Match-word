@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./game.css";
 import bggame from "../img-game/bg-game.png";
 import bgword from "../img-game/bg-word.png";
@@ -6,7 +6,6 @@ import menu from "../img-game/menu.png";
 import stop from "../img-game/stop.png";
 import wordbg from "../img-game/word-bg.png";
 import bgstop from "../img-game/bg-stop.png";
-import { useState } from "react";
 import btnadd from "../img-game/btn-add.png";
 import btnedit from "../img-game/btn-edit.png";
 import btnexit from "../img-game/btn-exit.png";
@@ -15,11 +14,97 @@ import btnmain from "../img-game/btn-main.png";
 import btnsetting from "../img-game/btn-setting.png";
 import btntreasury from "../img-game/btn-treasury.png";
 import menubg from "../img-game/menu-bg.png";
+import axios from "axios";
 
-function Game() {
+function Game({ selectedTreasury }) {
   const navigate = useNavigate();
   const [statusStop, setStatusStop] = useState(false);
   const [statusMenu, setStatusMenu] = useState(false);
+  const [getVocabs, setGetVocabs] = useState([]);
+  const [vocabEngs, setVocabEngs] = useState([]);
+  const [vocabThais, setVocabThais] = useState([]);
+  const [selectedWord1, setSelectedWord1] = useState("");
+  const [selectedWord2, setSelectedWord2] = useState("");
+  const [score, setScore] = useState(0);
+  const [selectedEngs, setSelectedEngs] = useState([]);
+  const [selectedThais, setSelectedThais] = useState([]);
+
+  //vocab_correct
+  //vocab_wrong
+
+  useEffect(() => {
+    axios.get("http://127.0.0.1:8000/vocabularys/").then((data) => {
+      setGetVocabs(data.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    let data = getVocabs
+      .filter((data) => data.treasury_id[0] === selectedTreasury.treasury_id)
+      .map((data) => {
+        return data;
+      });
+
+    if (data) {
+      data.map((data) => {
+        setVocabEngs((vocab) => [...vocab, data.vocabulary]);
+        setVocabThais((vocab) => [...vocab, data.thai_vocab]);
+      });
+      // console.log(data);
+    }
+
+    if (selectedEngs[0] !== undefined) {
+      vocabEngs.map(() => {
+        selectedEngs.map((selected) => {
+          // console.log(selected);
+          let data = vocabEngs
+            .filter((words) => (words === selected) === false)
+            .map((data) => {
+              return data;
+            });
+
+          setVocabEngs(data);
+        });
+      });
+    }
+
+    if (selectedThais[0] !== undefined) {
+      vocabThais.map(() => {
+        selectedThais.map((selected) => {
+          // console.log(selected);
+          let data = vocabThais
+            .filter((words) => (words === selected) === false)
+            .map((data) => {
+              return data;
+            });
+
+          setVocabThais(data);
+        });
+      });
+    }
+  }, [getVocabs, selectedTreasury.treasury_id, selectedEngs, selectedThais]);
+
+  //Check select 2 word
+  useEffect(() => {
+    //Check select 2 word
+    if (selectedWord1 !== "" && selectedWord2 !== "") {
+      console.log(selectedWord1 + " " + selectedWord2);
+
+      selectedEng(selectedWord1);
+      selectedThai(selectedWord2);
+
+      setSelectedWord1("");
+      setSelectedWord2("");
+    }
+  }, [selectedWord1, selectedWord2]);
+
+  const selectedEng = (word) => {
+    setSelectedEngs((words) => [...words, word]);
+  };
+
+  const selectedThai = (word) => {
+    setSelectedThais((words) => [...words, word]);
+  };
 
   return (
     <>
@@ -27,25 +112,45 @@ function Game() {
         <div className="bg-game" weight="1490px" height="735px">
           <div className="main-game">
             {/* <img id="bg-game" src={bggame} weight="50px" height="500px"/> */}
-            <img id="menu" src={menu} weight="50px" height="50px" onClick={() => setStatusMenu((val) => !val)}/>
+            <img
+              id="menu"
+              src={menu}
+              weight="50px"
+              height="50px"
+              onClick={() => setStatusMenu((val) => !val)}
+            />
             {!statusMenu ? (
               <></>
             ) : (
               <>
-                <div className="menu-bg" >
-                    <div>
-                        <img id="btn-main" src={btnmain} weight="110px" height="110px" onClick={() => navigate("/Main")}/>
-                    </div>
-                    <div>
-                        <img id="btn-setting" src={btnsetting} weight="100px" height="100px" />
-                        <img id="btn-treasury" src={btntreasury} weight="100px" height="100px"/>
-                    </div>
-
+                <div className="menu-bg">
+                  <div>
+                    <img
+                      id="btn-main"
+                      src={btnmain}
+                      weight="110px"
+                      height="110px"
+                      onClick={() => navigate("/Main")}
+                    />
+                  </div>
+                  <div>
+                    <img
+                      id="btn-setting"
+                      src={btnsetting}
+                      weight="100px"
+                      height="100px"
+                    />
+                    <img
+                      id="btn-treasury"
+                      src={btntreasury}
+                      weight="100px"
+                      height="100px"
+                    />
+                  </div>
                 </div>
-                
               </>
             )}
-            
+
             <img
               id="stop"
               src={stop}
@@ -57,23 +162,37 @@ function Game() {
               <></>
             ) : (
               <>
-                <div className="bg-stop" >
-                    <div>
-                        <img id="btn-add" src={btnadd} weight="100px" height="100px"/>
-                    </div>
-                    <div>
-                        <img id="btn-edit" src={btnedit} weight="100px" height="100px" />
-                        <img id="btn-exit" src={btnexit} weight="150px" height="150px" onClick={() => navigate("/Main")}/>
-                    </div>
-                    {/* <div onClick={() => navigate("/Main")}>
+                <div className="bg-stop">
+                  <div>
+                    <img
+                      id="btn-add"
+                      src={btnadd}
+                      weight="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      id="btn-edit"
+                      src={btnedit}
+                      weight="100px"
+                      height="100px"
+                    />
+                    <img
+                      id="btn-exit"
+                      src={btnexit}
+                      weight="150px"
+                      height="150px"
+                      onClick={() => navigate("/Main")}
+                    />
+                  </div>
+                  {/* <div onClick={() => navigate("/Main")}>
                         <img id="btn-exit" src={btnexit} weight="150px" height="150px" onClick={() => navigate("/Main")}/>
                     </div> */}
-
                 </div>
-                
               </>
             )}
-            <img id="word-bg" src={wordbg} weight="500px" height="680px" />
+            {/* <img id="word-bg" src={wordbg} weight="500px" height="680px" />
             <img id="bg-word" src={bgword} weight="30px" height="80px" />
             <img id="bg-word1" src={bgword} weight="30px" height="80px" />
             <img id="bg-word2" src={bgword} weight="30px" height="80px" />
@@ -93,7 +212,25 @@ function Game() {
             <img id="bg-word16" src={bgword} weight="30px" height="80px" />
             <img id="bg-word17" src={bgword} weight="30px" height="80px" />
             <img id="bg-word18" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word19" src={bgword} weight="30px" height="80px" />
+            <img id="bg-word19" src={bgword} weight="30px" height="80px" /> */}
+          </div>
+          <div>
+            {vocabEngs.map((vocab, index) => {
+              return (
+                <div key={index} onClick={() => setSelectedWord1(vocab)}>
+                  {vocab}
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            {vocabThais.map((vocab, index) => {
+              return (
+                <div key={index} onClick={() => setSelectedWord2(vocab)}>
+                  {vocab}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

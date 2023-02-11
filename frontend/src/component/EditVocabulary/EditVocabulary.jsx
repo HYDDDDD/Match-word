@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import Option from "../Category/Option";
-=======
->>>>>>> bf899e5a0610e8b8957c9352583c515921366d3a
 import Username from "../Category/Username";
 import Vocab from "./Vocab";
 

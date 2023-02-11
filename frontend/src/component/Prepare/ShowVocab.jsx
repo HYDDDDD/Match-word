@@ -62,7 +62,9 @@ function ShowVocab({ selectedTreasury }) {
         })}
       </div>
       <div>
-        <button id="goplay-showVocab">GO to Play</button>
+        <button id="goplay-showVocab" onClick={() => navigate("/Game")}>
+          GO to Play
+        </button>
       </div>
     </>
   );

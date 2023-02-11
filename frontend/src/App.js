@@ -65,7 +65,7 @@ function App() {
     getLocalStorageTreasury();
   }, []);
 
-  console.log(users);
+  // console.log(users);
 
   return (
     <Routes>
@@ -117,8 +117,8 @@ function App() {
       />
       <Route path="/setting" element={<Setting />} />
       <Route path="/edit" element={<Edit setSelectEdit={setSelectEdit} />} />
-      <Route path="/Main" element={<Main />} />
-      <Route path="/Game" element={<Game />} /> 
+      <Route path="/Main" element={<Main currentUser={currentUser}/>} />
+      <Route path="/Game" element={<Game selectedTreasury={selectedTreasury}/>} /> 
       <Route path="/history" element={<History/>} />
     </Routes>
   );
