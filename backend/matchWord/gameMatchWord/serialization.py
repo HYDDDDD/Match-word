@@ -27,4 +27,5 @@ class ScoreSerializer(serializers.ModelSerializer):
 class VocabularySerializer(serializers.ModelSerializer):
     class Meta:
         model = Vocabulary
-        fields = ('vocabulary_id','vocabulary', 'thai_vocab', 'treasury_id')
+        fields = ('vocabulary_id', 'vocabulary',
+                  'thai_vocab', 'vocab_status', 'treasury_id')
