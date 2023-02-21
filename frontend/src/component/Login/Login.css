@@ -10,55 +10,109 @@
   position: fixed;
 }
 
-.logo {
-  margin-top: 28px;
-  display: flex;
-  justify-content: center;
+@media only screen and (min-width: 992px) {
+  .logo {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  .boxLogin {
+    position: relative;
+    background-color: rgb(216, 235, 240, 0.8);
+    width: 780px;
+    height: 805px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 20px auto 0 auto;
+  }
+
+  .login {
+    position: absolute;
+  }
+
+  .box-or {
+    display: inline-block;
+    margin: 20px 0 20px 0;
+  }
+
+  .box-container {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    width: 742px;
+  }
+
+  .box-container hr {
+    width: 315px;
+    border-width: 0.4px;
+    border-color: black;
+  }
+
+  .box-login {
+    margin: 20px 0 20px 0;
+  }
+
+  .btn-login-other {
+    margin: 20px 0 20px 0;
+  }
+
+  .btnFacebook {
+    background-color: #3764b9;
+  }
 }
 
-form {
-  text-align: center;
-}
+@media only screen and (min-width: 768px) {
+  .logo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
 
-.boxLogin {
-  position: relative;
-  background-color: rgb(216, 235, 240, 0.8);
-  width: 780px;
-  height: 805px;
-  border-radius: 50px 50px 50px 50px;
-  margin: 20px auto 0 auto;
-}
+  .logo img {
+    width: 350px;
+  }
 
-.login {
-  position: absolute;
-}
+  form {
+    text-align: center;
+  }
 
-.box-or {
-  display: inline-block;
-  margin: 20px 0 20px 0;
-}
+  .boxLogin {
+    position: relative;
+    background-color: rgb(216, 235, 240, 0.8);
+    width: 780px;
+    height: 690px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 20px auto 0 auto;
+  }
 
-.box-container {
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  width: 742px;
-}
+  .login {
+    position: absolute;
+  }
 
-.box-container hr {
-  width: 315px;
-  border-width: 0.4px;
-  border-color: black;
-}
+  .box-login {
+    margin: 0px;
+  }
 
-.box-login {
-  margin: 20px 0 20px 0;
-}
+  .box-login .btn {
+    width: 165px;
+    height: 60px;
+    font-size: 22px;
+  }
 
-.btn-login-other {
-  margin: 20px 0 20px 0;
-}
+  .btn-login-other {
+    margin: 0px;
+  }
 
-.btnFacebook {
-  background-color: #3764b9;
+  .btn-login-other .btn {
+    width: 165px;
+    height: 60px;
+  }
+
+  .btn-login-other .btn img {
+    width: 40px;
+  }
 }

@@ -43,16 +43,7 @@ function Register() {
         <div className="logo">
           <img src={Logo} alt="" />
         </div>
-        <div
-          style={{
-            fontWeight: "bold",
-            fontSize: "xx-large",
-            textAlign: "center",
-            margin: "30px 0 30px 0",
-          }}
-        >
-          Sign Up!
-        </div>
+        <div className="textSignUp">Sign Up!</div>
         <form>
           <div className="formRegister">
             <input
@@ -90,7 +81,7 @@ function Register() {
             onKeyPress={(event) => {
               event.key === "Enter" && createUser();
             }}
-            style={{ margin: "30px 0 0 0" }}
+            style={{ margin: "20px 0 0 0" }}
           >
             Create!
           </button>

@@ -10,11 +10,31 @@
   position: fixed;
 }
 
-.boxRegister {
-  position: relative;
-  background-color: rgb(216, 235, 240, 0.8);
-  width: 780px;
-  height: 765px;
-  border-radius: 50px 50px 50px 50px;
-  margin: 40px auto 0 auto;
+@media only screen and (min-width: 992px) {
+  .boxRegister {
+    position: relative;
+    background-color: rgb(216, 235, 240, 0.8);
+    width: 780px;
+    height: 765px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 40px auto 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .boxRegister {
+    position: relative;
+    background-color: rgb(216, 235, 240, 0.8);
+    width: 780px;
+    height: 600px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 40px auto 0 auto;
+  }
+
+  .boxRegister .textSignUp {
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+    margin: 0px;
+  }
 }
