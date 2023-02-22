@@ -10,6 +10,19 @@
   position: fixed;
 }
 
+.btn-login-other .google {
+  margin-right: 80px;
+}
+
+#textOr {
+  font-weight: bold;
+}
+
+#textNotRegister {
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
 @media only screen and (min-width: 992px) {
   .logo {
     margin-top: 28px;

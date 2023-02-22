@@ -66,8 +66,8 @@ function Main({ currentUser }) {
             <div onClick={() => navigate("/category")}>
               <img id="play" src={btnPlay} weight="50px" height="600px" />
             </div>
-            <img id="add" src={btnAdd} weight="50px" height="300px" />
-            <img id="test" src={btnTest} weight="50px" height="258px" />
+            <img onClick={() => navigate("/editVocabulary")} id="add" src={btnAdd} weight="50px" height="350px" />
+            <img id="test" src={btnTest} weight="20px" height="300px" />
           </div>
 
           {/* <div className="right-bar">
