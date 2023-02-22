@@ -4,6 +4,7 @@ import axios from "axios";
 import Username from "../Category/Username";
 import "./VocabularyTreasury.css";
 import "../Category/Option.css";
+import Menu from "../Menu/Menu";
 
 function VocabularyTreasury({ currentUser }) {
   const navigate = useNavigate();
@@ -20,6 +21,9 @@ function VocabularyTreasury({ currentUser }) {
       <Username currentUser={currentUser} />
       <div id="VocabularyTreasury-details">
         <p>Vocabulary Treasury</p>
+      </div>
+      <div className="Menu-VT">
+        <Menu/>
       </div>
       <div className="frame-Option-one">
         <div className="Option-one"></div>

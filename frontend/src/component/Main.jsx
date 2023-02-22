@@ -33,10 +33,14 @@ function Main({ currentUser }) {
           </div> */}
           <Username currentUser={currentUser} />
 
-          <div className="tab">
+          <div className="tab-main">
             <img id="bg-tab" src={tab} weight="50px" height="500px" />
-            <img id="treasury" src={treasury} weight="50px" height="50px" />
-
+            <div
+              id="cursor-his"
+              onClick={() => navigate("/vocabularyTreasury")}
+            >
+              <img id="treasury" src={treasury} weight="50px" height="50px" />
+            </div>
             <p className="tab-text" id="treasury-text">
               คลัง
             </p>
@@ -46,7 +50,9 @@ function Main({ currentUser }) {
             <p className="tab-text" id="history-text">
               ประวัติ
             </p>
-            <img id="setting" src={setting} weight="50px" height="50px" />
+            <div id="cursor-his" onClick={() => navigate("/setting")}>
+                <img id="setting" src={setting} weight="50px" height="50px" />
+            </div>
             <p className="tab-text" id="setting-text">
               ตั่งค่า
             </p>
@@ -58,10 +64,10 @@ function Main({ currentUser }) {
 
           <div className="center">
             <div onClick={() => navigate("/category")}>
-              <img id="play" src={btnPlay} weight="50px" height="500px" />
+              <img id="play" src={btnPlay} weight="50px" height="600px" />
             </div>
-            <img id="add" src={btnAdd} weight="50px" height="350px" />
-            <img id="test" src={btnTest} weight="20px" height="300px" />
+            <img id="add" src={btnAdd} weight="50px" height="300px" />
+            <img id="test" src={btnTest} weight="50px" height="258px" />
           </div>
 
           {/* <div className="right-bar">

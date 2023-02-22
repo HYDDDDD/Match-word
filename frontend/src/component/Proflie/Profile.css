@@ -2,8 +2,8 @@
     background-color: aliceblue;
     width: 663px;
     height: 160px;
-    margin: 39px 430px;
-    position: absolute;
+    margin: 90px 430px;
+    /* position: absolute; */
     border-radius: 20px 20px 20px 20px;
 }
 
@@ -32,4 +32,9 @@
 
 .edit-profile {
     margin: 353px 0px 0px 0px;
+}
+
+.Menu-Profile {
+    margin: 63px 0px -37px 40px;
+    position: absolute;
 }

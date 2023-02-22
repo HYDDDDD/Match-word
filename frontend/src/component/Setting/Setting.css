@@ -176,3 +176,7 @@ input:checked + .slider:before {
     margin: 40px auto 0 auto;
   }
 }
+
+.Menu-Setting {
+  margin: 79px 0px -29px 34px;
+}

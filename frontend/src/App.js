@@ -15,6 +15,7 @@ import Edit from "./component/Setting/Edit";
 import Main from "./component/Main";
 import History from "./component/History";
 import Game from "./component/Game";
+import Profile from "./component/Proflie/Profile";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -81,6 +82,14 @@ function App() {
           <EditProfile
             currentUser={currentUser}
             setCurrentUser={setCurrentUser}
+          />
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <Profile
+            currentUser={currentUser}
           />
         }
       />

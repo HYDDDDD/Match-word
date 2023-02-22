@@ -1,0 +1,12 @@
+.boxbig {
+    background-color: #ffffff;
+    width: 583px;
+    height: 443px;
+    border-radius: 50px 50px 50px 50px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: -20px -15px 55px 433px;
+    position: relative;
+    box-shadow: inset -12px 12px 48px rgb(9, 124, 159);
+    z-index: 0;
+}

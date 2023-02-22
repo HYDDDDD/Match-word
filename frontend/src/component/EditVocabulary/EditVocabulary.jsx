@@ -1,6 +1,7 @@
 import React from "react";
 import Username from "../Category/Username";
 import Vocab from "./Vocab";
+import Menu from "../Menu/Menu";
 
 function EditVocabulary({ currentUser, selectedTreasury }) {
   return (
@@ -8,6 +9,9 @@ function EditVocabulary({ currentUser, selectedTreasury }) {
       <Username currentUser={currentUser} />
       <div id="category-details">
         <p>Edit Vocabulary</p>
+      </div>
+      <div className="Menu-EV">
+        <Menu/>
       </div>
       <Vocab selectedTreasury={selectedTreasury} />
     </div>

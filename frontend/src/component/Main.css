@@ -1,45 +1,54 @@
 .bg {
     background-image: url("../../src/img/background.jpeg");
+    background-position: center;
+    background-size: cover;
     position: fixed;
-    background-size: contain;
-    height: 840px;
-    margin: 0px 0px;
-    background-repeat:no-repeat; 
-}.main-page {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.main-page {
     color: rgb(0, 0, 0);
     margin: 20px 150px;
     border: 5px black;
     display: block;
 }
+
 #point {
     font-size: 18px;
 }
-#profile{
+
+#profile {
     position: initial;
     margin: -105px 20px;
     display: block;
 }
 
-.tab {
+.tab-main {
     display: grid;
-    margin: 200px 20px;
-    
+    margin: 14px 0px 147px 40px;
 }
+
 #bg-tab {
     position: fixed;
 }
+
 #treasury {
     margin: 65px 25px;
     position: fixed;
 }
+
 #history {
     margin: 165px 25px;
     position: fixed;
 }
+
 #setting {
     margin: 265px 25px;
     position: fixed;
 }
+
 #log-out {
     margin: 365px 25px;
     position: fixed;
@@ -49,42 +58,52 @@
     margin: 140px 25px;
     position: fixed;
 }
+
 #treasury-text {
     margin: 125px 35px;
 }
+
 #history-text {
     margin: 225px 30px;
 }
+
 #setting-text {
     margin: 325px 35px;
 }
+
 #log-out-text {
     margin: 425px 10px;
 }
 
 .center {
     display: grid;
-}
-#play {
-    margin:-200px 350px ;
-}
-#add {
-    margin:-400px 800px;
-}
-#test {
-    margin: 0px 800px;
+    margin: -34px 14px -8px 0px;
 }
 
-.right-bar{
+#play {
+    margin: -200px 350px;
+}
+
+#add {
+    margin: -390px 800px;
+}
+
+#test {
+    margin: -62px 800px;
+}
+
+.right-bar {
     display: grid;
 }
+
 #sound {
-    margin: -790px 1250px ;
-}
-#language {
-    margin: -790px 1300px ;
+    margin: -790px 1250px;
 }
 
-#cursor-his{
+#language {
+    margin: -790px 1300px;
+}
+
+#cursor-his {
     cursor: pointer;
 }

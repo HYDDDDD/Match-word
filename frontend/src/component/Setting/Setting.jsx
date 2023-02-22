@@ -3,6 +3,7 @@ import "../Setting/Setting.css";
 import { useNavigate } from "react-router-dom";
 import Edit from "../../Picture/Edit-setting.png";
 import Close from "../../Picture/close.png";
+import Menu from "../Menu/Menu";
 
 function Setting({ setSelectEdit }) {
   const navigate = useNavigate();
@@ -16,6 +17,9 @@ function Setting({ setSelectEdit }) {
           <div className="rec-setting"></div>
           <div className="rec-container">
             <h3>SETTING</h3>
+          </div>
+          <div className="Menu-Setting">
+             <Menu/>
           </div>
         </div>
         <div className="closeSetting">

@@ -1,8 +1,8 @@
 
 /* แท็บข้าง */
-.tab {
+.tab-history {
     display: grid;
-    margin: 200px 20px;
+    margin:200px 0px 0px 40px;
     
 }
 #bg-tab {

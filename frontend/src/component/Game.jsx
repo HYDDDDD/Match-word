@@ -101,6 +101,12 @@ function Game({ selectedTreasury }) {
     }
   }, [getVocabs, selectedTreasury.treasury_id, selectedEngs, selectedThais]);
 
+  useEffect(() => {
+    const a = vocabEngs.sort();
+    vocabThais.sort();
+    console.log(a);
+  }, [vocabEngs]);
+
   //Check select 2 word
   useEffect(() => {
     //Check select 2 word
@@ -293,31 +299,35 @@ function Game({ selectedTreasury }) {
             <img id="bg-word18" src={bgword} weight="30px" height="80px" />
             <img id="bg-word19" src={bgword} weight="30px" height="80px" /> */}
           </div>
-          <div>
-            {vocabEngs.map((vocab, index) => {
-              return (
-                <div
-                  key={index}
-                  onClick={() => setSelectedWord1(vocab)}
-                  style={{ fontSize: "35px" }}
-                >
-                  {vocab}
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            {vocabThais.map((vocab, index) => {
-              return (
-                <div
-                  key={index}
-                  onClick={() => setSelectedWord2(vocab)}
-                  style={{ fontSize: "35px" }}
-                >
-                  {vocab}
-                </div>
-              );
-            })}
+          <div className="boxVocab">
+            <div>
+              {vocabEngs.sort().map((vocab, index) => {
+                return (
+                  <div
+                    className="boxVocabEng"
+                    key={index}
+                    onClick={() => setSelectedWord1(vocab)}
+                    style={{ fontSize: "35px", color: "white" }}
+                  >
+                    {vocab}
+                  </div>
+                );
+              })}
+            </div>
+            <div>
+              {vocabThais.sort().map((vocab, index) => {
+                return (
+                  <div
+                    className="boxVocabThai"
+                    key={index}
+                    onClick={() => setSelectedWord2(vocab)}
+                    style={{ fontSize: "35px", color: "white" }}
+                  >
+                    {vocab}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

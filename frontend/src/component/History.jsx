@@ -82,10 +82,11 @@ function History() {
           </div>
 
           {/* แท็บข้าง */}
-          <div className="tab">
+          <div className="tab-history">
             <img id="bg-tab" src={tab} weight="50px" height="500px" />
-            <img id="treasury" src={treasury} weight="50px" height="50px" />
-
+            <div id="cursor-his" onClick={() => navigate("/vocabularyTreasury")}>
+              <img id="treasury" src={treasury} weight="50px" height="50px" />
+            </div>
             <p className="tab-text" id="treasury-text">
               คลัง
             </p>
@@ -95,7 +96,9 @@ function History() {
             <p className="tab-text" id="history-text">
               ประวัติ
             </p>
-            <img id="setting" src={setting} weight="50px" height="50px" />
+            <div id="cursor-his" onClick={() => navigate("/setting")}>
+              <img id="setting" src={setting} weight="50px" height="50px" />
+            </div>
             <p className="tab-text" id="setting-text">
               ตั่งค่า
             </p>
