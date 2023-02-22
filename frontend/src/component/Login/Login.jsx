@@ -101,21 +101,19 @@ function Login({ users, setCurrentUser }) {
             <div className="box-or">
               <div className="box-container">
                 <hr />
-                <div style={{ fontWeight: "bold" }}>Or</div>
+                <div id="textOr">Or</div>
                 <hr />
               </div>
             </div>
             <div className="btn-login-other">
-              <button className="btn" style={{ marginRight: "80px" }}>
+              <button className="btn google">
                 <img src={Google} alt="" />
               </button>
               <button className="btn btnFacebook">
                 <img src={Facebook} alt="" />
               </button>
             </div>
-            <div style={{ fontWeight: "bold", margin: "20px 0 10px 0" }}>
-              Not register?
-            </div>
+            <div id="textNotRegister">Not register?</div>
             <div
               className="btnSignUp"
               onClick={() => navigate("/register")}
