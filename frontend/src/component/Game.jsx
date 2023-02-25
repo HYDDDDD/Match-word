@@ -67,7 +67,7 @@ function Game({ selectedTreasury }) {
         setVocabEngs((vocab) => [...vocab, data.vocabulary]);
         setVocabThais((vocab) => [...vocab, data.thai_vocab]);
       });
-      // console.log(data);
+        console.log(data);
     }
 
     if (selectedEngs[0] !== undefined) {

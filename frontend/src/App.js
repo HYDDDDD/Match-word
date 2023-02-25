@@ -128,7 +128,7 @@ function App() {
       <Route path="/edit" element={<Edit setSelectEdit={setSelectEdit} />} />
       <Route path="/Main" element={<Main currentUser={currentUser}/>} />
       <Route path="/Game" element={<Game selectedTreasury={selectedTreasury}/>} /> 
-      <Route path="/history" element={<History/>} />
+      <Route path="/history" element={<History selectedTreasury={selectedTreasury}/>} />
     </Routes>
   );
 }
