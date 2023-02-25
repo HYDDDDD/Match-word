@@ -16,6 +16,7 @@ import setting from "../img/setting.png";
 import sound from "../img/sound01.png";
 import treasury from "../img/treasury.png";
 import Username from "./Category/Username";
+import Menu from "./Menu/Menu";
 
 function Main({ currentUser }) {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ function Main({ currentUser }) {
           </div> */}
           <Username currentUser={currentUser} />
 
-          <div className="tab-main">
+          {/* <div className="tab-main">
             <img id="bg-tab" src={tab} weight="50px" height="500px" />
             <div
               id="cursor-his"
@@ -60,14 +61,24 @@ function Main({ currentUser }) {
             <p className="tab-text" id="log-out-text">
               ออกจากระบบ
             </p>
-          </div>
+          </div> */}
+          <Menu />
 
-          <div className="center">
-            <div onClick={() => navigate("/category")}>
-              <img id="play" src={btnPlay} weight="50px" height="600px" />
+          <div>
+            <div className="center">
+              <div onClick={() => navigate("/category")}>
+                <img id="play" src={btnPlay} weight="50px" height="600px" alt=""/>
+              </div>
+              <img
+                onClick={() => navigate("/editVocabulary")}
+                id="add"
+                src={btnAdd}
+                weight="50px"
+                height="350px"
+                alt=""
+              />
+              <img id="test" src={btnTest} weight="20px" height="300px" alt=""/>
             </div>
-            <img onClick={() => navigate("/editVocabulary")} id="add" src={btnAdd} weight="50px" height="350px" />
-            <img id="test" src={btnTest} weight="20px" height="300px" />
           </div>
 
           {/* <div className="right-bar">

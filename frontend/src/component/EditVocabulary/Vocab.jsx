@@ -45,7 +45,7 @@ function Vocab({ selectedTreasury }) {
       })
       .catch((err) => console.log(err));
   };
-  console.log(selectedTreasury.treasury_id);
+  // console.log(selectedTreasury.treasury_id);
   const deleteVocab = (id) => {
     console.log(id);
     axios.delete(`http://127.0.0.1:8000/vocabularys/${id}`).then(() => {
@@ -53,7 +53,7 @@ function Vocab({ selectedTreasury }) {
     });
   };
 
-  console.log(vocab);
+  // console.log(vocab);
 
   return (
     <>

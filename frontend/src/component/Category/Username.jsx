@@ -10,7 +10,7 @@ function Username({ currentUser }) {
   return (
     <div className="username">
       <div className="frame-username">
-        <div className="photo-username" onClick={() => navigate("/Main")}>
+        <div className="photo-username" onClick={() => navigate("/profile")}>
           <img width="63px" height="63px" src={Photo} alt="" />
         </div>
         <div className="description-username">

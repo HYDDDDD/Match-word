@@ -160,17 +160,12 @@
 }
 
 .btndelete:hover {
-<<<<<<< HEAD
-    background-color: #19aee8; 
-    color: white;
-}
-
-.Menu-EV {
-    margin: 63px 0px 0px 43px;
-  }
-=======
   background-color: #19aee8;
   color: white;
+}
+
+.Menu-EV{
+  position: absolute;
 }
 
 @media only screen and (min-width: 768px) {
@@ -187,4 +182,3 @@
     margin-top: 10px;
   }
 }
->>>>>>> 0b8802ca989e190126717be6f0a8fb814a72d76c

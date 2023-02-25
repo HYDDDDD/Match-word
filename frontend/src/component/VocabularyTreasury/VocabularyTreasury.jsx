@@ -23,69 +23,71 @@ function VocabularyTreasury({ currentUser }) {
         <p>Vocabulary Treasury</p>
       </div>
       <div className="Menu-VT">
-        <Menu/>
+        <Menu />
       </div>
-      <div className="frame-Option-one">
-        <div className="Option-one"></div>
-        <div className="photo-Option-one"></div>
-        <div className="name-Option-one">
-          <p>
-            {treasurys
-              .filter((id) => id.treasury_id === 1)
-              .map((data) => data.treasury_title)}
-          </p>
-          <p id="dateplay-details">
-            Last played date :{" "}
-            {treasurys
-              .filter((id) => id.treasury_id === 1)
-              .map((data) => data.treasury_date)}
-          </p>
-        </div>
-        <div className="iconplay-Option-one"></div>
-        <div className="numberword-Option-one">
-          <p id="numberword-one">
-            {treasurys
-              .filter((id) => id.treasury_id === 1)
-              .map((data) => data.total_vocab)}
-          </p>
-          <p id="word-one">word</p>
-        </div>
+      <div>
+        <div className="frame-Option-one">
+          <div className="Option-one"></div>
+          <div className="photo-Option-one"></div>
+          <div className="name-Option-one">
+            <p>
+              {treasurys
+                .filter((id) => id.treasury_id === 1)
+                .map((data) => data.treasury_title)}
+            </p>
+            <p id="dateplay-details">
+              Last played date :{" "}
+              {treasurys
+                .filter((id) => id.treasury_id === 1)
+                .map((data) => data.treasury_date)}
+            </p>
+          </div>
+          <div className="iconplay-Option-one"></div>
+          <div className="numberword-Option-one">
+            <p id="numberword-one">
+              {treasurys
+                .filter((id) => id.treasury_id === 1)
+                .map((data) => data.total_vocab)}
+            </p>
+            <p id="word-one">word</p>
+          </div>
 
-        <div className="Option-two"></div>
-        <div className="photo-Option-two"></div>
-        <div className="name-Option-two">
-          <p>
-            {treasurys
-              .filter((id) => id.treasury_id === 2)
-              .map((data) => data.treasury_title)}
-          </p>
-          <p id="dateplay-details">
-            Last played date :{" "}
-            {treasurys
-              .filter((id) => id.treasury_id === 1)
-              .map((data) => data.treasury_date)}
-          </p>
-        </div>
-        <div className="iconplay-Option-two"></div>
-        <div className="numberword-Option-two">
-          <p id="numberword-two">
-            {treasurys
-              .filter((id) => id.treasury_id === 2)
-              .map((data) => data.total_vocab)}
-          </p>
-          <p id="word-two">word</p>
-        </div>
+          <div className="Option-two"></div>
+          <div className="photo-Option-two"></div>
+          <div className="name-Option-two">
+            <p>
+              {treasurys
+                .filter((id) => id.treasury_id === 2)
+                .map((data) => data.treasury_title)}
+            </p>
+            <p id="dateplay-details">
+              Last played date :{" "}
+              {treasurys
+                .filter((id) => id.treasury_id === 1)
+                .map((data) => data.treasury_date)}
+            </p>
+          </div>
+          <div className="iconplay-Option-two"></div>
+          <div className="numberword-Option-two">
+            <p id="numberword-two">
+              {treasurys
+                .filter((id) => id.treasury_id === 2)
+                .map((data) => data.total_vocab)}
+            </p>
+            <p id="word-two">word</p>
+          </div>
 
-        <div className="Option-three"></div>
-        <div className="photo-Option-three"></div>
-        <div className="name-Option-three">
-          <p>GameWord</p>
-          <p id="dateplay-details">date</p>
-        </div>
-        <div className="iconplay-Option-three"></div>
-        <div className="numberword-Option-three">
-          <p id="numberword-three">10</p>
-          <p id="word-three">word</p>
+          <div className="Option-three"></div>
+          <div className="photo-Option-three"></div>
+          <div className="name-Option-three">
+            <p>GameWord</p>
+            <p id="dateplay-details">date</p>
+          </div>
+          <div className="iconplay-Option-three"></div>
+          <div className="numberword-Option-three">
+            <p id="numberword-three">10</p>
+            <p id="word-three">word</p>
+          </div>
         </div>
       </div>
     </div>

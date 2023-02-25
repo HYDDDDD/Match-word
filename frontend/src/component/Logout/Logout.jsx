@@ -7,11 +7,11 @@ function Logout({ setShowLogout }) {
 
   return (
     <div className="boxbig">
-      <div className="font1">Do you want to log out?</div>
-      <div className="" onClick={() => navigate("/")}>
+      <div className="logout-Q">Do you want to log out?</div>
+      <div className="logout-yes" onClick={() => navigate("/")}>
         Yes
       </div>
-      <div className="" onClick={() => setShowLogout(false)}>
+      <div className="logout-no" onClick={() => setShowLogout(false)}>
         No
       </div>
     </div>

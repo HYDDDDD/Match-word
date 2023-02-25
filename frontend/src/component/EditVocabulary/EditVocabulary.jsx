@@ -2,6 +2,7 @@ import React from "react";
 import Username from "../Category/Username";
 import Vocab from "./Vocab";
 import Menu from "../Menu/Menu";
+import "./EditVocab.css";
 
 function EditVocabulary({ currentUser, selectedTreasury }) {
   return (

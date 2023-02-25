@@ -203,6 +203,7 @@ function Game({ selectedTreasury }) {
               weight="50px"
               height="50px"
               onClick={() => setStatusMenu((val) => !val)}
+              alt=""
             />
             {!statusMenu ? (
               <></>
@@ -216,6 +217,7 @@ function Game({ selectedTreasury }) {
                       weight="110px"
                       height="110px"
                       onClick={() => navigate("/Main")}
+                      alt=""
                     />
                   </div>
                   <div>
@@ -224,12 +226,14 @@ function Game({ selectedTreasury }) {
                       src={btnsetting}
                       weight="100px"
                       height="100px"
+                      alt=""
                     />
                     <img
                       id="btn-treasury"
                       src={btntreasury}
                       weight="100px"
                       height="100px"
+                      alt=""
                     />
                   </div>
                 </div>
@@ -242,6 +246,7 @@ function Game({ selectedTreasury }) {
               weight="40px"
               height="40px"
               onClick={() => setStatusStop((val) => !val)}
+              alt=""
             />
             {!statusStop ? (
               <></>
@@ -254,6 +259,8 @@ function Game({ selectedTreasury }) {
                       src={btnadd}
                       weight="100px"
                       height="100px"
+                      alt=""
+                      onClick={() => navigate("/prepare")}
                     />
                   </div>
                   <div>
@@ -262,6 +269,8 @@ function Game({ selectedTreasury }) {
                       src={btnedit}
                       weight="100px"
                       height="100px"
+                      alt=""
+                      onClick={() => navigate("/prepare")}
                     />
                     <img
                       id="btn-exit"
@@ -269,6 +278,7 @@ function Game({ selectedTreasury }) {
                       weight="150px"
                       height="150px"
                       onClick={() => navigate("/Main")}
+                      alt=""
                     />
                   </div>
                   {/* <div onClick={() => navigate("/Main")}>
