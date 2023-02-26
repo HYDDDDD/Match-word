@@ -162,9 +162,10 @@
     position: relative;
     background-color: rgb(216, 235, 240, 0.8);
     width: 1200px;
-    height: 560px;
+    height: fit-content;
     border-radius: 50px 50px 50px 50px;
-    margin: 40px auto 0 auto;
+    margin: 15px auto 0 auto;
+    padding: 10px;
 }
 
 .boxVocab {
@@ -183,4 +184,11 @@
     font-size: 20px;
     font-weight: bold;
     transition-duration: 0.4s;
+}
+
+#word {
+    display: grid;
+    grid-template-columns: repeat(2, 240px);
+    height: fit-content;
+    justify-content: center;
 }

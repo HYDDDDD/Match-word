@@ -311,7 +311,7 @@ function Game({ selectedTreasury }) {
           </div>
           <div className="box-game">
             <div className="boxVocab">
-              <div>
+              <div id="word">
                 {vocabEngs.sort().map((vocab, index) => {
                   return (
                     <div
@@ -325,7 +325,7 @@ function Game({ selectedTreasury }) {
                   );
                 })}
               </div>
-              <div>
+              <div id="word">
                 {vocabThais.sort().map((vocab, index) => {
                   return (
                     <div

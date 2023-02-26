@@ -96,6 +96,8 @@ function History({ selectedTreasury }) {
         return data;
       });
 
+    console.log(data);
+
     if (data) {
       setVocabs(data);
     }
@@ -381,7 +383,9 @@ function History({ selectedTreasury }) {
 
         {/* Score Demo */}
         <div className="text">
-          <p id="t2">{score.filter((id) => id.vocab_status === "T").length}</p>
+          <p id="t2">
+            {/* {score.filter((id) => id.vocab_status === "T").length} */}
+          </p>
         </div>
 
         {/* Total Vocab Demo */}
