@@ -71,3 +71,7 @@ input {
   font-size: 20px;
   font-weight: 600;
 }
+
+#tabMenu {
+  margin: 137px 0px 0px 40px;
+}

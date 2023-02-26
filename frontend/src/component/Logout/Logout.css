@@ -1,12 +1,52 @@
 .boxbig {
     background-color: #ffffff;
-    width: 583px;
-    height: 443px;
+    width: 520px;
+    height: 288px;
     border-radius: 50px 50px 50px 50px;
     /* margin-left: auto;
     margin-right: auto; */
-    margin: -20px -15px 55px 433px;
+    margin: 85px 0px -352px 494px;
     position: relative;
-    box-shadow: inset -12px 12px 48px rgb(9, 124, 159);
-    z-index: 0;
+    box-shadow: inset -12px 12px 48px rgb(121 203 228);
+    z-index: 1;
+    position: fixed;
+}
+
+.logout-Q {
+    color: #000000;
+    /* margin: 58px 214px; */
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 198px;
+}
+
+.logout-yes {
+    background-color: #507214;
+    box-shadow: inset -12px 12px 48px rgb(132 255 0);
+    /* border: 3px solid rgb(79 214 255 / 59%); */
+    width: 119px;
+    height: 47px;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 11px 11px 11px 11px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: -22px 108px;
+    transition-duration: 0.4s;
+}
+
+.logout-no {
+    background-color: rgb(255 134 0);
+    box-shadow: inset -12px 12px 48px #ffcf66;
+    /* border: 3px solid rgb(79 214 255 / 59%); */
+    width: 119px;
+    height: 47px;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 11px 11px 11px 11px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: -47px 278px;
+    transition-duration: 0.4s;
 }

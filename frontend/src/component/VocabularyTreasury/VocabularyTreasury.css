@@ -19,7 +19,7 @@
     margin-top: -116px;
     font-size: 32px;
     font-weight: bold;
-  }
+}
 
 #dateplay-details {
     color: #fff;
@@ -28,7 +28,7 @@
     font-weight: bold;
 }
 
-.Menu-VT {
+/* .Menu-VT {
     margin: 78px 0px -7px 22px;
-  }
-  
+    position: absolute;
+} */

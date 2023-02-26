@@ -178,5 +178,9 @@ input:checked + .slider:before {
 }
 
 .Menu-Setting {
-  margin: 79px 0px -29px 34px;
+  margin: 79px 0px -29px 40px;
+}
+
+.bigboxsetting {
+  /* position: relative; */
 }

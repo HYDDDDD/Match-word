@@ -27,7 +27,7 @@ function ShowVocab({ selectedTreasury }) {
   // console.log(vocabs);
 
   return (
-    <>
+    <div>
       <div className="details-boxframe">
         <div className="details-boxbig"></div>
         <div className="photo-showVo"></div>
@@ -66,7 +66,7 @@ function ShowVocab({ selectedTreasury }) {
           GO to Play
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

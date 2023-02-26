@@ -25,21 +25,21 @@
     display: block;
 }
 
-.tab-main {
+/* .tab {
     display: grid;
     margin: 14px 0px 147px 40px;
-}
+} */
 
-#bg-tab {
+/* #bg-tab {
     position: fixed;
-}
+} */
 
-#treasury {
+/* #treasury {
     margin: 65px 25px;
     position: fixed;
-}
+} */
 
-#history {
+/* #history {
     margin: 165px 25px;
     position: fixed;
 }
@@ -52,9 +52,9 @@
 #log-out {
     margin: 365px 25px;
     position: fixed;
-}
+} */
 
-.tab-text {
+/* .tab-text {
     margin: 140px 25px;
     position: fixed;
 }
@@ -73,11 +73,11 @@
 
 #log-out-text {
     margin: 425px 10px;
-}
+} */
 
 .center {
     display: grid;
-    margin: -34px 14px -8px 0px;
+    margin: 133px 14px -8px 0px;
 }
 
 #play {
@@ -104,6 +104,6 @@
     margin: -790px 1300px;
 }
 
-#cursor-his {
+/* #cursor-his {
     cursor: pointer;
-}
+} */
