@@ -31,7 +31,7 @@ function History({ selectedTreasury }) {
   const [scoreF, setScoreF] = useState([]);
   const [total, setTotal] = useState([]);
   const [title, setTitle] = useState([]);
- 
+
   //Get vocabularys in table.
   useEffect(() => {
     axios.get("http://127.0.0.1:8000/vocabularys/").then((data) => {
@@ -81,7 +81,7 @@ function History({ selectedTreasury }) {
 
     setTitle(data)
     console.log(data)
-  }, [getTreasury, setTitle])
+  }, [getTreasury, selectedTreasury.treasury_id])
 
   //Get Score
   useEffect(() => {
@@ -107,7 +107,7 @@ function History({ selectedTreasury }) {
         setVocabs(info);
       }
 
-      console.log(data)
+      // console.log(data)
     setScore(data)
     setScoreF(info)
   }, [getVocabs, setScore, setScoreF]);
@@ -127,7 +127,7 @@ function History({ selectedTreasury }) {
   
   setTotal(data)
 
-  console.log(total)
+  // console.log(total)
 
 },[getVocabs])
   
@@ -208,7 +208,7 @@ function History({ selectedTreasury }) {
                 return (
                   <div
                   className="text" id="t1"
-                  key={index}
+                  key={index.treasury_id}
                   >
                   {treasuryTitle.treasury_title}
                   </div>
@@ -230,6 +230,9 @@ function History({ selectedTreasury }) {
           <p id="t3">
           {vocabs.filter((id) => id.treasury_id[0] === 1).length}
           </p>
+          {/* <p id="t3-3">
+          {vocabs.filter((id) => id.treasury_id[1] === 2).length}
+          </p> */}
         </div>
         
         {/* ตัวหนังสือ */}
@@ -248,7 +251,7 @@ function History({ selectedTreasury }) {
           </p>
         </div>
         <div className="text">
-           {/* <b id="t1"> Unit2 </b> */}
+           {/* <b id="t1", id="t1-1"> Unit2 </b> */}
           {/* <b id="t2"> 10 </b> */}
           {/* <b id="t3"> 10 </b> */}
         </div>
