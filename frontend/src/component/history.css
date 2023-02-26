@@ -118,10 +118,17 @@
     margin: 60px 340px;
 }
 
+.textTotal {
+    font-size: 20px;
+    position: fixed;
+    margin: 60px 33px 0px 345px;
+}
+
 #t1 {
     position: fixed;
     margin: 5px -136px;
 }
+
 #t1-1 {
     margin: 120px -268px
 }
@@ -130,6 +137,7 @@
     position: fixed;
     margin: 5px 120px;
 }
+
 #t2-2 {
     margin: 136px 120px;
 }
@@ -138,6 +146,7 @@
     position: fixed;
     margin: 5px 435px;
 }
+
 #t3-3 {
     margin: 136px 439px;
 }
@@ -212,11 +221,13 @@
 #hisarrow {
     position: fixed;
     margin: 72px 876px;
+    z-index: 1;
 }
 
 #toparrow {
     position: fixed;
     margin: 72px 876px;
+    z-index: 1;
 }
 
 #hideline {
@@ -249,6 +260,7 @@
 #his1 {
     margin: 0px -132px;
 }
+
 #his2 {
     margin: 136px 5px;
 }

@@ -75,13 +75,13 @@ function History({ selectedTreasury }) {
         return data.treasury_title;
       });
 
-      let info = getTreasury
-      .filter((info) => info.treasury_title === 'Hard')
+    let info = getTreasury
+      .filter((info) => info.treasury_title === "Hard")
       .map((info) => {
         return info.treasury_title;
       });
 
-     console.log(info);
+    console.log(info);
 
     // if (data) {
     //   data.map((data) => {
@@ -91,7 +91,7 @@ function History({ selectedTreasury }) {
     // }
 
     setTitle(data);
-    setTitle2(info)
+    setTitle2(info);
     // console.log(data);
   }, [getTreasury, setTitle]);
 
@@ -145,176 +145,28 @@ function History({ selectedTreasury }) {
   }, [getVocabs]);
 
   return (
-    // <>
-    //   <div id="main">
-    //     {/* พื้นหลัง */}
-    //     <div>
-    //       <img id="bg-his" src={hisbg}  alt="" />
-    //     </div>
-
-    //     <div className="main-his">
-    //       {/* <div>
-    //         <img id="bghisword" src={bghisword} alt="" />
-    //       </div>
-
-    //       <Menu /> */}
-    //       <div className="titleSetting">
-    //         <div>
-    //           <div className="rec-history"></div>
-    //           <div className="his-container">
-    //             <h3>HISTORY</h3>
-    //           </div>
-    //           <div className="Menu-Setting">
-    //             <Menu />
-    //           </div>
-    //         </div>
-    //         <div className="closeSetting">
-    //           <img src={Close} alt="" />
-    //         </div>
-    //       </div>
-    //       <div className="boxHistory">
-    //         {/* <div>
-    //           <img
-    //             id="cross"
-    //             src={cross}
-    //             weight="40px"
-    //             height="40px"
-    //             onClick={() => navigate("/Main")}
-    //             alt=""
-    //           />
-    //         </div> */}
-    //         {/* <img id="hiswordbg" src={hiswordbg} weight="3000px" height="3000px" alt=""/> */}
-    //         {/* <img id="line" src={line} alt="" /> */}
-    //         {/* <img
-    //           id="hisarrow"
-    //           src={hisarrow}
-    //           alt=""
-    //           weight="30"
-    //           height={30}
-    //           onClick={() => setStatusClick((val) => !val)}
-    //         /> */}
-    //         {/* {!statusClick ? (
-    //           <></>
-    //         ) : (
-    //           <div className="text-click">
-    //             <b id="hidetext1">
-    //               <div style={{ display: "flex" }}>
-    //                 คำที่ถูก:
-    //                 {score.map((data, index) => {
-    //                   return (
-    //                     <div
-    //                       // className="text-click"
-    //                       //
-    //                       key={index}
-    //                     >
-    //                       {data.vocabulary},
-    //                     </div>
-    //                   );
-    //                 })}
-    //               </div>
-    //             </b>
-    //             <b id="hidetext2">
-    //               <div style={{ display: "flex" }}>
-    //                 คำที่ผิด:
-    //                 {scoreF.map((data, index) => {
-    //                   return (
-    //                     <div
-    //                       // className="text-click"
-    //                       key={index}
-    //                       // style={{position: "fixed"}}
-    //                     >
-    //                       {data.vocabulary},
-    //                     </div>
-    //                   );
-    //                 })}
-    //               </div>
-    //             </b>
-    //             <img
-    //               id="toparrow"
-    //               src={toparrow}
-    //               weight="30"
-    //               height={30}
-    //               alt=""
-    //             />
-    //             <img id="hideline" src={hideline} alt="" />
-    //           </div>
-    //         )} */}
-    //         {/* Title Demo */}
-    //         {/* <div className="text">
-    //           <p id="t1">
-    //             <div>
-    //               {title.map((treasuryTitle, index) => {
-    //                 return (
-    //                   <div className="text" id="t1" key={index}>
-    //                     {treasuryTitle.treasury_title}
-    //                   </div>
-    //                 );
-    //               })}
-    //             </div>
-    //           </p>
-    //         </div> */}
-
-    //         {/* Score Demo */}
-    //         {/* <div className="text">
-    //           <p id="t2">
-    //             {score.filter((id) => id.vocab_status === "T").length}
-    //           </p>
-    //         </div> */}
-
-    //         {/* Total Vocab Demo */}
-    //         {/* <div className="text">
-    //           <p id="t3">
-    //             {vocabs.filter((id) => id.treasury_id[0] === 1).length}
-    //           </p>
-    //         </div> */}
-
-    //         {/* ตัวหนังสือ */}
-    //         {/* <div className="text-title">
-    //           <p id="tt1">
-    //             <b>หมวดหมู่</b>
-    //           </p>
-    //           <p id="tt2">
-    //             <b>คะแนน</b>
-    //           </p>
-    //           <p id="tt3">
-    //             <b>จำนวน</b>
-    //           </p>
-    //           <p id="tt3-1">
-    //             <b>ศัพท์</b>
-    //           </p>
-    //         </div> */}
-    //         <div className="text">
-    //           {/* <b id="t1"> Unit2 </b> */}
-    //           {/* <b id="t2"> 10 </b> */}
-    //           {/* <b id="t3"> 10 </b> */}
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </>
     <div className="backgroundHistory">
-    <div className="titleSetting">
-      <div>
-        <div className="rec-history"></div>
-        <div className="his-container">
-          <h3>HISTORY</h3>
+      <div className="titleSetting">
+        <div>
+          <div className="rec-history"></div>
+          <div className="his-container">
+            <h3>HISTORY</h3>
+          </div>
+          <div className="Menu-Setting">
+            <Menu />
+          </div>
         </div>
-        <div className="Menu-Setting">
-          <Menu />
+        <div className="closeSetting">
+          <img src={Close} alt="" />
         </div>
-      </div>
-      <div className="closeSetting">
-        <img src={Close} alt="" />
-      </div>
-    </div>
-
-    <div className="boxHistory">
-      <div>
-        <img id="line" src={line} alt="" />
       </div>
 
-      {!statusClick ? (
-        <>
+      <div className="boxHistory">
+        <div>
+          <img id="line" src={line} alt="" />
+        </div>
+
+        {!statusClick ? (
           <div>
             <img
               id="hisarrow"
@@ -325,8 +177,7 @@ function History({ selectedTreasury }) {
               onClick={() => setStatusClick((val) => !val)}
             />
           </div>
-        </>
-      ) : (
+        ) : (
           <div className="text-click">
             <b id="hidetext1">
               <div style={{ display: "flex" }}>
@@ -407,18 +258,18 @@ function History({ selectedTreasury }) {
 
         {/* Score Demo */}
         <div className="text">
-          <p id="t2">
-             {score.filter((id) => id.vocab_status === "T").length}
-          </p>
-           <p id="t2-2">
-             {score.filter((id) => id.vocab_status === "N").length}
+          <p id="t2">{score.filter((id) => id.vocab_status === "T").length}</p>
+          <p id="t2-2">
+            {score.filter((id) => id.vocab_status === "N").length}
           </p>
         </div>
 
         {/* Total Vocab Demo */}
-        <div className="text">
+        <div className="textTotal">
           <p id="t3">{vocabs.filter((id) => id.treasury_id[0] === 1).length}</p>
-          <p id="t3-3">{vocabs.filter((id) => id.treasury_id[1] === 2).length}</p>
+          <p id="t3-3">
+            {vocabs.filter((id) => id.treasury_id[1] === 2).length}
+          </p>
         </div>
 
         {/* ตัวหนังสือ */}
