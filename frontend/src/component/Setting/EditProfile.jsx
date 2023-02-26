@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./EditProfile.css";
 import PictureUser from "../../Picture/pictureUser.png";
+import Menu from "../Menu/Menu";
 
 function EditProfile({ currentUser, setCurrentUser }) {
   const navigate = useNavigate();
@@ -46,6 +47,9 @@ function EditProfile({ currentUser, setCurrentUser }) {
 
   return (
     <div className="backgroundEditProfile">
+      <div id="tabMenu">
+        <Menu />
+      </div>
       <div className="boxEdit">
         <div className="containerEdit">
           <div style={{ textAlign: "center", marginTop: "50px" }}>

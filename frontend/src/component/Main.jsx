@@ -70,7 +70,7 @@ function Main({ currentUser }) {
                 <img id="play" src={btnPlay} weight="50px" height="600px" alt=""/>
               </div>
               <img
-                onClick={() => navigate("/editVocabulary")}
+                onClick={() => navigate("/category2")}
                 id="add"
                 src={btnAdd}
                 weight="50px"

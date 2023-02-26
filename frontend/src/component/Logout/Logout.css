@@ -5,10 +5,11 @@
     border-radius: 50px 50px 50px 50px;
     /* margin-left: auto;
     margin-right: auto; */
-    margin: -20px -15px 55px 487px;
+    margin: 85px 0px -352px 494px;
     position: relative;
     box-shadow: inset -12px 12px 48px rgb(121 203 228);
-    z-index: 0;
+    z-index: 1;
+    position: fixed;
 }
 
 .logout-Q {

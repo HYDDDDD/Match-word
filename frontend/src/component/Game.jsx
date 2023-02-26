@@ -67,7 +67,7 @@ function Game({ selectedTreasury }) {
         setVocabEngs((vocab) => [...vocab, data.vocabulary]);
         setVocabThais((vocab) => [...vocab, data.thai_vocab]);
       });
-        console.log(data);
+      console.log(data);
     }
 
     if (selectedEngs[0] !== undefined) {
@@ -309,34 +309,36 @@ function Game({ selectedTreasury }) {
             <img id="bg-word18" src={bgword} weight="30px" height="80px" />
             <img id="bg-word19" src={bgword} weight="30px" height="80px" /> */}
           </div>
-          <div className="boxVocab">
-            <div>
-              {vocabEngs.sort().map((vocab, index) => {
-                return (
-                  <div
-                    className="boxVocabEng"
-                    key={index}
-                    onClick={() => setSelectedWord1(vocab)}
-                    style={{ fontSize: "35px", color: "white" }}
-                  >
-                    {vocab}
-                  </div>
-                );
-              })}
-            </div>
-            <div>
-              {vocabThais.sort().map((vocab, index) => {
-                return (
-                  <div
-                    className="boxVocabThai"
-                    key={index}
-                    onClick={() => setSelectedWord2(vocab)}
-                    style={{ fontSize: "35px", color: "white" }}
-                  >
-                    {vocab}
-                  </div>
-                );
-              })}
+          <div className="box-game">
+            <div className="boxVocab">
+              <div>
+                {vocabEngs.sort().map((vocab, index) => {
+                  return (
+                    <div
+                      className="boxVocabEng"
+                      key={index}
+                      onClick={() => setSelectedWord1(vocab)}
+                      style={{ fontSize: "35px", color: "white" }}
+                    >
+                      {vocab}
+                    </div>
+                  );
+                })}
+              </div>
+              <div>
+                {vocabThais.sort().map((vocab, index) => {
+                  return (
+                    <div
+                      className="boxVocabThai"
+                      key={index}
+                      onClick={() => setSelectedWord2(vocab)}
+                      style={{ fontSize: "35px", color: "white" }}
+                    >
+                      {vocab}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

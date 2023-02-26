@@ -7,6 +7,7 @@ import logout from "../../img/log-out.png";
 import setting from "../../img/setting.png";
 import { useNavigate } from "react-router-dom";
 import Logout from "../Logout/Logout";
+import "./Menu.css";
 
 function Menu({ currentUser }) {
   const navigate = useNavigate();

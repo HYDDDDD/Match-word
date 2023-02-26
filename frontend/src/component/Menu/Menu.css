@@ -1,0 +1,66 @@
+.tab {
+    display: grid;
+    margin: 9px 0px 0px 40px;
+    position: fixed;
+
+}
+
+#bg-tab {
+    position: fixed;
+    width: 110px;
+    height: 550px;
+}
+
+#home {
+    margin: 32px 25px;
+    position: fixed;
+}
+
+#cursor-his {
+    cursor: pointer;
+}
+
+#treasury {
+    margin: 132px 25px;
+    position: fixed;
+}
+
+#history {
+    margin: 232px 25px;
+    position: fixed;
+}
+
+#setting {
+    margin: 332px 25px;
+    position: fixed;
+}
+
+#log-out {
+    margin: 432px 25px;
+    position: fixed;
+}
+
+.tab-text {
+    margin: 140px 25px;
+    position: fixed;
+}
+
+#home-text {
+    margin: 90px 25px;
+}
+
+#treasury-text {
+    margin: 190px 35px;
+}
+
+#history-text {
+    margin: 290px 30px;
+}
+
+#setting-text {
+    margin: 390px 35px;
+}
+
+#log-out-text {
+    margin: 490px 10px;
+}

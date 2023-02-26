@@ -16,6 +16,7 @@ import Main from "./component/Main";
 import History from "./component/History";
 import Game from "./component/Game";
 import Profile from "./component/Proflie/Profile";
+import Category2 from "./component/Category/Category2";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -85,18 +86,20 @@ function App() {
           />
         }
       />
-      <Route
-        path="/profile"
-        element={
-          <Profile
-            currentUser={currentUser}
-          />
-        }
-      />
+      <Route path="/profile" element={<Profile currentUser={currentUser} />} />
       <Route
         path="/category"
         element={
           <Category
+            currentUser={currentUser}
+            setSelectedTreasury={setSelectedTreasury}
+          />
+        }
+      />
+      <Route
+        path="/category2"
+        element={
+          <Category2
             currentUser={currentUser}
             setSelectedTreasury={setSelectedTreasury}
           />
@@ -126,9 +129,15 @@ function App() {
       />
       <Route path="/setting" element={<Setting />} />
       <Route path="/edit" element={<Edit setSelectEdit={setSelectEdit} />} />
-      <Route path="/Main" element={<Main currentUser={currentUser}/>} />
-      <Route path="/Game" element={<Game selectedTreasury={selectedTreasury}/>} /> 
-      <Route path="/history" element={<History selectedTreasury={selectedTreasury}/>} />
+      <Route path="/Main" element={<Main currentUser={currentUser} />} />
+      <Route
+        path="/Game"
+        element={<Game selectedTreasury={selectedTreasury} />}
+      />
+      <Route
+        path="/history"
+        element={<History selectedTreasury={selectedTreasury} />}
+      />
     </Routes>
   );
 }

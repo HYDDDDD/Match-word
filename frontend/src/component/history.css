@@ -1,5 +1,5 @@
 /* แท็บข้าง */
-.tab-history {
+/* .tab-history {
     display: grid;
     margin: 200px 0px 0px 40px;
 
@@ -59,7 +59,7 @@
 
 #log-out-text {
     margin: 490px 10px;
-}
+} */
 
 /* #bg-tab {
     position: relative;
@@ -77,18 +77,19 @@
 /* พื้นหลัง */
 #bg-his {
     background-image: url("../../src/img-his/his.jpeg");
-    position: fixed;
+    /* position: fixed;
     background-size: contain;
-    height: 1000px;
+    width: 100%;
+    height: 100%;
     margin: -200px 0px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 /* ข้อความ */
 .text-title {
     font-size: 23px;
     position: fixed;
-    margin: -60px 350px;
+    margin: -16px 36px;
 }
 
 #tt1 {
@@ -119,46 +120,103 @@
 
 #t1 {
     position: fixed;
-    margin: 00px 40px;
+    margin: 5px -148px;
 }
 
 #t2 {
     position: fixed;
-    margin: 00px 440px;
+    margin: 5px 108px;
 }
 
 #t3 {
     position: fixed;
-    margin: 00px 740px;
+    margin: 5px 435px;
+}
+
+
+
+#bghisword {
+    position: fixed;
+    /* margin: -170px 0px; */
+}
+
+#cross {
+    position: fixed;
+    /* margin: -160px 1380px; */
+}
+
+
+/* #hisarrow{
+    visibility:hidden;
+} */
+
+/* title history */
+.rec-history {
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 295px;
+    height: 62px;
+    background-color: #fff;
+    text-align: center;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.his-container {
+    width: 263px;
+    height: 62px;
+    position: absolute;
+    color: #fff;
+    background-color: #14374A;
+    text-align: center;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    margin: -52px 0;
+}
+
+.backgroundHistory {
+    background-image: url(../img-his/his.jpeg);
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.boxHistory {
+    position: relative;
+    background-color: rgb(216, 235, 240, 0.8);
+    width: 968px;
+    height: 630px;
+    border-radius: 50px 50px 50px 50px;
+    margin: -55px 296px 0px 296px;
 }
 
 #line {
     position: fixed;
-    margin: 30px 320px;
+    /* margin: 30px 320px; */
+    margin: 51px 32px;
+    width: 886px;
 }
 
 /* ตรงกลางหน้า */
 #hisarrow {
     position: fixed;
-    margin: 60px 1180px;
+    margin: 72px 876px;
 }
 
-#bghisword {
+#toparrow {
     position: fixed;
-    margin: -170px 0px;
+    margin: 72px 876px;
 }
 
-#cross {
+#hideline {
     position: fixed;
-    margin: -160px 1380px;
+    /* margin: 30px 320px; */
+    margin: 120px 32px;
+    width: 886px;
 }
-
-#hiswordbg {
-    position: fixed;
-    margin: -70px 240px;
-    height: 80vh;
-}
-
 
 /* ที่ซ่อน */
 .text-click {
@@ -167,24 +225,15 @@
 
 #hidetext1 {
     position: fixed;
-    margin: 150px 380px;
+    margin: 120px 47px;
 }
 
 #hidetext2 {
     position: fixed;
-    margin: 180px 380px;
+    margin: 155px 47px;
 }
 
 #hidearrow {
     position: fixed;
     margin: 360px 180px;
 }
-
-#hideline {
-    position: fixed;
-    margin: 120px 330px;
-}
-
-/* #hisarrow{
-    visibility:hidden;
-} */
