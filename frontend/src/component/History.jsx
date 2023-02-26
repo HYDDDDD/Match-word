@@ -69,19 +69,22 @@ function History({ selectedTreasury }) {
   //Get Title
   useEffect(() => {
     let data = getTreasury
-      .filter((data) => data.treasury_id === selectedTreasury.treasury_id)
+      // .filter((data) => data.treasury_id === selectedTreasury.treasury_id)
       .map((data) => {
-        return data;
+        return data.treasury_title;
       });
 
-    if (data) {
-      data.map((data) => {
-        setTitle((treasuryTitle) => [...treasuryTitle, data.treasury_title]);
-      });
-    }
+    // console.log(data);
+
+    // if (data) {
+    //   data.map((data) => {
+    //     console.log(data);
+    //     // setTitle((treasuryTitle) => [...treasuryTitle, data.treasury_title]);
+    //   });
+    // }
 
     setTitle(data);
-    console.log(data);
+    // console.log(data);
   }, [getTreasury, setTitle]);
 
   //Get Score
@@ -108,7 +111,7 @@ function History({ selectedTreasury }) {
       setVocabs(info);
     }
 
-    console.log(data);
+    // console.log(data);
     setScore(data);
     setScoreF(info);
   }, [getVocabs, setScore, setScoreF]);
@@ -361,13 +364,16 @@ function History({ selectedTreasury }) {
         {/* Title Demo */}
         <div className="text">
           <p id="t1">
-            <div>
-              {title.map((treasuryTitle, index) => {
+            <div id="vocabEng">
+              {/* {title.map((treasuryTitle, index) => {
                 return (
                   <div className="text" id="t1" key={index}>
                     {treasuryTitle.treasury_title}
                   </div>
                 );
+              })} */}
+              {title.map((data, index) => {
+                return <div key={index}>{data}</div>;
               })}
             </div>
           </p>

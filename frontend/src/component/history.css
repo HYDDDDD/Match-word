@@ -120,12 +120,12 @@
 
 #t1 {
     position: fixed;
-    margin: 5px -148px;
+    margin: 5px -136px;
 }
 
 #t2 {
     position: fixed;
-    margin: 5px 108px;
+    margin: 5px 120px;
 }
 
 #t3 {
@@ -236,4 +236,8 @@
 #hidearrow {
     position: fixed;
     margin: 360px 180px;
+}
+
+#vocabEng {
+    margin: 0px -132px;
 }
