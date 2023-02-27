@@ -8,7 +8,7 @@ function EditVocabulary({ currentUser, selectedTreasury }) {
   return (
     <div id="picNo2">
       <Username currentUser={currentUser} />
-      <div id="category-details">
+      <div id="EV-details">
         <p>Edit Vocabulary</p>
       </div>
       <div className="Menu-EV">

@@ -12,10 +12,12 @@ function Category({ currentUser, setSelectedTreasury, setIdTreasury }) {
     <div id="picNo2">
       <Username currentUser={currentUser} />
       <div id="category-details">
-        <p>Category</p>
+        <div id="titleCategory">
+          <p>Category</p>
+        </div>
       </div>
       <div className="Menu">
-        <Menu/>
+        <Menu />
       </div>
 
       <div className="Option">

@@ -207,7 +207,7 @@
     width: 968px;
     height: 630px;
     border-radius: 50px 50px 50px 50px;
-    margin: -55px 296px 0px 296px;
+    margin: -8px 296px 0px 296px;
 }
 
 #line {
@@ -220,20 +220,20 @@
 /* ตรงกลางหน้า */
 #hisarrow {
     position: fixed;
-    margin: 72px 876px;
+    margin: -193px 876px;
     z-index: 1;
 }
 
 #toparrow {
     position: fixed;
-    margin: 72px 876px;
+    margin: -192px 876px;
     z-index: 1;
 }
 
 #hideline {
     position: fixed;
     /* margin: 30px 320px; */
-    margin: 120px 32px;
+    margin: -141px 32px;
     width: 886px;
 }
 
@@ -244,12 +244,12 @@
 
 #hidetext1 {
     position: fixed;
-    margin: 120px 47px;
+    margin: -134px 47px;
 }
 
 #hidetext2 {
     position: fixed;
-    margin: 155px 47px;
+    margin: -104px 47px;
 }
 
 #hidearrow {
@@ -263,4 +263,49 @@
 
 #his2 {
     margin: 136px 5px;
+}
+
+.basic {
+    display: flex;
+}
+
+#title {
+    margin: 75px 74px 37px 73px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#score1 {
+    margin: 75px 74px 37px 282px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#score2 {
+    margin: 75px 74px 37px 247px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.hard {
+    display: flex;
+
+}
+
+#title2 {
+    margin: 75px 74px 37px 73px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#score3 {
+    margin: 75px 74px 37px 282px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#score4 {
+    margin: 75px 74px 37px 247px;
+    font-weight: bold;
+    font-size: larger;
 }

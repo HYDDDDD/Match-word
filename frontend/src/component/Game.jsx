@@ -226,6 +226,7 @@ function Game({ selectedTreasury }) {
                       src={btnsetting}
                       weight="100px"
                       height="100px"
+                      onClick={() => navigate("/setting")}
                       alt=""
                     />
                     <img
@@ -233,6 +234,7 @@ function Game({ selectedTreasury }) {
                       src={btntreasury}
                       weight="100px"
                       height="100px"
+                      onClick={() => navigate("/vocabularyTreasury")}
                       alt=""
                     />
                   </div>
@@ -287,27 +289,7 @@ function Game({ selectedTreasury }) {
                 </div>
               </>
             )}
-            {/* <img id="word-bg" src={wordbg} weight="500px" height="680px" />
-            <img id="bg-word" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word1" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word2" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word3" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word4" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word5" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word6" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word7" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word8" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word9" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word10" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word11" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word12" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word13" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word14" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word15" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word16" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word17" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word18" src={bgword} weight="30px" height="80px" />
-            <img id="bg-word19" src={bgword} weight="30px" height="80px" /> */}
+        
           </div>
           <div className="box-game">
             <div className="boxVocab">

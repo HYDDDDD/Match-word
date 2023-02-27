@@ -1,7 +1,7 @@
 
 #prepare-details {
     text-align: center;
-    margin-top: -116px;
+    margin-top: -71px;
     font-size: 32px;
     font-weight: bold;
 }
@@ -12,7 +12,7 @@
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 39px;
+    margin-top: -62px;
 }
 
 .photo-showVo {
@@ -135,7 +135,6 @@
     border: 3px solid #ffcf66;
 }
 
-/* .Menu-P {
-    margin: 75px 0px 30px 33px;
-    position: absolute;
-  } */
+.Menu-P {
+    margin: 75px 0px 0px 0px;
+  }

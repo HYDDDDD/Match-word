@@ -17,6 +17,8 @@ function EditProfile({ currentUser, setCurrentUser }) {
   const update = (event) => {
     event.preventDefault();
 
+    console.log(updateData);
+
     if (handleValidation() === true) {
       let url = `http://127.0.0.1:8000/users/${currentUser.user_id}`;
 
@@ -28,7 +30,8 @@ function EditProfile({ currentUser, setCurrentUser }) {
         });
         setUpdateData({ username: "", email: "", password: "" });
         setPasswordAgain("");
-        refreshPage();
+        // refreshPage();
+        navigate("/setting");
       });
     }
   };
@@ -41,9 +44,9 @@ function EditProfile({ currentUser, setCurrentUser }) {
     return true;
   };
 
-  const refreshPage = () => {
-    window.location.reload(false);
-  };
+  // const refreshPage = () => {
+  //   window.location.reload(false);
+  // };
 
   return (
     <div className="backgroundEditProfile">

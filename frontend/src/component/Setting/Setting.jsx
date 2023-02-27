@@ -87,7 +87,7 @@ function Setting({ setSelectEdit }) {
                   <div
                     onClick={() => {
                       navigate("/editProfile");
-                      setSelectEdit("name");
+                      // setSelectEdit("name");
                     }}
                   >
                     <img src={Edit} alt="" width={"35px"} />
@@ -98,7 +98,7 @@ function Setting({ setSelectEdit }) {
                   <div
                     onClick={() => {
                       navigate("/editProfile");
-                      setSelectEdit("email");
+                      // setSelectEdit("email");
                     }}
                   >
                     <img src={Edit} alt="" width={"35px"} />
@@ -109,7 +109,7 @@ function Setting({ setSelectEdit }) {
                   <div
                     onClick={() => {
                       navigate("/editProfile");
-                      setSelectEdit("name");
+                      // setSelectEdit("name");
                     }}
                   >
                     <img src={Edit} alt="" width={"35px"} />

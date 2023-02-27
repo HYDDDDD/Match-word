@@ -26,9 +26,13 @@ function App() {
   const [selectedTreasury, setSelectedTreasury] = useState([]);
   const [selectEdit, setSelectEdit] = useState("");
 
+  // console.log(currentUser);
+
   const getLocalStorageUser = async () => {
     try {
       const local = await localStorage.getItem("Current User");
+
+      // console.log(local);
 
       if (local) {
         await setCurrentUser(JSON.parse(local));

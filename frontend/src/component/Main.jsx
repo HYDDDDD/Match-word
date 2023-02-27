@@ -25,44 +25,10 @@ function Main({ currentUser }) {
     <>
       <div id="main">
         <div className="bg">
-          {/* <h1 className="main-page">User name</h1>
-          <p className="main-page" id="point">
-            point : 100{" "}
-          </p>
-          <div onClick={() => navigate("/Main")}>
-            <img src={profile} id="profile" />
-          </div> */}
           <Username currentUser={currentUser} />
-
-          {/* <div className="tab-main">
-            <img id="bg-tab" src={tab} weight="50px" height="500px" />
-            <div
-              id="cursor-his"
-              onClick={() => navigate("/vocabularyTreasury")}
-            >
-              <img id="treasury" src={treasury} weight="50px" height="50px" />
-            </div>
-            <p className="tab-text" id="treasury-text">
-              คลัง
-            </p>
-            <div id="cursor-his" onClick={() => navigate("/history")}>
-              <img id="history" src={history} weight="50px" height="50px" />
-            </div>
-            <p className="tab-text" id="history-text">
-              ประวัติ
-            </p>
-            <div id="cursor-his" onClick={() => navigate("/setting")}>
-                <img id="setting" src={setting} weight="50px" height="50px" />
-            </div>
-            <p className="tab-text" id="setting-text">
-              ตั่งค่า
-            </p>
-            <img id="log-out" src={logout} weight="50px" height="50px" />
-            <p className="tab-text" id="log-out-text">
-              ออกจากระบบ
-            </p>
-          </div> */}
-          <Menu />
+          <div className="Menu-main">
+            <Menu />
+          </div>
 
           <div>
             <div className="center">

@@ -22,9 +22,13 @@
 
 #category-details {
   text-align: center;
-  margin-top: -116px;
+  margin-top: -10px;
   font-size: 32px;
   font-weight: bold;
+}
+
+#titleCategory{
+  /* margin-top: 10px; */
 }
 
 /* .Menu {

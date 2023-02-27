@@ -80,6 +80,8 @@
     margin: 133px 14px -8px 0px; */
     display: flex;
     justify-content: center;
+    margin-top: -116px;
+    margin-left: 104px;
 }
 
 #play {
@@ -110,6 +112,8 @@
     cursor: pointer;
 } */
 
-#boxBtnAddTest{
+#boxBtnAddTest {}
 
+.Menu-main {
+    margin: 75px 0px 0px 11px;
 }
