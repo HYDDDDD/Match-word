@@ -15,51 +15,65 @@ function Menu({ currentUser }) {
 
   return (
     <div>
-      <div className="tab">
-        <img id="bg-tab" src={tab} alt="" />
-        <div onClick={() => navigate("/Main")}>
-          <div>
+      <div>
+        <div className="tab">
+          <img id="bg-tab" src={tab} alt="" />
+          <div onClick={() => navigate("/Main")}>
+            <div>
+              <img
+                id="home"
+                src="https://cdn-icons-png.flaticon.com/512/609/609803.png"
+                weight="50px"
+                height="50px"
+                alt=""
+              />
+            </div>
+            <p className="tab-text" id="home-text">
+              หน้าหลัก
+            </p>
+          </div>
+          <div id="cursor-his" onClick={() => navigate("/vocabularyTreasury")}>
             <img
-              id="home"
-              src="https://cdn-icons-png.flaticon.com/512/609/609803.png"
+              id="treasury"
+              src={treasury}
               weight="50px"
               height="50px"
               alt=""
             />
           </div>
-          <p className="tab-text" id="home-text">
-            หน้าหลัก
+          <p className="tab-text" id="treasury-text">
+            คลัง
           </p>
-        </div>
-        <div id="cursor-his" onClick={() => navigate("/vocabularyTreasury")}>
-          <img
-            id="treasury"
-            src={treasury}
-            weight="50px"
-            height="50px"
-            alt=""
-          />
-        </div>
-        <p className="tab-text" id="treasury-text">
-          คลัง
-        </p>
-        <div id="cursor-his" onClick={() => navigate("/history")}>
-          <img id="history" src={history} weight="50px" height="50px" alt="" />
-        </div>
-        <p className="tab-text" id="history-text">
-          ประวัติ
-        </p>
-        <div id="cursor-his" onClick={() => navigate("/setting")}>
-          <img id="setting" src={setting} weight="50px" height="50px" alt="" />
-        </div>
-        <p className="tab-text" id="setting-text">
-          ตั่งค่า
-        </p>
-        <div onClick={() => setShowLogout(true)}>
-          <img id="log-out" src={logout} weight="50px" height="50px" alt="" />
-          <p className="tab-text" id="log-out-text">
-            ออกจากระบบ
+          <div id="cursor-his" onClick={() => navigate("/history")}>
+            <img
+              id="history"
+              src={history}
+              weight="50px"
+              height="50px"
+              alt=""
+            />
+          </div>
+          <p className="tab-text" id="history-text">
+            ประวัติ
           </p>
+          <div id="cursor-his" onClick={() => navigate("/setting")}>
+            <img
+              id="setting"
+              src={setting}
+              weight="50px"
+              height="50px"
+              alt=""
+            />
+          </div>
+          <p className="tab-text" id="setting-text">
+            ตั่งค่า
+          </p>
+          <div onClick={() => setShowLogout(true)}>
+            <img id="log-out" src={logout} weight="50px" height="50px" alt="" />
+            <p className="tab-text" id="log-out-text">
+              ออกจากระบบ
+            </p>
+          </div>
         </div>
       </div>
       {/* <div id="bg-tab">
@@ -102,11 +116,9 @@ function Menu({ currentUser }) {
         </div>
       </div> */}
       {showLogout ? (
-        <>
-          <div>
-            <Logout setShowLogout={setShowLogout} />
-          </div>
-        </>
+        <div id="boxPopUp">
+          <Logout setShowLogout={setShowLogout} />
+        </div>
       ) : (
         <></>
       )}

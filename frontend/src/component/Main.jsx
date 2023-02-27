@@ -67,17 +67,35 @@ function Main({ currentUser }) {
           <div>
             <div className="center">
               <div onClick={() => navigate("/category")}>
-                <img id="play" src={btnPlay} weight="50px" height="600px" alt=""/>
+                <img
+                  id="play"
+                  src={btnPlay}
+                  weight="50px"
+                  height="600px"
+                  alt=""
+                />
               </div>
-              <img
-                onClick={() => navigate("/category2")}
-                id="add"
-                src={btnAdd}
-                weight="50px"
-                height="350px"
-                alt=""
-              />
-              <img id="test" src={btnTest} weight="20px" height="300px" alt=""/>
+              <div id="boxBtnAddTest">
+                <div>
+                  <img
+                    onClick={() => navigate("/category2")}
+                    id="add"
+                    src={btnAdd}
+                    weight="50px"
+                    height="350px"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    id="test"
+                    src={btnTest}
+                    weight="20px"
+                    height="300px"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
           </div>
 

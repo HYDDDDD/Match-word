@@ -76,20 +76,22 @@
 } */
 
 .center {
-    display: grid;
-    margin: 133px 14px -8px 0px;
+    /* display: grid;
+    margin: 133px 14px -8px 0px; */
+    display: flex;
+    justify-content: center;
 }
 
 #play {
-    margin: -200px 350px;
+    /* margin: -200px 350px; */
 }
 
 #add {
-    margin: -390px 800px;
+    /* margin: -390px 800px; */
 }
 
 #test {
-    margin: -62px 800px;
+    /* margin: -62px 800px; */
 }
 
 .right-bar {
@@ -107,3 +109,7 @@
 /* #cursor-his {
     cursor: pointer;
 } */
+
+#boxBtnAddTest{
+
+}
