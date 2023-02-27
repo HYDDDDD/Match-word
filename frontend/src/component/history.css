@@ -1,4 +1,4 @@
-/* แท็บข้าง */
+แท็บข้าง
 /* .tab-history {
     display: grid;
     margin: 200px 0px 0px 40px;
@@ -208,104 +208,172 @@
     height: 630px;
     border-radius: 50px 50px 50px 50px;
     margin: -8px 296px 0px 296px;
+    padding: 15px;
+}
+
+.subtitleHistory {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: x-large;
 }
 
 #line {
-    position: fixed;
+    /* position: fixed; */
     /* margin: 30px 320px; */
-    margin: 51px 32px;
+    /* margin: 51px 32px; */
     width: 886px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
 }
+
+#boxBasic {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 15px;
+}
+
+#dataBasic {
+    /* display: flex; */
+}
+
+#titleBasic {
+    /* margin-left: -16px; */
+    margin-left: 16px;
+}
+
+#scoreBasic {
+    /* margin-left: -40px; */
+    margin-left: 48px;
+}
+
+#totalVacabBasic {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    justify-items: right;
+}
+
+#arrowBasic {}
+
 
 /* ตรงกลางหน้า */
 #hisarrow {
-    position: fixed;
-    margin: -193px 876px;
-    z-index: 1;
+    /* position: fixed; */
+    /* margin: -193px 876px; */
+    /* z-index: 1; */
 }
 
 #toparrow {
-    position: fixed;
-    margin: -192px 876px;
-    z-index: 1;
+    /* position: fixed; */
+    /* margin: -192px 876px; */
+    /* z-index: 1; */
+}
+
+#toparrow2 {
+    /* margin: -54px 0px 46px 874px; */
 }
 
 #hideline {
     position: fixed;
     /* margin: 30px 320px; */
-    margin: -141px 32px;
-    width: 886px;
+    /* margin: -141px 32px; */
+    /* width: 886px; */
+}
+
+#hideline2 {
+    /* position: fixed; */
+    /* margin: 30px 320px; */
+    /* margin: -8px -868px; */
+    /* width: 886px; */
 }
 
 /* ที่ซ่อน */
 .text-click {
-    position: absolute;
+    /* position: absolute; */
 }
 
 #hidetext1 {
-    position: fixed;
-    margin: -134px 47px;
+    /* position: fixed; */
+    /* margin: -134px 47px; */
+}
+
+#hidetextWrong {
+    /* margin: 142px 0px 0px 0px; */
+    /* display: flex; */
+}
+
+#hidetextWrong2 {
+    /* margin: 142px 0px 0px 0px; */
+    /* display: flex; */
 }
 
 #hidetext2 {
-    position: fixed;
-    margin: -104px 47px;
+    /* position: fixed; */
+    /* margin: -104px 47px; */
 }
 
 #hidearrow {
-    position: fixed;
-    margin: 360px 180px;
+    /* position: fixed; */
+    /* margin: 360px 180px; */
+}
+
+#hisarrow2 {
+    /* margin: -111px 0px 42px 871px; */
 }
 
 #his1 {
-    margin: 0px -132px;
+    /* margin: 0px -132px; */
 }
 
 #his2 {
-    margin: 136px 5px;
+    /* margin: 136px 5px; */
 }
 
-.basic {
+/* .basic {
     display: flex;
-}
+} */
 
-#title {
+/* #title {
     margin: 75px 74px 37px 73px;
     font-weight: bold;
     font-size: larger;
-}
+} */
 
-#score1 {
+/* #score1 {
     margin: 75px 74px 37px 282px;
     font-weight: bold;
     font-size: larger;
-}
+} */
 
-#score2 {
+/* #score2 {
     margin: 75px 74px 37px 247px;
     font-weight: bold;
     font-size: larger;
-}
+} */
 
-.hard {
+/* .hard {
     display: flex;
 
-}
+} */
 
-#title2 {
+/* #title2 {
     margin: 75px 74px 37px 73px;
     font-weight: bold;
     font-size: larger;
-}
+} */
 
-#score3 {
+/* #score3 {
     margin: 75px 74px 37px 282px;
     font-weight: bold;
     font-size: larger;
-}
+} */
 
-#score4 {
+/* #score4 {
     margin: 75px 74px 37px 247px;
     font-weight: bold;
     font-size: larger;
-}
+} */

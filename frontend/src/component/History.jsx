@@ -130,7 +130,6 @@ function History({ selectedTreasury }) {
       setVocabs(info);
     }
 
-    // console.log(data);
     setScore(data);
     setScoreF(info);
   }, [getVocabs, setScore, setScoreF]);
@@ -149,13 +148,6 @@ function History({ selectedTreasury }) {
     }
 
     setTotal(data);
-
-    // console.log(total);
-    let dataHard = getVocabs.filter((data) => {
-      // console.log(data);
-    });
-
-    console.log(dataHard);
   }, [getVocabs]);
 
   return (
@@ -177,7 +169,52 @@ function History({ selectedTreasury }) {
 
       <div className="boxHistory">
         {/* ตัวหนังสือ */}
-        <div className="text-title">
+        <div>
+          <div>
+            <img id="line" src={line} alt="" />
+          </div>
+          <div className="subtitleHistory">
+            <div>หมวดหมู่</div>
+            <div>คะแนน</div>
+            <div>จำนวนศัพท์</div>
+          </div>
+          <div>
+            <img id="line" src={line} alt="" />
+          </div>
+        </div>
+        <div id="boxBasic">
+          <div id="titleBasic">
+            {getTreasury
+              .filter((data) => (data.treasury_title === "Basic") === true)
+              .map((data) => {
+                return <div id="title">{data.treasury_title}</div>;
+              })}
+          </div>
+          <div id="scoreBasic">
+            {
+              getVocabs
+                .filter((data) => (data.treasury_id[0] === 1) === true)
+                .filter((data) => data.vocab_status === "T").length
+            }
+          </div>
+          <div id="totalVacabBasic">
+            <div>{vocabs.filter((id) => id.treasury_id[0] === 1).length}</div>
+            <div id="arrowBasic">
+              <img
+                // id="hisarrow"
+                src={hisarrow}
+                alt=""
+                weight="30"
+                height={30}
+                onClick={() => setStatusClick((val) => !val)}
+              />
+            </div>
+          </div>
+        </div>
+        {!statusClick ? <>FFF</> : <>DD</>}
+        <div></div>
+
+        {/* <div className="text-title">
           <p id="tt1">
             <b>หมวดหมู่</b>
           </p>
@@ -190,16 +227,13 @@ function History({ selectedTreasury }) {
           <p id="tt3-1">
             <b>ศัพท์</b>
           </p>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <img id="line" src={line} alt="" />
-        </div>
+        </div> */}
 
-        <div className="boxWord">
-          {/* <b id="t1"> Unit2 </b> */}
-          {/* <b id="t2"> 10 </b> */}
-          {/* <b id="t3"> 10 </b> */}
+        {/* <div className="boxWord">
           <div className="basic">
             {getTreasury
               .filter((data) => (data.treasury_title === "Basic") === true)
@@ -234,10 +268,10 @@ function History({ selectedTreasury }) {
               {vocabs.filter((id) => id.treasury_id[0] === 2).length}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div>
-          {!statusClick ? (
+          {/* {!statusClick ? (
             <div>
               <img
                 id="hisarrow"
@@ -250,101 +284,104 @@ function History({ selectedTreasury }) {
             </div>
           ) : (
             <div className="text-click">
+              <div>
+                <b id="hidetext1">
+                  <div style={{ display: "flex" }}>
+                    คำที่ถูก:
+                    {score.map((data, index) => {
+                      return (
+                        <div
+                          // className="text-click"
+                          //
+                          key={index}
+                        >
+                          {data.vocabulary},
+                        </div>
+                      );
+                    })}
+                  </div>
+                </b>
+              </div>
+              <div>
+                <b id="hidetext2">
+                  <div style={{ display: "flex" }}>
+                    คำที่ผิด:
+                    {scoreF.map((data, index) => {
+                      return (
+                        <div
+                          // className="text-click"
+                          key={index}
+                          // style={{position: "fixed"}}
+                        >
+                          {data.vocabulary},
+                        </div>
+                      );
+                    })}
+                  </div>
+                </b>
+              </div>
+              <div>
+                <img
+                  id="toparrow"
+                  src={toparrow}
+                  weight="30"
+                  height={30}
+                  alt=""
+                  onClick={() => setStatusClick((val) => !val)}
+                />
+              </div>
+              <div>
+                <img id="hideline" src={hideline} alt="" />
+              </div>
+            </div>
+          )} */}
+          {/* {!statusClick2 ? (
+            <div>
+              <img
+                id="hisarrow2"
+                src={hisarrow}
+                alt=""
+                weight="30"
+                height={30}
+                onClick={() => setStatusClick2((val) => !val)}
+              />
+            </div>
+          ) : (
+            <div className="text-click">
               <b id="hidetext1">
-                <div style={{ display: "flex" }}>
+                <div id="hidetextWrong">
                   คำที่ถูก:
-                  {score.map((data, index) => {
-                    return (
-                      <div
-                        // className="text-click"
-                        //
-                        key={index}
-                      >
-                        {data.vocabulary},
-                      </div>
-                    );
-                  })}
+                  {getVocabs
+                    .filter((data) => (data.treasury_id[0] === 2) === true)
+                    .filter((data) => (data.vocab_status === "T") === true)
+                    .map((data) => {
+                      return <div id="text-click">{data.vocabulary},</div>;
+                    })}
                 </div>
               </b>
               <b id="hidetext2">
-                <div style={{ display: "flex" }}>
+                <div id="hidetextWrong2">
                   คำที่ผิด:
-                  {scoreF.map((data, index) => {
-                    return (
-                      <div
-                        // className="text-click"
-                        key={index}
-                        // style={{position: "fixed"}}
-                      >
-                        {data.vocabulary},
-                      </div>
-                    );
-                  })}
+                  {getVocabs
+                    .filter((data) => (data.treasury_id[0] === 2) === true)
+                    .filter((data) => (data.vocab_status === "F") === true)
+                    .map((data) => {
+                      return <div id="text-click">{data.vocabulary},</div>;
+                    })}
                 </div>
               </b>
               <img
-                id="toparrow"
+                id="toparrow2"
                 src={toparrow}
                 weight="30"
                 height={30}
                 alt=""
-                onClick={() => setStatusClick((val) => !val)}
+                onClick={() => setStatusClick2((val) => !val)}
               />
-              <img id="hideline" src={hideline} alt="" />
+              <img id="hideline2" src={hideline} alt="" />
             </div>
-          )}
-          {}
+          )} */}
         </div>
-
-        {/* Title Demo */}
-        <div className="text">
-          <p id="t1">
-            <div id="his1">
-              {/* {title.map((treasuryTitle, index) => {
-                return (
-                  <div className="text" id="t1" key={index}>
-                    {treasuryTitle.treasury_title}
-                  </div>
-                );
-              })} */}
-              {/* Title by Faii */}
-              {/* {title.map((data, index) => {
-                return <div key={index}>{data}</div>;
-              })} */}
-            </div>
-          </p>
-          <p id="t1-1">
-            <div id="his2">
-              {/* {title.map((treasuryTitle, index) => {
-                return (
-                  <div className="text" id="t1" key={index}>
-                    {treasuryTitle.treasury_title}
-                  </div>
-                );
-              })} */}
-              {/* Title by Faii */}
-              {/* {title2.map((info, index) => {
-                return <div key={index}>{info}</div>;
-              })} */}
-            </div>
-          </p>
-        </div>
-
-        {/* Score Demo */}
-        {/* <div className="text">
-          <p id="t2">{score.filter((id) => id.vocab_status === "T").length}</p>
-          <p id="t2-2">
-            {score.filter((id) => id.vocab_status === "N").length}
-          </p>
-        </div> */}
-
-        {/* Total Vocab Demo */}
-        {/* <div className="textTotal">
-          <p id="t3">{vocabs.filter((id) => id.treasury_id[0] === 1).length}</p>
-          <p id="t3-3">
-            {vocabs.filter((id) => id.treasury_id[1] === 2).length}
-          </p>
-        </div> */}
       </div>
     </div>
   );
