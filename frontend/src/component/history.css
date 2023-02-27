@@ -216,6 +216,7 @@
     justify-content: space-around;
     font-weight: bold;
     font-size: x-large;
+    margin: 8px 0px 8px 0px;
 }
 
 #line {
@@ -233,7 +234,7 @@
     justify-content: space-around;
     font-weight: bold;
     font-size: larger;
-    margin-top: 15px;
+    margin: 15px 0px 15px 0px;
 }
 
 #dataBasic {
@@ -257,7 +258,44 @@
     justify-items: right;
 }
 
-#arrowBasic {}
+#showWord {
+    margin-top: 8px;
+    margin-left: 145px;
+}
+
+#showWord,
+#words {
+    display: flex;
+    font-weight: bold;
+    /* font-size: x-large; */
+}
+
+#boxHard {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: larger;
+    margin: 15px 0px 15px 0px;
+}
+
+#titleHard {
+    /* margin-left: -16px; */
+    margin-left: 16px;
+}
+
+#scoreHard {
+    /* margin-left: -40px; */
+    margin-left: 48px;
+}
+
+#totalVacabHard {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    justify-items: right;
+}
+
+
 
 
 /* ตรงกลางหน้า */

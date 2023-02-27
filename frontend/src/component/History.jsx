@@ -200,19 +200,142 @@ function History({ selectedTreasury }) {
           <div id="totalVacabBasic">
             <div>{vocabs.filter((id) => id.treasury_id[0] === 1).length}</div>
             <div id="arrowBasic">
-              <img
-                // id="hisarrow"
-                src={hisarrow}
-                alt=""
-                weight="30"
-                height={30}
-                onClick={() => setStatusClick((val) => !val)}
-              />
+              {!statusClick ? (
+                <img
+                  // id="hisarrow"
+                  src={hisarrow}
+                  alt=""
+                  weight="30"
+                  height={30}
+                  onClick={() => setStatusClick((val) => !val)}
+                />
+              ) : (
+                <img
+                  id="toparrow"
+                  src={toparrow}
+                  weight="30"
+                  height={30}
+                  alt=""
+                  onClick={() => setStatusClick((val) => !val)}
+                />
+              )}
             </div>
           </div>
         </div>
-        {!statusClick ? <>FFF</> : <>DD</>}
-        <div></div>
+
+        <div>
+          <img id="line" src={line} alt="" />
+        </div>
+
+        {!statusClick ? (
+          <></>
+        ) : (
+          <div>
+            <div id="showWord">
+              <div>คำที่ถูก:</div>
+              <div id="words">
+                {getVocabs
+                  .filter((data) => (data.treasury_id[0] === 1) === true)
+                  .filter((data) => (data.vocab_status === "T") === true)
+                  .map((data) => {
+                    return <div id="text-click"> {data.vocabulary},</div>;
+                  })}
+              </div>
+            </div>
+            <div id="showWord">
+              <div>คำที่ผิด:</div>
+              <div id="words">
+                {getVocabs
+                  .filter((data) => (data.treasury_id[0] === 1) === true)
+                  .filter((data) => (data.vocab_status === "F") === true)
+                  .map((data) => {
+                    return <div id="text-click"> {data.vocabulary},</div>;
+                  })}
+              </div>
+            </div>
+            <div>
+              <img id="line" src={line} alt="" />
+            </div>
+          </div>
+        )}
+
+        <div id="boxHard">
+          <div id="titleHard">
+            {getTreasury
+              .filter((data) => (data.treasury_title === "Hard") === true)
+              .map((data) => {
+                return <div id="title">{data.treasury_title}</div>;
+              })}
+          </div>
+          <div id="scoreHard">
+            {
+              getVocabs
+                .filter((data) => (data.treasury_id[0] === 2) === true)
+                .filter((data) => data.vocab_status === "T").length
+            }
+          </div>
+          <div id="totalVacabHard">
+            <div>{vocabs.filter((id) => id.treasury_id[0] === 2).length}</div>
+            <div id="arrowHard">
+              {!statusClick2 ? (
+                <img
+                  // id="hisarrow"
+                  src={hisarrow}
+                  alt=""
+                  weight="30"
+                  height={30}
+                  onClick={() => setStatusClick2((val) => !val)}
+                />
+              ) : (
+                <img
+                  id="toparrow"
+                  src={toparrow}
+                  weight="30"
+                  height={30}
+                  alt=""
+                  onClick={() => setStatusClick2((val) => !val)}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img id="line" src={line} alt="" />
+        </div>
+
+        {!statusClick2 ? (
+          <></>
+        ) : (
+          <div>
+            <div id="showWord">
+              <div>คำที่ถูก:</div>
+              <div id="words">
+                {getVocabs
+                  .filter((data) => (data.treasury_id[0] === 2) === true)
+                  .filter((data) => (data.vocab_status === "T") === true)
+                  .map((data) => {
+                    return <div id="text-click"> {data.vocabulary},</div>;
+                  })}
+              </div>
+            </div>
+
+            <div id="showWord">
+              <div>คำที่ผิด:</div>
+              <div id="words">
+                {getVocabs
+                  .filter((data) => (data.treasury_id[0] === 2) === true)
+                  .filter((data) => (data.vocab_status === "F") === true)
+                  .map((data) => {
+                    return <div id="text-click"> {data.vocabulary},</div>;
+                  })}
+              </div>
+            </div>
+            <div>
+              <img id="line" src={line} alt="" />
+            </div>
+          </div>
+        )}
 
         {/* <div className="text-title">
           <p id="tt1">
