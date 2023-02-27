@@ -117,6 +117,7 @@
     height: 350px;
     margin: 250px 580px;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 #btn-add {
@@ -165,20 +166,28 @@
     height: fit-content;
     border-radius: 50px 50px 50px 50px;
     margin: 15px auto 0 auto;
-    padding: 10px;
+    padding: 30px;
 }
 
 .boxVocab {
     display: grid;
-    grid-template-columns: repeat(2, 550px);
+    grid-template-columns: repeat(2, 590px);
 }
 
 .boxVocabEng,
 .boxVocabThai {
-    margin-top: 10px;
-    background-color: #004b6b;
-    box-shadow: inset -12px 12px 48px rgb(9 124 159);
+    /* margin-top: 10px;
+    background-color: #0c3f70;
     width: 184px;
+    text-align: center;
+    border-radius: 11px 11px 11px 11px;
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    cursor: pointer; */
+    margin-top: 10px;
+    background-color: #0c3f70;
+    height: 58px;
     text-align: center;
     border-radius: 11px 11px 11px 11px;
     font-size: 20px;
@@ -190,6 +199,9 @@
 #word {
     display: grid;
     grid-template-columns: repeat(2, 240px);
+    /* height: -moz-fit-content; */
     height: fit-content;
+    gap: 10px;
+    column-gap: 30px;
     justify-content: center;
 }

@@ -12,7 +12,7 @@ function Profile({ currentUser, selectedTreasury }) {
       <div id="picNo2">
         {/* <div><Logout/></div> */}
         <Username currentUser={currentUser} />
-        <div id="prepare-details">
+        <div id="profile-details">
           <p>Profile</p>
         </div>
         <div className="Menu-Profile">

@@ -76,13 +76,21 @@ function History({ selectedTreasury }) {
         return data.treasury_title;
       });
 
-    let info = getTreasury
-      .filter((info) => info.treasury_title === "Hard")
-      .map((info) => {
-        return info.treasury_title;
-      });
+    // let info = getTreasury
+    //   .filter((info) => info.treasury_title === "Hard")
+    //   .map((info) => {
+    //     return info.treasury_title;
+    //   });
 
-    console.log(info);
+    // console.log(info);
+
+    // let info = getTreasury
+    //   .filter((data) => (data.treasury_title === "Hard") === true)
+    //   .map((data) => {
+    //     return data.treasury_title;
+    //   });
+
+    // console.log(info);
 
     // if (data) {
     //   data.map((data) => {
@@ -92,7 +100,7 @@ function History({ selectedTreasury }) {
     // }
 
     setTitle(data);
-    setTitle2(info);
+    // setTitle2(info);
     // console.log(data);
   }, [getTreasury, setTitle]);
 
@@ -142,7 +150,12 @@ function History({ selectedTreasury }) {
 
     setTotal(data);
 
-    console.log(total);
+    // console.log(total);
+    let dataHard = getVocabs.filter((data) => {
+      // console.log(data);
+    });
+
+    console.log(dataHard);
   }, [getVocabs]);
 
   return (
@@ -188,30 +201,34 @@ function History({ selectedTreasury }) {
           {/* <b id="t2"> 10 </b> */}
           {/* <b id="t3"> 10 </b> */}
           <div className="basic">
-            {title.map((data, index) => {
-              return (
-                <div id="title" key={index}>
-                  {data}
-                </div>
-              );
-            })}
+            {getTreasury
+              .filter((data) => (data.treasury_title === "Basic") === true)
+              .map((data) => {
+                return <div id="title">{data.treasury_title}</div>;
+              })}
             <div id="score1">
-              {score.filter((id) => id.vocab_status === "T").length}
+              {
+                getVocabs
+                  .filter((data) => (data.treasury_id[0] === 1) === true)
+                  .filter((data) => data.vocab_status === "T").length
+              }
             </div>
             <div id="score2">
               {vocabs.filter((id) => id.treasury_id[0] === 1).length}
             </div>
           </div>
           <div className="hard">
-            {title2.map((info, index) => {
-              return (
-                <div id="title2" key={index}>
-                  {info}
-                </div>
-              );
-            })}
+            {getTreasury
+              .filter((data) => (data.treasury_title === "Hard") === true)
+              .map((data) => {
+                return <div id="title">{data.treasury_title}</div>;
+              })}
             <div id="score3">
-              {score.filter((id) => id.vocab_status === "T").length}
+              {
+                getVocabs
+                  .filter((data) => (data.treasury_id[0] === 2) === true)
+                  .filter((data) => data.vocab_status === "T").length
+              }
             </div>
             <div id="score4">
               {vocabs.filter((id) => id.treasury_id[0] === 2).length}

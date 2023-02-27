@@ -2,7 +2,7 @@
     background-color: aliceblue;
     width: 663px;
     height: 160px;
-    margin: 90px 430px;
+    margin: -14px 430px;
     /* position: absolute; */
     border-radius: 20px 20px 20px 20px;
 }
@@ -34,7 +34,13 @@
     margin: 353px 0px 0px 0px;
 }
 
-/* .Menu-Profile {
-    margin: 63px 0px -37px 40px;
-    position: absolute;
-} */
+.Menu-Profile {
+    margin: 28px 0px 0px 0px;
+}
+
+#profile-details {
+    text-align: center;
+    margin-top: -10px;
+    font-size: 32px;
+    font-weight: bold;
+}
